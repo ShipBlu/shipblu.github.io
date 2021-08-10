@@ -15,15 +15,11 @@ TO BE DOCUMENTED
 ## Geographic Availability
 
 - [pudos](#) : meeting points between customer and customer agent.
-  - [pudo city](#)
 - [governorates](#) : the governorates in which we serve.
-  - [governorate cities](#)
 - [warehouses](#) : warehouses used to store shipments.
-  - [warehouse zone groups](#)
-  - [warehouse zones](#)
-- [zone groups](#) : group of zones - areas in city. 
+- [zones](#) : areas in city.
+- [zone groups](#) : group of zones. 
 - [cities](#) : areas in governorate.
-  - [citie zones](#)
 
 ## Service Availability
 
