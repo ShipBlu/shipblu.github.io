@@ -14,37 +14,56 @@ TO BE DOCUMENTED
 
 ## Geographic Availability
 
-TO BE DOCUMENTED
+- [pudos](#) : meeting points between customer and customer agent.
+  - [pudo city](#)
+- [governorates](#) : the governorates in which we serve.
+  - [governorate cities](#)
+- [warehouses](#) : warehouses used to store shipments.
+  - [warehouse zone groups](#)
+  - [warehouse zones](#)
+- [zone groups](#) : group of zones - areas in city. 
+- [cities](#) : areas in governorate.
+  - [citie zones](#)
 
 ## Service Availability
 
-TO BE DOCUMENTED 
+- [package sizes](#) : size of package in order
+- [hands hake types](#) : type of shipment delivery between customer and customer agent.
 
 ## Pickup Points
 
-TO BE DOCUMENTED 
+Meeting points between merchant and merchant agent.
+- [pickup points](#)
 
 ## Orders
 
-TO BE DOCUMENTED
+Orders divided on three categoricals
+- Delivery
+- Return
+- Exchanges
 
 ### Delivery
 
-TO BE DOCUMENTED 
+- [tracking](#) : tracking current location of delivery order.
+- [upload](#) : upload packages info of delivery order.
+- [uncompleted](#) : fail to deliver delivery order.
 
 ### Return
 
-TO BE DOCUMENTED 
+- [tracking](#) : tracking current location of return order.
+- [uncompleted](#) : fail to deliver return order.
 
 ### Exchanges
 
-TO BE DOCUMENTED 
+- [exchanges](#) 
 
 ### Cash Collection
 
-TO BE DOCUMENTED 
+Collect shipment cost from customer.
+- [cash collection](#) 
 
 ## Billing Statements
 
-TO BE DOCUMENTED
+- [invoices](#) 
+- [statements](#) 
 
