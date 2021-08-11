@@ -1,0 +1,152 @@
+{"0": {
+    "doc": "Home",
+    "title": "Focus on Selling Online",
+    "content": "ShipBlu Docs offers a developer API for ShipBlu last-mile delivery service. It is intended to be used by Merchants who have an account on ShipBlu, and would like to integrate their online e-commerce store to our delivery service. Get started now . ShipBlu makes last-mile delivery predictable by using advanced combinatorial optimization methods to get packages to customers in time. Our services are exposed in APIs that you can directly use from your e-commerce website. If you need help streamlining your online sales process, this is the right place. Don’t have in-house developers? We can always help. Get in touch at tech@shipblu.com . ",
+    "url": "/#focus-on-selling-online",
+    "relUrl": "/#focus-on-selling-online"
+  },"1": {
+    "doc": "Home",
+    "title": "Home",
+    "content": " ",
+    "url": "/",
+    "relUrl": "/"
+  },"2": {
+    "doc": "Quick Start",
+    "title": "Quick Start",
+    "content": "TO BE DOCUMENTED . ",
+    "url": "/quick-start",
+    "relUrl": "/quick-start"
+  },"3": {
+    "doc": "Quick Start",
+    "title": "Getting Your API Key",
+    "content": "TO BE DOCUMENTED . ",
+    "url": "/quick-start#getting-your-api-key",
+    "relUrl": "/quick-start#getting-your-api-key"
+  },"4": {
+    "doc": "Quick Start",
+    "title": "Test Your Setup",
+    "content": "TO BE DOCUMENTED . ",
+    "url": "/quick-start#test-your-setup",
+    "relUrl": "/quick-start#test-your-setup"
+  },"5": {
+    "doc": "Quick Start",
+    "title": "API Reference",
+    "content": "Refer to our Tutorial or the API Reference for detailed API functionality. ",
+    "url": "/quick-start#api-reference",
+    "relUrl": "/quick-start#api-reference"
+  },"6": {
+    "doc": "Tutorial",
+    "title": "ShipBlu API Tutorial",
+    "content": "TO BE DOCUMENTED . ",
+    "url": "/tutorial#shipblu-api-tutorial",
+    "relUrl": "/tutorial#shipblu-api-tutorial"
+  },"7": {
+    "doc": "Tutorial",
+    "title": "API Reference",
+    "content": "Refer to our Tutorial or the API Reference for detailed API functionality. ",
+    "url": "/tutorial#api-reference",
+    "relUrl": "/tutorial#api-reference"
+  },"8": {
+    "doc": "Tutorial",
+    "title": "Tutorial",
+    "content": " ",
+    "url": "/tutorial",
+    "relUrl": "/tutorial"
+  },"9": {
+    "doc": "API Reference",
+    "title": "API Reference",
+    "content": "TO BE DOCUMENTED . ",
+    "url": "/api-reference#api-reference",
+    "relUrl": "/api-reference#api-reference"
+  },"10": {
+    "doc": "API Reference",
+    "title": "Geographic Availability",
+    "content": ". | pudos . We can define pudos as meeting points between customer and CA. Now after know what is pudos, let’s play with his API end-points. | GET/v1/pudos/ This end-point allow you to list all pudos. | POST/v1/pudos/ This end-point allow you to create new pudo point. | GET/v1/pudos/{id}/ This end-point allow you retrieve specific pudo based on his id. | PUT/v1/pudos/{id}/ This end-point allow you update specific pudo based on his id. | PATCH/v1/pudos/{id}/ This end-point allow you partial update specific pudo based on his id. | DELETE/v1/pudos/{id}/ This end-point allow you delete specific pudo based on his id. | GET/v1/pudo/cities/{city_id}/ This end-point allow you retrieve pudos in specific city based on city id. | . | governorates . | GET/v1/governorates/ This end-point allow you to list all governorates. | POST/v1/governorates/ This end-point allow you to create new governorate. | GET/v1/governorates/{governorate_id}/cities/ This end-point allow you retrieve all cities in specific governorate based on governorates id. | . | warehouses . A large building where shipments may be stored before their export or distribution for sale. | GET/v1/warehouses/ This end-point allow you to list all warehouses. | GET/v1/warehouses/{warehouse_code}/zone-groups/ This end-point allow you to retrieve all zone-groups served by specific warehouse based on warehouse code. | POST/v1/warehouses/{warehouse_code}/zone-groups/ This end-point allow you to create new zone-groups served by specific warehouse. | GET/v1/warehouses/{warehouse_code}/zones/ This end-point allow you to retrieve all zones served by specific warehouse based on warehouse code. | . | zones . We can define zones as specific areas in city. Now after know what is zones, let’s play with his API end-points. | GET/v1/cities/{city_id}/zones/ This end-point allow you retrieve zones in specific city based on city id. | . | zone groups . | GET/v1/zone-groups/{id}/ This end-point allow you retrieve specific zone group based on his id. | PUT/v1/zone-groups/{id}/ This end-point allow you update specific zone group based on his id. | PATCH/v1/zone-groups/{id}/ This end-point allow you partial update specific zone group based on his id. | DELETE/v1/zone-groups/{id}/ This end-point allow you delete specific zone group based on his id. | . | cities . | GET/v1/cities/{id}/ This end-point allow you retrieve specific city based on his id. | POST/v1/cities/{id}/ check… . | PUT/v1/cities/{id}/ This end-point allow you update specific city based on his id. | PATCH/v1/cities/{id}/ This end-point allow you partial update specific city based on his id. | DELETE/v1/cities/{id}/ This end-point allow you delete specific city based on his id. | . | . ",
+    "url": "/api-reference#geographic-availability",
+    "relUrl": "/api-reference#geographic-availability"
+  },"11": {
+    "doc": "API Reference",
+    "title": "Service Availability",
+    "content": "To Be Document . ",
+    "url": "/api-reference#service-availability",
+    "relUrl": "/api-reference#service-availability"
+  },"12": {
+    "doc": "API Reference",
+    "title": "Pickup Points",
+    "content": ". | pickup points . Meeting points between merchant and merchant agent. | GET/v1/merchants/{merchant_id}/pickup-points/ This end-point allow you to list all pickup point of specific merchant based on merchant id. | POST/v1/merchants/{merchant_id}/pickup-points/ This end-point allow you to create new pickup point to specific merchant based on merchant id. | GET/v1/merchants/{merchant_id}/pickup-points/{id}/ This end-point allow you retrieve specific pickup point based on merchant id and his id. | PUT/v1/merchants/{merchant_id}/pickup-points/{id}/ This end-point allow you update specific pickup point based on merchant id and his id. | PATCH/v1/merchants/{merchant_id}/pickup-points/{id}/ This end-point allow you partial update pickup point based on merchant id and his id. | DELETE/v1/merchants/{merchant_id}/pickup-points/{id}/ This end-point allow you delete specific pickup point based on merchant id and his id. | . | . ",
+    "url": "/api-reference#pickup-points",
+    "relUrl": "/api-reference#pickup-points"
+  },"13": {
+    "doc": "API Reference",
+    "title": "Orders",
+    "content": "Orders divided on three categoricals . | Delivery | Return | Exchanges | . ",
+    "url": "/api-reference#orders",
+    "relUrl": "/api-reference#orders"
+  },"14": {
+    "doc": "API Reference",
+    "title": "Delivery",
+    "content": ". | delivery order . | GET/v1/delivery-orders/ This end-point allow you to list all delivery orders. | POST/v1/delivery-orders/ This end-point allow you to create new delivery order. | . | tracking . | GET/v1/delivery-order/{tracking_number}/ check… . | POST/v1/delivery-order/{tracking_number}/ check… . | . | upload . | GET/v1/delivery-order-upload/ check… . | POST/v1/delivery-order-upload/ check… . | . | uncompleted . | GET/v1/delivery-orders-uncompleted/ check… . | . | . ",
+    "url": "/api-reference#delivery",
+    "relUrl": "/api-reference#delivery"
+  },"15": {
+    "doc": "API Reference",
+    "title": "Return",
+    "content": ". | return order . | GET/v1/returns/ This end-point allow you to list all return orders. | POST/v1/returns/ This end-point allow you to create new return orde . | GET/v1/returns/{id}/ This end-point allow you retrieve specific return based on his id. | PUT/v1/returns/{id}/ This end-point allow you update specific return based on his id. | PATCH/v1/returns/{id}/ This end-point allow you partial update return pudo based on his id. | DELETE/v1/returns/{id}/ This end-point allow you delete specific return based on his id. | . | tracking . | GET/v1/return/{tracking_number}/ check… . | POST/v1/return/{tracking_number}/ check… . | . | uncompleted . | GET/v1/return-orders-uncompleted/ check… . | . | . ",
+    "url": "/api-reference#return",
+    "relUrl": "/api-reference#return"
+  },"16": {
+    "doc": "API Reference",
+    "title": "Exchanges",
+    "content": ". | exchange order . | GET/v1/exchanges/ | . &lt;/div&gt; This end-point allow you to list all exchange orders. | POST/v1/exchanges/ | . &lt;/div&gt; This end-point allow you to create new exchange orders. | GET/v1/exchanges/{id}/ | . &lt;/div&gt; This end-point allow you retrieve specific exchange orders based on his id. | PUT/v1/exchanges/{id}/ This end-point allow you update specific exchange orders based on his id. | PATCH/v1/exchanges/{id}/ This end-point allow you partial update specific exchange orders based on his id. | DELETE/v1/exchanges/{id}/ This end-point allow you delete specific exchange orders based on his id. | . | . ",
+    "url": "/api-reference#exchanges",
+    "relUrl": "/api-reference#exchanges"
+  },"17": {
+    "doc": "API Reference",
+    "title": "Cash Collection",
+    "content": "Collect shipment cost from customer. | cash collection | . ",
+    "url": "/api-reference#cash-collection",
+    "relUrl": "/api-reference#cash-collection"
+  },"18": {
+    "doc": "API Reference",
+    "title": "Billing Statements",
+    "content": ". | invoices . | GET/v1/billing/invoices/ This end-point allow you to list all invoices. | GET/v1/billing/invoices/{id}/ This end-point allow you to retrieve specific invoice based on his id. | POST/v1/billing/invoices/order/ This end-point allow you to create new invoice for orders list. | . | statements | . ",
+    "url": "/api-reference#billing-statements",
+    "relUrl": "/api-reference#billing-statements"
+  },"19": {
+    "doc": "API Reference",
+    "title": "API Reference",
+    "content": " ",
+    "url": "/api-reference",
+    "relUrl": "/api-reference"
+  },"20": {
+    "doc": "About",
+    "title": "About",
+    "content": "ShipBlu makes shipping easier and more predictable using combinatorial optimization methods. Please, visit our website at https://shipblu.com to get connected to our team. ",
+    "url": "/about/",
+    "relUrl": "/about/"
+  },"21": {
+    "doc": "About",
+    "title": "This Documentation",
+    "content": "This documentation is meant to be read by developers of existing clients of ShipBlu. Running code in this guide requires an API key from your merchant account with ShipBlu. If you want to sign up for a merchant account, visit our website at https://shipblu.com to talk to our team. ",
+    "url": "/about/#this-documentation",
+    "relUrl": "/about/#this-documentation"
+  },"22": {
+    "doc": "About",
+    "title": "Issues",
+    "content": "If you find issues with this documentation, please create and issue on GitHub. ",
+    "url": "/about/#issues",
+    "relUrl": "/about/#issues"
+  },"23": {
+    "doc": "About",
+    "title": "Feature Requests",
+    "content": "Want to streamline more business operations on your end? We would love to hear from you by creating a feature request on GitHub. ",
+    "url": "/about/#feature-requests",
+    "relUrl": "/about/#feature-requests"
+  },"24": {
+    "doc": "About",
+    "title": "Contact Us",
+    "content": "Get in touch with our engineering team by emailing tech@shipblu.com . ",
+    "url": "/about/#contact-us",
+    "relUrl": "/about/#contact-us"
+  }
+}
