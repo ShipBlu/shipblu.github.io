@@ -1,1 +1,1116 @@
-<!DOCTYPE html><html lang="en-US"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"><link rel="stylesheet" href="/assets/css/just-the-docs-default.css"> <script async src="https://www.googletagmanager.com/gtag/js?id=G-CV04NXHZ3V"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-CV04NXHZ3V', { 'anonymize_ip': true }); </script> <script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script> <script type="text/javascript" src="/assets/js/just-the-docs.js"></script><meta name="viewport" content="width=device-width, initial-scale=1"><title>API Reference | ShipBlu Docs</title><meta name="generator" content="Jekyll v4.2.0" /><meta property="og:title" content="API Reference" /><meta property="og:locale" content="en_US" /><meta name="description" content="Full API Reference" /><meta property="og:description" content="Full API Reference" /><link rel="canonical" href="/api-reference" /><meta property="og:url" content="/api-reference" /><meta property="og:site_name" content="ShipBlu Docs" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2021-08-11T11:54:31+02:00" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="API Reference" /> <script type="application/ld+json"> {"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/api-reference"},"description":"Full API Reference","headline":"API Reference","dateModified":"2021-08-11T11:54:31+02:00","datePublished":"2021-08-11T11:54:31+02:00","url":"/api-reference","@context":"https://schema.org"}</script><body> <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"> <symbol id="svg-link" viewBox="0 0 24 24"><title>Link</title><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> </symbol> <symbol id="svg-search" viewBox="0 0 24 24"><title>Search</title><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"> <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> </symbol> <symbol id="svg-menu" viewBox="0 0 24 24"><title>Menu</title><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line> </svg> </symbol> <symbol id="svg-arrow-right" viewBox="0 0 24 24"><title>Expand</title><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline> </svg> </symbol> <symbol id="svg-doc" viewBox="0 0 24 24"><title>Document</title><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline> </svg> </symbol> </svg><div class="side-bar"><div class="site-header"> <a href="/" class="site-title lh-tight"> ShipBlu Docs </a> <a href="#" id="menu-button" class="site-button"> <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg> </a></div><nav role="navigation" aria-label="Main" id="site-nav" class="site-nav"><ul class="nav-list"><li class="nav-list-item"><a href="/" class="nav-list-link">Home</a><li class="nav-list-item"><a href="/quick-start" class="nav-list-link">Quick Start</a><li class="nav-list-item"><a href="/tutorial" class="nav-list-link">Tutorial</a><li class="nav-list-item active"><a href="/api-reference" class="nav-list-link active">API Reference</a><li class="nav-list-item"><a href="/about/" class="nav-list-link">About</a></ul></nav><footer class="site-footer"> This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.</footer></div><div class="main" id="top"><div id="main-header" class="main-header"><div class="search"><div class="search-input-wrap"> <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search ShipBlu Docs" aria-label="Search ShipBlu Docs" autocomplete="off"> <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label></div><div id="search-results" class="search-results"></div></div><nav aria-label="Auxiliary" class="aux-nav"><ul class="aux-nav-list"><li class="aux-nav-list-item"> <a href="//github.com/ShipBlu" class="site-button" > ShipBlu on GitHub </a></ul></nav></div><div id="main-content-wrap" class="main-content-wrap"><div id="main-content" class="main-content" role="main"><style> .request{ padding:5px 10px; margin-right: 15px; color:#FFF; } .get{ background:#60affe; } .get-desc{ background:#ebf3fb; border:1px solid #60affe; } .post{ background:#49cc90; } .post-desc{ background:#e8f6f0; border:1px solid #49cc90; } .put{ background:#fca130; } .put-desc{ background:#fbf1e6; border:1px solid #fca130; } .patch{ background:#50e3c2; } .patch-desc{ background:#e9f8f5; border:1px solid #50e3c2; } .delete{ background:#f93e3e; } .delete-desc{ background:#fbe7e7; border:1px solid #f93e3e; } .desc{ color:#000; padding:7px; font-weight:bold; margin-bottom: 7px; margin-top: 10px; }</style><h1 class="fs-9" id="api-reference"> <a href="#api-reference" class="anchor-heading" aria-labelledby="api-reference"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> API Reference</h1><p>TO BE DOCUMENTED</p><h2 id="geographic-availability"> <a href="#geographic-availability" class="anchor-heading" aria-labelledby="geographic-availability"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Geographic Availability</h2><ul><li><p><a href="#">pudos</a> <br /></p><p>We can define pudos as meeting points between customer and CA.<br /></p><p>Now after know what is pudos, let’s play with his API end-points.<br /></p><ol><li><div class="desc get-desc"><span class="request get">GET</span>/v1/pudos/</div><p>This end-point allow you to list all pudos.</p><li><div class="desc post-desc"><span class="request post">POST</span>/v1/pudos/</div><p>This end-point allow you to create new pudo point.</p><li><div class="desc get-desc"><span class="request get">GET</span>/v1/pudos/{id}/</div><p>This end-point allow you retrieve specific pudo based on his id.</p><li><div class="desc put-desc"><span class="request put">PUT</span>/v1/pudos/{id}/</div><p>This end-point allow you update specific pudo based on his id.</p><li><div class="desc patch-desc"><span class="request patch">PATCH</span>/v1/pudos/{id}/</div><p>This end-point allow you partial update specific pudo based on his id.</p><li><div class="desc delete-desc"><span class="request delete">DELETE</span>/v1/pudos/{id}/</div><p>This end-point allow you delete specific pudo based on his id.</p><li><div class="desc get-desc"><span class="request get">GET</span>/v1/pudo/cities/{city_id}/</div><p>This end-point allow you retrieve pudos in specific city based on city id.</p></ol><li><p><a href="#">governorates</a> <br /></p><ol><li><div class="desc get-desc"><span class="request get">GET</span>/v1/governorates/</div><p>This end-point allow you to list all governorates.</p><li><div class="desc post-desc"><span class="request post">POST</span>/v1/governorates/</div><p>This end-point allow you to create new governorate.</p><li><div class="desc get-desc"><span class="request get">GET</span>/v1/governorates/{governorate_id}/cities/</div><p>This end-point allow you retrieve all cities in specific governorate based on governorates id.</p></ol><li><p><a href="#">warehouses</a> <br /></p><p>A large building where shipments may be stored before their export or distribution for sale.</p><ol><li><div class="desc get-desc"><span class="request get">GET</span>/v1/warehouses/</div><p>This end-point allow you to list all warehouses.</p><li><div class="desc get-desc"><span class="request get">GET</span>/v1/warehouses/{warehouse_code}/zone-groups/</div><p>This end-point allow you to retrieve all zone-groups served by specific warehouse based on warehouse code.</p><li><div class="desc post-desc"><span class="request post">POST</span>/v1/warehouses/{warehouse_code}/zone-groups/</div><p>This end-point allow you to create new zone-groups served by specific warehouse.</p><li><div class="desc get-desc"><span class="request get">GET</span>/v1/warehouses/{warehouse_code}/zones/</div><p>This end-point allow you to retrieve all zones served by specific warehouse based on warehouse code.</p></ol><li><p><a href="#">zones</a> <br /></p><p>We can define zones as specific areas in city.<br /></p><p>Now after know what is zones, let’s play with his API end-points.<br /></p><ol><li><div class="desc get-desc"><span class="request get">GET</span>/v1/cities/{city_id}/zones/</div><p>This end-point allow you retrieve zones in specific city based on city id.</p></ol><li><p><a href="#">zone groups</a> <br /></p><ol><li><div class="desc get-desc"><span class="request get">GET</span>/v1/zone-groups/{id}/</div><p>This end-point allow you retrieve specific zone group based on his id.</p><li><div class="desc put-desc"><span class="request put">PUT</span>/v1/zone-groups/{id}/</div><p>This end-point allow you update specific zone group based on his id.</p><li><div class="desc patch-desc"><span class="request patch">PATCH</span>/v1/zone-groups/{id}/</div><p>This end-point allow you partial update specific zone group based on his id.</p><li><div class="desc delete-desc"><span class="request delete">DELETE</span>/v1/zone-groups/{id}/</div><p>This end-point allow you delete specific zone group based on his id.</p></ol><li><p><a href="#">cities</a> <br /></p><ol><li><div class="desc get-desc"><span class="request get">GET</span>/v1/cities/{id}/</div><p>This end-point allow you retrieve specific city based on his id.</p><li><div class="desc post-desc"><span class="request post">POST</span>/v1/cities/{id}/</div><p>check…</p><li><div class="desc put-desc"><span class="request put">PUT</span>/v1/cities/{id}/</div><p>This end-point allow you update specific city based on his id.</p><li><div class="desc patch-desc"><span class="request patch">PATCH</span>/v1/cities/{id}/</div><p>This end-point allow you partial update specific city based on his id.</p><li><div class="desc delete-desc"><span class="request delete">DELETE</span>/v1/cities/{id}/</div><p>This end-point allow you delete specific city based on his id.</p></ol></ul><h2 id="service-availability"> <a href="#service-availability" class="anchor-heading" aria-labelledby="service-availability"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Service Availability</h2><p>To Be Document</p><h2 id="pickup-points"> <a href="#pickup-points" class="anchor-heading" aria-labelledby="pickup-points"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Pickup Points</h2><ul><li><p><a href="#">pickup points</a> <br /></p><p>Meeting points between merchant and merchant agent.</p><ol><li><div class="desc get-desc"><span class="request get">GET</span>/v1/merchants/{merchant_id}/pickup-points/</div><p>This end-point allow you to list all pickup point of specific merchant based on merchant id.</p><li><div class="desc post-desc"><span class="request post">POST</span>/v1/merchants/{merchant_id}/pickup-points/</div><p>This end-point allow you to create new pickup point to specific merchant based on merchant id.</p><li><div class="desc get-desc"><span class="request get">GET</span>/v1/merchants/{merchant_id}/pickup-points/{id}/</div><p>This end-point allow you retrieve specific pickup point based on merchant id and his id.</p><li><div class="desc put-desc"><span class="request put">PUT</span>/v1/merchants/{merchant_id}/pickup-points/{id}/</div><p>This end-point allow you update specific pickup point based on merchant id and his id.</p><li><div class="desc patch-desc"><span class="request patch">PATCH</span>/v1/merchants/{merchant_id}/pickup-points/{id}/</div><p>This end-point allow you partial update pickup point based on merchant id and his id.</p><li><div class="desc delete-desc"><span class="request delete">DELETE</span>/v1/merchants/{merchant_id}/pickup-points/{id}/</div><p>This end-point allow you delete specific pickup point based on merchant id and his id.</p></ol></ul><h2 id="orders"> <a href="#orders" class="anchor-heading" aria-labelledby="orders"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Orders</h2><p>Orders divided on three categoricals</p><ul><li>Delivery<li>Return<li>Exchanges</ul><h3 id="delivery"> <a href="#delivery" class="anchor-heading" aria-labelledby="delivery"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Delivery</h3><ul><li><a href="#">delivery order</a> <br /><ol><li><div class="desc get-desc"><span class="request get">GET</span>/v1/delivery-orders/</div><p>This end-point allow you to list all delivery orders.</p><li><div class="desc post-desc"><span class="request post">POST</span>/v1/delivery-orders/</div><p>This end-point allow you to create new delivery order.</p></ol><li><a href="#">tracking</a> <br /><ol><li><div class="desc get-desc"><span class="request get">GET</span>/v1/delivery-order/{tracking_number}/</div><p>check…</p><li><div class="desc post-desc"><span class="request post">POST</span>/v1/delivery-order/{tracking_number}/</div><p>check…</p></ol><li><a href="#">upload</a> <br /><ol><li><div class="desc get-desc"><span class="request get">GET</span>/v1/delivery-order-upload/</div><p>check…</p><li><div class="desc post-desc"><span class="request post">POST</span>/v1/delivery-order-upload/</div><p>check…</p></ol><li><a href="#">uncompleted</a> <br /><ol><li><div class="desc get-desc"><span class="request get">GET</span>/v1/delivery-orders-uncompleted/</div><p>check…</p></ol></ul><h3 id="return"> <a href="#return" class="anchor-heading" aria-labelledby="return"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Return</h3><ul><li><a href="#">return order</a> <br /><ol><li><div class="desc get-desc"><span class="request get">GET</span>/v1/returns/</div><p>This end-point allow you to list all return orders.</p><li><div class="desc post-desc"><span class="request post">POST</span>/v1/returns/</div><p>This end-point allow you to create new return orde</p><li><div class="desc get-desc"> <span class="request get">GET</span>/v1/returns/{id}/</div><p>This end-point allow you retrieve specific return based on his id.</p><li><div class="desc put-desc"><span class="request put">PUT</span>/v1/returns/{id}/</div><p>This end-point allow you update specific return based on his id.</p><li><div class="desc patch-desc"><span class="request patch">PATCH</span>/v1/returns/{id}/</div><p>This end-point allow you partial update return pudo based on his id.</p><li><div class="desc delete-desc"><span class="request delete">DELETE</span>/v1/returns/{id}/</div><p>This end-point allow you delete specific return based on his id.</p></ol><li><a href="#">tracking</a> <br /><ol><li><div class="desc get-desc"><span class="request get">GET</span>/v1/return/{tracking_number}/</div><p>check…</p><li><div class="desc post-desc"><span class="request post">POST</span>/v1/return/{tracking_number}/</div><p>check…</p></ol><li><a href="#">uncompleted</a> <br /><ol><li><div class="desc get-desc"><span class="request get">GET</span>/v1/return-orders-uncompleted/</div><p>check…</p></ol></ul><h3 id="exchanges"> <a href="#exchanges" class="anchor-heading" aria-labelledby="exchanges"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Exchanges</h3><ul><li><a href="#">exchange order</a> <br /><ol><li><div class="desc get-desc"> <span class="request get">GET</span>/v1/exchanges/</div></ol><p>&lt;/div&gt; This end-point allow you to list all exchange orders.</p><ol><li><div class="desc post-desc"> <span class="request post">POST</span>/v1/exchanges/</div></ol><p>&lt;/div&gt; This end-point allow you to create new exchange orders.</p><ol><li><div class="desc get-desc"> <span class="request get">GET</span>/v1/exchanges/{id}/</div></ol><p>&lt;/div&gt; This end-point allow you retrieve specific exchange orders based on his id.</p><ol><li><div class="desc put-desc"><span class="request put">PUT</span>/v1/exchanges/{id}/</div><p>This end-point allow you update specific exchange orders based on his id.</p><li><div class="desc patch-desc"><span class="request patch">PATCH</span>/v1/exchanges/{id}/</div><p>This end-point allow you partial update specific exchange orders based on his id.</p><li><div class="desc delete-desc"><span class="request delete">DELETE</span>/v1/exchanges/{id}/</div><p>This end-point allow you delete specific exchange orders based on his id.</p></ol></ul><h3 id="cash-collection"> <a href="#cash-collection" class="anchor-heading" aria-labelledby="cash-collection"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Cash Collection</h3><p>Collect shipment cost from customer.</p><ul><li><a href="#">cash collection</a></ul><h2 id="billing-statements"> <a href="#billing-statements" class="anchor-heading" aria-labelledby="billing-statements"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Billing Statements</h2><ul><li><a href="#">invoices</a> <br /><ol><li><div class="desc get-desc"> <span class="request get">GET</span>/v1/billing/invoices/</div><p>This end-point allow you to list all invoices.</p><li><div class="desc get-desc"> <span class="request get">GET</span>/v1/billing/invoices/{id}/</div><p>This end-point allow you to retrieve specific invoice based on his id.</p><li><div class="desc post-desc"> <span class="request post">POST</span>/v1/billing/invoices/order/</div><p>This end-point allow you to create new invoice for orders list.</p></ol><li><a href="#">statements</a></ul><hr><footer><p><a href="#top" id="back-to-top">Back to top</a></p><p class="text-small text-grey-dk-100 mb-0">Copyright &copy; 2021 ShipBlu.</p><div class="d-flex mt-2"><p class="text-small text-grey-dk-000 mb-0"> <a href="https://github.com/ShipBlu/shipblu.github.io/tree/main/_docs/04_api_reference.md" id="edit-this-page">Edit this page on GitHub</a></p></div></footer></div></div><a href="#" id="search-button" class="search-button"> <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-search"></use></svg> </a><div class="search-overlay"></div></div>
+<!DOCTYPE html><html lang="en-US"><head><meta charset="UTF-8"><meta http-equiv="X-UA-Compatible" content="IE=Edge"><link rel="shortcut icon" href="/favicon.ico" type="image/x-icon"><link rel="stylesheet" href="/assets/css/just-the-docs-default.css"> <script async src="https://www.googletagmanager.com/gtag/js?id=G-CV04NXHZ3V"></script> <script> window.dataLayer = window.dataLayer || []; function gtag(){dataLayer.push(arguments);} gtag('js', new Date()); gtag('config', 'G-CV04NXHZ3V', { 'anonymize_ip': true }); </script> <script type="text/javascript" src="/assets/js/vendor/lunr.min.js"></script> <script type="text/javascript" src="/assets/js/just-the-docs.js"></script><meta name="viewport" content="width=device-width, initial-scale=1"><title>API Reference | ShipBlu Docs</title><meta name="generator" content="Jekyll v4.2.0" /><meta property="og:title" content="API Reference" /><meta property="og:locale" content="en_US" /><meta name="description" content="Full API Reference" /><meta property="og:description" content="Full API Reference" /><link rel="canonical" href="/api-reference" /><meta property="og:url" content="/api-reference" /><meta property="og:site_name" content="ShipBlu Docs" /><meta property="og:type" content="article" /><meta property="article:published_time" content="2021-08-15T17:38:44+02:00" /><meta name="twitter:card" content="summary" /><meta property="twitter:title" content="API Reference" /> <script type="application/ld+json"> {"@type":"BlogPosting","mainEntityOfPage":{"@type":"WebPage","@id":"/api-reference"},"description":"Full API Reference","headline":"API Reference","dateModified":"2021-08-15T17:38:44+02:00","datePublished":"2021-08-15T17:38:44+02:00","url":"/api-reference","@context":"https://schema.org"}</script><body> <svg xmlns="http://www.w3.org/2000/svg" style="display: none;"> <symbol id="svg-link" viewBox="0 0 24 24"><title>Link</title><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-link"><path d="M10 13a5 5 0 0 0 7.54.54l3-3a5 5 0 0 0-7.07-7.07l-1.72 1.71"></path><path d="M14 11a5 5 0 0 0-7.54-.54l-3 3a5 5 0 0 0 7.07 7.07l1.71-1.71"></path> </svg> </symbol> <symbol id="svg-search" viewBox="0 0 24 24"><title>Search</title><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-search"> <circle cx="11" cy="11" r="8"></circle><line x1="21" y1="21" x2="16.65" y2="16.65"></line> </svg> </symbol> <symbol id="svg-menu" viewBox="0 0 24 24"><title>Menu</title><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-menu"><line x1="3" y1="12" x2="21" y2="12"></line><line x1="3" y1="6" x2="21" y2="6"></line><line x1="3" y1="18" x2="21" y2="18"></line> </svg> </symbol> <symbol id="svg-arrow-right" viewBox="0 0 24 24"><title>Expand</title><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-chevron-right"><polyline points="9 18 15 12 9 6"></polyline> </svg> </symbol> <symbol id="svg-doc" viewBox="0 0 24 24"><title>Document</title><svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" class="feather feather-file"><path d="M13 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V9z"></path><polyline points="13 2 13 9 20 9"></polyline> </svg> </symbol> </svg><div class="side-bar"><div class="site-header"> <a href="/" class="site-title lh-tight"> ShipBlu Docs </a> <a href="#" id="menu-button" class="site-button"> <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-menu"></use></svg> </a></div><nav role="navigation" aria-label="Main" id="site-nav" class="site-nav"><ul class="nav-list"><li class="nav-list-item"><a href="/" class="nav-list-link">Home</a><li class="nav-list-item"><a href="/quick-start" class="nav-list-link">Quick Start</a><li class="nav-list-item"><a href="/tutorial" class="nav-list-link">Tutorial</a><li class="nav-list-item active"><a href="/api-reference" class="nav-list-link active">API Reference</a><li class="nav-list-item"><a href="/about/" class="nav-list-link">About</a></ul></nav><footer class="site-footer"> This site uses <a href="https://github.com/pmarsceill/just-the-docs">Just the Docs</a>, a documentation theme for Jekyll.</footer></div><div class="main" id="top"><div id="main-header" class="main-header"><div class="search"><div class="search-input-wrap"> <input type="text" id="search-input" class="search-input" tabindex="0" placeholder="Search ShipBlu Docs" aria-label="Search ShipBlu Docs" autocomplete="off"> <label for="search-input" class="search-label"><svg viewBox="0 0 24 24" class="search-icon"><use xlink:href="#svg-search"></use></svg></label></div><div id="search-results" class="search-results"></div></div><nav aria-label="Auxiliary" class="aux-nav"><ul class="aux-nav-list"><li class="aux-nav-list-item"> <a href="//github.com/ShipBlu" class="site-button" > ShipBlu on GitHub </a></ul></nav></div><div id="main-content-wrap" class="main-content-wrap"><div id="main-content" class="main-content" role="main"><head><link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-KyZXEAg3QhqLMpG8r+8fhAXLRk2vvoC2f3B09zVXn8CA5QIVfZOJ3BCsw2P0p/We" crossorigin="anonymous" /><style> .request{ padding:5px 10px; margin-right: 15px; color:#FFF; } .get{ background:#60affe; } .get-desc{ background:#ebf3fb; border:1px solid #60affe; } .post{ background:#49cc90; } .post-desc{ background:#e8f6f0; border:1px solid #49cc90; } .put{ background:#fca130; } .put-desc{ background:#fbf1e6; border:1px solid #fca130; } .patch{ background:#50e3c2; } .patch-desc{ background:#e9f8f5; border:1px solid #50e3c2; } .delete{ background:#f93e3e; } .delete-desc{ background:#fbe7e7; border:1px solid #f93e3e; } .desc{ color:#000; padding:7px; font-weight:bold; margin-bottom: 7px; margin-top: 10px; } .black{ background:#4c4848 } .accordion-body{ font-size: 17px; font-weight: normal; }</style><h1 class="fs-9" id="api-reference"> <a href="#api-reference" class="anchor-heading" aria-labelledby="api-reference"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> API Reference</h1><p>TO BE DOCUMENTED</p><h2 id="geographic-availability"> <a href="#geographic-availability" class="anchor-heading" aria-labelledby="geographic-availability"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Geographic Availability</h2><ul><li><p><a href="#">pudos</a> <br /></p><p>We can define pudos as meeting points between customer and CA.<br /></p><p>Now after know what is pudos, let’s play with his API end-points.<br /></p><ol><li><div class="desc get-desc"><span class="request get">GET</span>/v1/pudos/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you to list all pudos.</p><li><div class="desc post-desc"><span class="request post">POST</span>/v1/pudos/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you to create new pudo point.</p><li><div class="desc get-desc"><span class="request get">GET</span>/v1/pudos/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you retrieve specific pudo based on his id.</p><li><div class="desc put-desc"><span class="request put">PUT</span>/v1/pudos/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you update specific pudo based on his id.</p><li><div class="desc patch-desc"><span class="request patch">PATCH</span>/v1/pudos/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you partial update specific pudo based on his id.</p><li><div class="desc delete-desc"><span class="request delete">DELETE</span>/v1/pudos/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you delete specific pudo based on his id.</p><li><div class="desc get-desc"><span class="request get">GET</span>/v1/pudo/cities/{city_id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you retrieve pudos in specific city based on city id.</p></ol><li><p><a href="#">governorates</a> <br /></p><ol><li><div class="desc get-desc"><span class="request get">GET</span>/v1/governorates/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you to list all governorates.</p><li><div class="desc post-desc"><span class="request post">POST</span>/v1/governorates/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you to create new governorate.</p><li><div class="desc get-desc"><span class="request get">GET</span>/v1/governorates/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you to retrieve specific governorate based on his id.</p><li><div class="desc put-desc"><span class="request put">PUT</span>/v1/governorates/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you to update specific governorate based on his id.</p><li><div class="desc patch-desc"><span class="request patch">PATCH</span>/v1/governorates/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you to partial update specific governorate based on his id.</p><li><div class="desc delete-desc"><span class="request delete">DELETE</span>/v1/governorates/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you to delete specific governorate based on his id.</p><li><div class="desc get-desc"><span class="request get">GET</span>/v1/governorates/{governorate_id}/cities/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you retrieve all cities in specific governorate based on governorates id.</p></ol><li><p><a href="#">warehouses</a> <br /></p><p>A large building where shipments may be stored before their export or distribution for sale.</p><ol><li><div class="desc get-desc"><span class="request get">GET</span>/v1/warehouses/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you to list all warehouses.</p><li><div class="desc get-desc"><span class="request get">GET</span>/v1/warehouses/{warehouse_code}/zone-groups/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you to retrieve all zone-groups served by specific warehouse based on warehouse code.</p><li><div class="desc post-desc"><span class="request post">POST</span>/v1/warehouses/{warehouse_code}/zone-groups/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you to create new zone-groups served by specific warehouse.</p><li><div class="desc get-desc"><span class="request get">GET</span>/v1/warehouses/{warehouse_code}/zones/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you to retrieve all zones served by specific warehouse based on warehouse code.</p><li><div class="desc get-desc"><span class="request get">GET</span>/v1/warehouse/{warehouse_code}/agents/{agent_type}/<div><p class="request black">Request body exampel</p><div> In this end-point no request body needed but two parameters are required <br /> <code>agent_type, warehouse_code</code></div><p class="request black">Response header exampel</p><pre>
+     allow: GET,HEAD,OPTIONS 
+     content-length: 58 
+     content-type: application/json 
+     date: Sun,15 Aug 2021 08:36:49 GMT 
+     referrer-policy: same-origin 
+     server: WSGIServer/0.2 CPython/3.9.6 
+     vary: Accept,Origin,Cookie 
+     www-authenticate: Bearer realm="api" 
+     x-content-type-options: nosniff 
+     x-frame-options: DENY 
+     x-queryinspect-duplicate-sql-queries: 0 
+     x-queryinspect-num-sql-queries: 0 
+     x-queryinspect-total-request-time: 7 ms 
+     x-queryinspect-total-sql-time: 0 ms 
+     x-xss-protection: 1; mode=bloc
+    </pre><p class="request black">Response body exampel</p><pre>
+    {
+         "count": integer,
+         "next": string,
+         "previous": string,
+         "results": [
+             {
+                 "id": integer,
+                 "created": string,
+                 "modified": string,
+                 "uid": string,
+                 "email": string,
+                 "first_name": string,
+                 "last_name": string,
+                 "phone_number": string,
+                 "national_id": string,
+                 "primary_warehouse": integer,
+                 "zone_group": integer,
+                 "act_cash_account": string
+             }
+         ]
+     }
+    </pre></div></div><p>This end-point allow you to retrieve all agents based on warehouse code and agent type.</p><li><div class="desc get-desc"><span class="request get">GET</span>/v1/warehouse/{warehouse_code}/task-sheets/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you to retrieve all task sheets based on warehouse code.</p></ol><li><p><a href="#">zones</a> <br /></p><p>We can define zones as specific areas in city.<br /></p><p>Now after know what is zones, let’s play with his API end-points.<br /></p><ol><li><div class="desc get-desc"><span class="request get">GET</span>/v1/cities/{city_id}/zones/<div><p class="request black">Request body exampel</p><div> In this end-point no request body needed but only one parameter is required <br /> <code>city_id</code></div><p class="request black">Response header exampel</p><pre>
+     allow: GET,HEAD,OPTIONS 
+     content-length: 58 
+     content-type: application/json 
+     date: Sun,15 Aug 2021 09:18:53 GMT 
+     referrer-policy: same-origin 
+     server: WSGIServer/0.2 CPython/3.9.6 
+     vary: Accept,Origin,Cookie 
+     www-authenticate: Bearer realm="api" 
+     x-content-type-options: nosniff 
+     x-frame-options: DENY 
+     x-queryinspect-duplicate-sql-queries: 0 
+     x-queryinspect-num-sql-queries: 0 
+     x-queryinspect-total-request-time: 7 ms 
+     x-queryinspect-total-sql-time: 0 ms 
+     x-xss-protection: 1; mode=block
+    </pre><p class="request black">Response body exampel</p><pre>
+    [
+         {
+             "id": integer,
+             "name": string,
+             "radius": float,
+             "city": integer,
+             "served_by": integer,
+             "zone_group": list
+         },
+         ....
+    ]
+    </pre></div></div><p>This end-point allow you retrieve zones in specific city based on city id.</p></ol><li><p><a href="#">zone groups</a> <br /></p><ol><li><div class="desc get-desc"><span class="request get">GET</span>/v1/zone-groups/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you retrieve specific zone group based on his id.</p><li><div class="desc put-desc"><span class="request put">PUT</span>/v1/zone-groups/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you update specific zone group based on his id.</p><li><div class="desc patch-desc"><span class="request patch">PATCH</span>/v1/zone-groups/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you partial update specific zone group based on his id.</p><li><div class="desc delete-desc"><span class="request delete">DELETE</span>/v1/zone-groups/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you delete specific zone group based on his id.</p></ol><li><p><a href="#">cities</a> <br /></p><ol><li><div class="desc get-desc"><span class="request get">GET</span>/v1/cities/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you retrieve specific city based on his id.</p><li><div class="desc post-desc"><span class="request post">POST</span>/v1/cities/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>check…</p><li><div class="desc put-desc"><span class="request put">PUT</span>/v1/cities/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you update specific city based on his id.</p><li><div class="desc patch-desc"><span class="request patch">PATCH</span>/v1/cities/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you partial update specific city based on his id.</p><li><div class="desc delete-desc"><span class="request delete">DELETE</span>/v1/cities/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you delete specific city based on his id.</p></ol></ul><h2 id="service-availability"> <a href="#service-availability" class="anchor-heading" aria-labelledby="service-availability"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Service Availability</h2><ul><li><p><a href="#">service availability</a> <br /></p><p>To be document</p><ol><li><div class="desc get-desc"><span class="request get">GET</span>/v1/services-availability/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>checks…</p><li><div class="desc post-desc"><span class="request post">POST</span>/v1/services-availability/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>checks…</p><li><div class="desc get-desc"><span class="request get">GET</span>/v1/services-availability/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>checks…</p><li><div class="desc put-desc"><span class="request put">PUT</span>/v1/services-availability/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>checks…</p><li><div class="desc patch-desc"><span class="request patch">PATCH</span>/v1/services-availability/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you partial update specific pudo based on his id.</p><li><div class="desc delete-desc"><span class="request delete">DELETE</span>/v1/services-availability/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>checks…</p></ol></ul><h2 id="pickup-points"> <a href="#pickup-points" class="anchor-heading" aria-labelledby="pickup-points"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Pickup Points</h2><ul><li><p><a href="#">pickup points</a> <br /></p><p>Meeting points between merchant and merchant agent.</p><ol><li><div class="desc get-desc"><span class="request get">GET</span>/v1/merchants/{merchant_id}/pickup-points/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you to list all pickup point of specific merchant based on merchant id.</p><li><div class="desc post-desc"><span class="request post">POST</span>/v1/merchants/{merchant_id}/pickup-points/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you to create new pickup point to specific merchant based on merchant id.</p><li><div class="desc get-desc"><span class="request get">GET</span>/v1/merchants/{merchant_id}/pickup-points/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you retrieve specific pickup point based on merchant id and his id.</p><li><div class="desc put-desc"><span class="request put">PUT</span>/v1/merchants/{merchant_id}/pickup-points/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you update specific pickup point based on merchant id and his id.</p><li><div class="desc patch-desc"><span class="request patch">PATCH</span>/v1/merchants/{merchant_id}/pickup-points/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you partial update pickup point based on merchant id and his id.</p><li><div class="desc delete-desc"><span class="request delete">DELETE</span>/v1/merchants/{merchant_id}/pickup-points/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you delete specific pickup point based on merchant id and his id.</p></ol></ul><h2 id="orders"> <a href="#orders" class="anchor-heading" aria-labelledby="orders"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Orders</h2><p>Orders divided on three categoricals</p><ul><li>Delivery<li>Return<li>Exchanges</ul><h3 id="delivery"> <a href="#delivery" class="anchor-heading" aria-labelledby="delivery"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Delivery</h3><ul><li><a href="#">delivery order</a> <br /><ol><li><div id="accordionExample_1" class="desc get-desc accordion"><span class="request get">GET</span>/v1/delivery-orders/<div style="margin-top: 15px;"><h2 class="accordion-header" id="deliveryHeadingOne"> <a href="#deliveryHeadingOne" class="anchor-heading" aria-labelledby="deliveryHeadingOne"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseOne" aria-expanded="true" aria-controls="collapseOne"> Request body exampel </button></h2><div id="deliveryCollapseOne" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingOne" data-bs-parent="#accordionExample"><div class="accordion-body"> In this end-point no request body needed.</div></div><h2 class="accordion-header" id="deliveryHeadingTwo"> <a href="#deliveryHeadingTwo" class="anchor-heading" aria-labelledby="deliveryHeadingTwo"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseTwo" aria-expanded="true" aria-controls="collapseOne"> Response header exampel </button></h2><div id="deliveryCollapseTwo" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingTwo" data-bs-parent="#accordionExample"><div class="accordion-body"><pre>
+     allow: GET,POST,HEAD,OPTIONS 
+     content-length: 58 
+     content-type: application/json 
+     date: Sun,15 Aug 2021 09:53:24 GMT 
+     referrer-policy: same-origin 
+     server: WSGIServer/0.2 CPython/3.9.6 
+     vary: Accept,Origin,Cookie 
+     www-authenticate: Bearer realm="api" 
+     x-content-type-options: nosniff 
+     x-frame-options: DENY 
+     x-queryinspect-duplicate-sql-queries: 0 
+     x-queryinspect-num-sql-queries: 0 
+     x-queryinspect-total-request-time: 10 ms 
+     x-queryinspect-total-sql-time: 0 ms 
+     x-xss-protection: 1; mode=block
+    </pre></div></div><h2 class="accordion-header" id="deliveryHeadingThree"> <a href="#deliveryHeadingThree" class="anchor-heading" aria-labelledby="deliveryHeadingThree"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseThree" aria-expanded="true" aria-controls="collapseOne"> Response body exampel </button></h2><div id="deliveryCollapseThree" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingThree" data-bs-parent="#accordionExample"><div class="accordion-body"><pre>
+     {
+             "count": integer,
+             "next": string,
+             "previous": string,
+             "results": [
+                 {
+                     "id": integer,
+                     "packages": [
+                         {
+                             "id": integer,
+                             "supplies_required": boolean,
+                             "sms_confirmation_code": string,
+                             "package": {
+                                 "id": integer,
+                                 "created": string,
+                                 "modified": string,
+                                 "description": string,
+                                 "weight": number,
+                                 "volume": number,
+                                 "fragile": boolean,
+                                 "package_size": {
+                                     "id": integer,
+                                     "name": string,
+                                     "short_code": string,
+                                     "description": string
+                                 }
+                             },
+                             "package_location": string
+                         }
+                     ],
+                     "delivery_attempts": string,
+                     "pickup_date": string,
+                     "cash_deposited": boolean
+                     "delivered_date": string,
+                     "created": string,
+                     "modified": string,
+                     "tracking_number": string,
+                     "merchant_order_reference": string,
+                     "order_notes": string,
+                     "is_exchange": boolean,
+                     "is_pudo": boolean,
+                     "is_counter_dropoff": boolean,
+                     "cash_processing": boolean,
+                     "cash_amount": number,
+                     "preferred_date": string,
+                     "estimated_date": string,
+                     "status": string,
+                     "intermediate_warehouses": [string],
+                     "dispatch_early": string,
+                     "dispatch_late": string,
+                     "merchant": {
+                         "id": integer,
+                         "created": string,
+                         "modified": string,
+                         "name": string,
+                         "store_url": string,
+                         "logo": string,
+                         "store_phone": string,
+                         "store_email": string,
+                         "status": string",
+                         "api_key": string,
+                         "cash_processing_fees": number,
+                         "cash_processing_fees_max": number,
+                         "cash_processing_percentage": number,
+                         "cash_processing_threshold": number,
+                         "address": {
+                             "id": integer,
+                             "created": string,
+                             "modified": string,
+                             "nickname": string,
+                             "line_1": string,
+                             "line_2": string,
+                             "line_3": string,
+                             "zip_code": string,
+                             "latitude": number,
+                             "longitude": number,
+                             "google_maps_link": number,
+                             "notes": number,
+                             "zone": {
+                                 "id": integer,
+                                 "name": string,
+                                 "radius": number,
+                                 "city": {
+                                     "id": integer,
+                                     "name": string,
+                                     "population": integer,
+                                     "is_captial": boolean,
+                                     "governorate": {
+                                         "id": integer,
+                                         "name": string
+                                     }
+                                 },
+                                 "served_by": {
+                                     "id": integer,
+                                     "name": string,
+                                     "code": string,
+                                     "capacity": number,
+                                     "current_utilization": number,
+                                     "size": number,
+                                     "latitude": number,
+                                     "longitude": number,
+                                     "address": string,
+                                     "is_virtual": boolean
+                                 },
+                                 "zone_group": [{
+                                     "id": integer,
+                                     "created": string,
+                                     "modified": string,
+                                     "name": string,
+                                     "served_by": {
+                                         "id": integer,
+                                         "name": string,
+                                         "code": string,
+                                         "capacity": number,
+                                         "current_utilization": number,
+                                         "size": number,
+                                         "latitude": number,
+                                         "longitude": number,
+                                         "address": string,
+                                         "is_virtual": boolean
+                                     },
+                                 }]
+                             }
+                         },
+                         "subscription": {
+                             "id": integer,
+                             "name": string
+                         },
+                         "pricing_lookup_delivery": {
+                             "id": integer,
+                             "created": string,
+                             "modified": string,
+                             "status": string,
+                             "service_type": string,
+                             "package": {
+                                 "id": integer,
+                                 "created": string,
+                                 "modified": string,
+                                 "status": string,
+                                 "name": string,
+                                 "google_sheet_url": string
+                             }
+                         },
+                         "pricing_lookup_return": {
+                             "id": integer,
+                             "created": string,
+                             "modified": string,
+                             "status": string,
+                             "service_type": string,
+                             "package": {
+                                 "id": integer,
+                                 "created": string,
+                                 "modified": string,
+                                 "status": string,
+                                 "name": string,
+                                 "google_sheet_url": string
+                             }
+                         },
+                         "pricing_lookup_exchange": {
+                             "id": integer,
+                             "created": string,
+                             "modified": string,
+                             "status": string,
+                             "service_type": string,
+                             "package": {
+                                 "id": integer,
+                                 "created": string,
+                                 "modified": string,
+                                 "status": string,
+                                 "name": string,
+                                 "google_sheet_url": string
+                             }
+                         },
+                         "pricing_lookup_cash_collection": {
+                             "id": integer,
+                             "created": string,
+                             "modified": string,
+                             "status": string,
+                             "service_type": string,
+                             "package": {
+                                 "id": integer,
+                                 "created": string,
+                                 "modified": string,
+                                 "status": string,
+                                 "name": string,
+                                 "google_sheet_url": string
+                             }
+                         },
+                         "act_cod_account": {
+                             "account_number": string,
+                             "created": string,
+                             "modified": string,
+                             "name": string,
+                             "parent_account": {
+                                 "account_number": string",
+                                 "created": string,
+                                 "modified": string,
+                                 "name": string,
+                                 "parent_account": object,
+                                 "type": {
+                                     "id": integer,
+                                     "name": string
+                                 }
+                             },
+                             "type": {
+                                 "id": integer,
+                                 "name": string
+                             }
+                         },
+                         "act_shipping_revenue_account": {
+                             "account_number": string,
+                             "created": string,
+                             "modified": string,
+                             "name": string,
+                             "parent_account": {
+                                 "account_number": string",
+                                 "created": string,
+                                 "modified": string,
+                                 "name": string,
+                                 "parent_account": object,
+                                 "type": {
+                                     "id": integer,
+                                     "name": string
+                                 }
+                             },
+                             "type": {
+                                 "id": integer,
+                                 "name": string
+                             }
+                         },
+                         "act_discounts_account": {
+                             "account_number": string,
+                             "created": string,
+                             "modified": string,
+                             "name": string,
+                             "parent_account": {
+                                 "account_number": string",
+                                 "created": string,
+                                 "modified": string,
+                                 "name": string,
+                                 "parent_account": object,
+                                 "type": {
+                                     "id": integer,
+                                     "name": string
+                                 }
+                             },
+                             "type": {
+                                 "id": integer,
+                                 "name": string
+                             }
+                         },
+                         "act_account_receivable": {
+                             "account_number": string,
+                             "created": string,
+                             "modified": string,
+                             "name": string,
+                             "parent_account": {
+                                 "account_number": string",
+                                 "created": string,
+                                 "modified": string,
+                                 "name": string,
+                                 "parent_account": object,
+                                 "type": {
+                                     "id": integer,
+                                     "name": string
+                                 }
+                             },
+                             "type": {
+                                 "id": integer,
+                                 "name": string
+                             }
+                         },
+                         "act_supplies_revenue_account": {
+                             "account_number": string,
+                             "created": string,
+                             "modified": string,
+                             "name": string,
+                             "parent_account": {
+                                 "account_number": string",
+                                 "created": string,
+                                 "modified": string,
+                                 "name": string,
+                                 "parent_account": object,
+                                 "type": {
+                                     "id": integer,
+                                     "name": string
+                                 }
+                             },
+                             "type": {
+                                 "id": integer,
+                                 "name": string
+                             }
+                         },
+                         "pickup_days": [{
+                             "id": integer,
+                             "day": string
+                         }],
+                         "billing_days": [{
+                             "id": integer,
+                             "day": string
+                         }]
+                     },
+                     "customer": {
+                         "id": integer,
+                         "created": string,
+                         "modified": string,
+                         "first_name": string,
+                         "last_name": string,
+                         "email": string,
+                         "phone": string,
+                         "address": {
+                             "id": integer,
+                             "created": string,
+                             "modified": string,
+                             "nickname": string,
+                             "line_1": string,
+                             "line_2": string,
+                             "line_3": string,
+                             "zip_code": string,
+                             "latitude": number,
+                             "longitude": number,
+                             "google_maps_link": string,
+                             "notes": string,
+                             "zone": {
+                                 "id": integer,
+                                 "name": string,
+                                 "radius": number,
+                                 "city": {
+                                     "id": integer,
+                                     "name": string,
+                                     "population": integer,
+                                     "is_captial": boolean,
+                                     "governorate": {
+                                         "id": integer,
+                                         "name": string
+                                     }
+                                 },
+                                 "served_by": {
+                                     "id": integer,
+                                     "name": string,
+                                     "code": string,
+                                     "capacity": number,
+                                     "current_utilization": number,
+                                     "size": number,
+                                     "latitude": number,
+                                     "longitude": number,
+                                     "address": string,
+                                     "is_virtual": boolean
+                                 },
+                                 "zone_group": [{
+                                     "id": integer,
+                                     "created": string,
+                                     "modified": string,
+                                     "name": string,
+                                     "served_by": {
+                                         "id": integer,
+                                         "name": string,
+                                         "code": string,
+                                         "capacity": number,
+                                         "current_utilization": number,
+                                         "size": number,
+                                         "latitude": number,
+                                         "longitude": number,
+                                         "address": string,
+                                         "is_virtual": boolean
+                                     },
+                                 }]
+                             }
+                         },
+                         "act_cash_account": {
+                             "account_number": string,
+                             "created": string,
+                             "modified": string,
+                             "name": string,
+                             "parent_account": {
+                                 "account_number": string",
+                                 "created": string,
+                                 "modified": string,
+                                 "name": string,
+                                 "parent_account": object,
+                                 "type": {
+                                     "id": integer,
+                                     "name": string
+                                 }
+                             },
+                             "type": {
+                                 "id": integer,
+                                 "name": string
+                             }
+                         }
+                     },
+                     "service_level": {
+                         "id": integer,
+                         "name": string,
+                         "short_code": string,
+                         "description": string
+                     },
+                     "pickup_point": {
+                         "id": integer,
+                         "created": string,
+                         "modified": string,
+                         "is_default": boolean,
+                         "merchant": object,
+                         "address":object
+                     },
+                     "order_price": {
+                         "id": integer,
+                         "created": string,
+                         "modified": string,
+                         "subtotal": number,
+                         "vat": number,
+                         "postal_tax": number,
+                         "total": number
+                     },
+                     "current_warehouse": {
+                         "id": integer,
+                         "name": string,
+                         "code": string",
+                         "capacity": number,
+                         "current_utilization": number,
+                         "size": number,
+                         "latitude": number,
+                         "longitude": number,
+                         "address": string,
+                         "is_virtual": boolean
+                     },
+                     "inbound_warehouse": {
+                         "id": integer,
+                         "name": string,
+                         "code": string",
+                         "capacity": number,
+                         "current_utilization": number,
+                         "size": number,
+                         "latitude": number,
+                         "longitude": number,
+                         "address": string,
+                         "is_virtual": boolean
+                     },
+                     "outbound_warehouse": {
+                         "id": integer,
+                         "name": string,
+                         "code": string",
+                         "capacity": number,
+                         "current_utilization": number,
+                         "size": number,
+                         "latitude": number,
+                         "longitude": number,
+                         "address": string,
+                         "is_virtual": boolean
+                     },
+                     "preferred_window": [{
+                         "id": integer,
+                         "display_name": string
+                     }]
+                 }
+             ]
+         }
+    </pre></div></div></div></div><p>This end-point allow you to list all delivery orders.</p><li><div id="accordionExample_2" class="desc post-desc accordion"><span class="request post">POST</span>/v1/delivery-orders/<div style="margin-top: 15px;"><h2 class="accordion-header" id="deliveryHeadingOne_2"> <a href="#deliveryHeadingOne_2" class="anchor-heading" aria-labelledby="deliveryHeadingOne_2"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseOne_2" aria-expanded="true" aria-controls="collapseOne"> Request body exampel </button></h2><div id="deliveryCollapseOne_2" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingOne_2" data-bs-parent="#accordionExample"><div class="accordion-body"><pre>
+    {
+         "customer": {
+             "first_name": string,
+             "last_name": string,
+             "phone": string,
+             "address":{
+                 "line_1":string,
+                 "line_2":string,
+                 "zone": integer
+             }
+         },
+         "service_level": integer,
+         "packages":[
+             {
+                 "package_size": integer
+             }
+         ]
+     }
+    </pre></div></div><h2 class="accordion-header" id="deliveryHeadingTwo_2"> <a href="#deliveryHeadingTwo_2" class="anchor-heading" aria-labelledby="deliveryHeadingTwo_2"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseTwo_2" aria-expanded="true" aria-controls="collapseOne"> Response header exampel </button></h2><div id="deliveryCollapseTwo_2" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingTwo_2" data-bs-parent="#accordionExample"><div class="accordion-body"><pre>
+     access-control-allow-origin: * 
+     allow: GET,POST,HEAD,OPTIONS 
+     content-length: 58 
+     content-type: application/json 
+     date: Sun,15 Aug 2021 12:56:02 GMT 
+     referrer-policy: same-origin 
+     server: WSGIServer/0.2 CPython/3.9.6 
+     vary: Accept,Origin,Cookie 
+     www-authenticate: Bearer realm="api" 
+     x-content-type-options: nosniff 
+     x-frame-options: DENY 
+     x-queryinspect-duplicate-sql-queries: 0 
+     x-queryinspect-num-sql-queries: 0 
+     x-queryinspect-total-request-time: 9 ms 
+     x-queryinspect-total-sql-time: 0 ms 
+     x-xss-protection: 1; mode=block
+    </pre></div></div><h2 class="accordion-header" id="deliveryHeadingThree_2"> <a href="#deliveryHeadingThree_2" class="anchor-heading" aria-labelledby="deliveryHeadingThree_2"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseThree_2" aria-expanded="true" aria-controls="collapseOne"> Response body exampel </button></h2><div id="deliveryCollapseThree_2" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingThree_2" data-bs-parent="#accordionExample"><div class="accordion-body"><pre>
+    {
+         "id": integer,
+         "customer": {
+             "id": integer,
+             "address": {
+                 "id": integer,
+                 "created": string,
+                 "modified": string,
+                 "nickname": string,
+                 "line_1": string,
+                 "line_2": string,
+                 "line_3": null,
+                 "zip_code": null,
+                 "latitude": null,
+                 "longitude": null,
+                 "google_maps_link": null,
+                 "notes": null,
+                 "zone": integer
+             },
+             "created": string,
+             "modified": string,
+             "first_name": string,
+             "last_name": string,
+             "email": null,
+             "phone": string,
+             "act_cash_account": null
+         },
+         "created": string,
+         "modified": string,
+         "tracking_number": string,
+         "merchant_order_reference": null,
+         "order_notes": null,
+         "is_exchange": boolean,
+         "is_pudo": boolean,
+         "is_counter_dropoff": boolean,
+         "cash_processing": boolean,
+         "cash_amount": null,
+         "preferred_date": null,
+         "estimated_date": null,
+         "status": string,
+         "intermediate_warehouses": [
+             string,
+             ...
+         ],
+         "dispatch_early": null,
+         "dispatch_late": null,
+         "merchant": integer,
+         "service_level": integer,
+         "pickup_point": null,
+         "order_price": integer,
+         "current_warehouse": null,
+         "inbound_warehouse": integer,
+         "outbound_warehouse": integer,
+         "preferred_window": []
+     }
+    </pre></div></div></div>This end-point allow you to create new delivery order.</div><li><div id="accordionExample_3" class="desc get-desc accordion"> <span class="request get">GET</span>/v1/delivery-orders/{id}/<div style="margin-top: 15px;"><h2 class="accordion-header" id="deliveryHeadingOne_3"> <a href="#deliveryHeadingOne_3" class="anchor-heading" aria-labelledby="deliveryHeadingOne_3"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseOne_3" aria-expanded="true" aria-controls="collapseOne"> Request body exampel </button></h2><div id="deliveryCollapseOne_3" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingOne_3" data-bs-parent="#accordionExample"><div class="accordion-body"> In this end-point no request body needed, but one parameter is required: <code>id</code></div></div><h2 class="accordion-header" id="deliveryHeadingTwo_3"> <a href="#deliveryHeadingTwo_3" class="anchor-heading" aria-labelledby="deliveryHeadingTwo_3"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseTwo_3" aria-expanded="true" aria-controls="collapseOne"> Response header exampel </button></h2><div id="deliveryCollapseTwo_3" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingTwo_3" data-bs-parent="#accordionExample"><div class="accordion-body"><pre>
+     allow: GET,PUT,PATCH,DELETE,HEAD,OPTIONS 
+     content-length: 58 
+     content-type: application/json 
+     date: Sun,15 Aug 2021 13:11:17 GMT 
+     referrer-policy: same-origin 
+     server: WSGIServer/0.2 CPython/3.9.6 
+     vary: Accept,Origin,Cookie 
+     www-authenticate: Bearer realm="api" 
+     x-content-type-options: nosniff 
+     x-frame-options: DENY 
+     x-queryinspect-duplicate-sql-queries: 0 
+     x-queryinspect-num-sql-queries: 0 
+     x-queryinspect-total-request-time: 8 ms 
+     x-queryinspect-total-sql-time: 0 ms 
+     x-xss-protection: 1; mode=block 
+    </pre></div></div><h2 class="accordion-header" id="deliveryHeadingThree_3"> <a href="#deliveryHeadingThree_3" class="anchor-heading" aria-labelledby="deliveryHeadingThree_3"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseThree_3" aria-expanded="true" aria-controls="collapseOne"> Response body exampel </button></h2><div id="deliveryCollapseThree_3" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingThree_3" data-bs-parent="#accordionExample"><div class="accordion-body"> Request body as same as <code>GET: v1/delivery-orders/</code> BUT for specific delivery order id</div></div></div>This end-point allow you retrieve specific delivery based on his id.</div><li><div id="accordionExample_4" class="desc put-desc accordion"><span class="request put">PUT</span>/v1/delivery-orders/{id}/<div style="margin-top: 15px;"><h2 class="accordion-header" id="deliveryHeadingOne_4"> <a href="#deliveryHeadingOne_4" class="anchor-heading" aria-labelledby="deliveryHeadingOne_4"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseOne_4" aria-expanded="true" aria-controls="collapseOne"> Request body exampel </button></h2><div id="deliveryCollapseOne_4" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingOne_4" data-bs-parent="#accordionExample"><div class="accordion-body"><pre>
+    {
+         "customer": {
+             "first_name": string,
+             "last_name": string,
+             "phone": string,
+             "address":{
+                 "line_1":string,
+                 "line_2":string,
+                 "zone": integer
+             }
+         },
+         "service_level": integer,
+         "packages":[
+             {
+                 "package_size": integer
+             }
+         ],
+         "tracking_number":string",
+         "merchant":integer
+     }
+    </pre></div></div><h2 class="accordion-header" id="deliveryHeadingTwo_4"> <a href="#deliveryHeadingTwo_4" class="anchor-heading" aria-labelledby="deliveryHeadingTwo_4"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseTwo_4" aria-expanded="true" aria-controls="collapseOne"> Response header exampel </button></h2><div id="deliveryCollapseTwo_4" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingTwo_4" data-bs-parent="#accordionExample"><div class="accordion-body"><pre>
+     access-control-allow-origin: * 
+     allow: GET,PUT,PATCH,DELETE,HEAD,OPTIONS 
+     content-length: 58 
+     content-type: application/json 
+     date: Sun,15 Aug 2021 13:29:33 GMT 
+     referrer-policy: same-origin 
+     server: WSGIServer/0.2 CPython/3.9.6 
+     vary: Accept,Origin,Cookie 
+     www-authenticate: Bearer realm="api" 
+     x-content-type-options: nosniff 
+     x-frame-options: DENY 
+     x-queryinspect-duplicate-sql-queries: 0 
+     x-queryinspect-num-sql-queries: 0 
+     x-queryinspect-total-request-time: 7 ms 
+     x-queryinspect-total-sql-time: 0 ms 
+     x-xss-protection: 1; mode=bloc 
+    </pre></div></div><h2 class="accordion-header" id="deliveryHeadingThree_4"> <a href="#deliveryHeadingThree_4" class="anchor-heading" aria-labelledby="deliveryHeadingThree_4"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseThree_4" aria-expanded="true" aria-controls="collapseOne"> Response body exampel </button></h2><div id="deliveryCollapseThree_4" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingThree_4" data-bs-parent="#accordionExample"><div class="accordion-body"><pre>
+    {
+         "id": integer,
+         "customer": {
+             "id": integer,
+             "address": {
+                 "id": integer,
+                 "created": string,
+                 "modified": string,
+                 "nickname": string,
+                 "line_1": string,
+                 "line_2": "string,
+                 "line_3": null,
+                 "zip_code": null,
+                 "latitude": null,
+                 "longitude": null,
+                 "google_maps_link": null,
+                 "notes": null,
+                 "zone": integer
+             },
+             "created": string,
+             "modified": string,
+             "first_name": string,
+             "last_name": string,
+             "email": null,
+             "phone": string,
+             "act_cash_account": null
+         },
+         "created": "string,
+         "modified": string,
+         "tracking_number": string,
+         "merchant_order_reference": null,
+         "order_notes": null,
+         "is_exchange": boolean,
+         "is_pudo": boolean,
+         "is_counter_dropoff": boolean,
+         "cash_processing": boolean,
+         "cash_amount": null,
+         "preferred_date": null,
+         "estimated_date": null,
+         "status": string",
+         "intermediate_warehouses": [
+             string,
+             ...
+         ],
+         "dispatch_early": null,
+         "dispatch_late": null,
+         "merchant": integer,
+         "service_level": integer,
+         "pickup_point": null,
+         "order_price": integer,
+         "current_warehouse": null,
+         "inbound_warehouse": integer,
+         "outbound_warehouse": integer,
+         "preferred_window": []
+     }
+    </pre></div></div></div>This end-point allow you update specific delivery based on his id.</div><li><div id="accordionExample_5" class="desc patch-desc accordion"><span class="request patch">PATCH</span>/v1/delivery-orders/{id}/<div style="margin-top: 15px;"><h2 class="accordion-header" id="deliveryHeadingOne_5"> <a href="#deliveryHeadingOne_5" class="anchor-heading" aria-labelledby="deliveryHeadingOne_5"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseOne_5" aria-expanded="true" aria-controls="collapseOne"> Request body exampel </button></h2><div id="deliveryCollapseOne_5" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingOne_5" data-bs-parent="#accordionExample"><div class="accordion-body"> Request body as same as <code>PUT: /v1/delivery-orders/{id}/</code> BUT you can ignore some of keys because it partial update</div></div><h2 class="accordion-header" id="deliveryHeadingTwo_5"> <a href="#deliveryHeadingTwo_5" class="anchor-heading" aria-labelledby="deliveryHeadingTwo_5"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseTwo_5" aria-expanded="true" aria-controls="collapseOne"> Response header exampel </button></h2><div id="deliveryCollapseTwo_5" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingTwo_5" data-bs-parent="#accordionExample"><div class="accordion-body"><pre>
+     access-control-allow-origin: * 
+     allow: GET,PUT,PATCH,DELETE,HEAD,OPTIONS 
+     content-length: 58 
+     content-type: application/json 
+     date: Sun,15 Aug 2021 14:29:17 GMT 
+     referrer-policy: same-origin 
+     server: WSGIServer/0.2 CPython/3.9.6 
+     vary: Accept,Origin,Cookie 
+     www-authenticate: Bearer realm="api" 
+     x-content-type-options: nosniff 
+     x-frame-options: DENY 
+     x-queryinspect-duplicate-sql-queries: 0 
+     x-queryinspect-num-sql-queries: 0 
+     x-queryinspect-total-request-time: 6 ms 
+     x-queryinspect-total-sql-time: 0 ms 
+     x-xss-protection: 1; mode=block 
+    </pre></div></div><h2 class="accordion-header" id="deliveryHeadingThree_5"> <a href="#deliveryHeadingThree_5" class="anchor-heading" aria-labelledby="deliveryHeadingThree_5"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseThree_5" aria-expanded="true" aria-controls="collapseOne"> Response body exampel </button></h2><div id="deliveryCollapseThree_5" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingThree_5" data-bs-parent="#accordionExample"><div class="accordion-body"> Response body as same as <code>PUT: /v1/delivery-orders/{id}/</code></div></div></div>This end-point allow you partial update delivery based on his id.</div><li><div id="accordionExample_6" class="desc delete-desc accordion"><span class="request delete">DELETE</span>/v1/delivery-orders/{id}/<div style="margin-top: 15px;"><h2 class="accordion-header" id="deliveryHeadingOne_6"> <a href="#deliveryHeadingOne_6" class="anchor-heading" aria-labelledby="deliveryHeadingOne_6"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseOne_6" aria-expanded="true" aria-controls="collapseOne"> Request body exampel </button></h2><div id="deliveryCollapseOne_6" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingOne_6" data-bs-parent="#accordionExample"><div class="accordion-body"> In this end-point no request body needed, but one parameter is required: <code>id</code></div></div><h2 class="accordion-header" id="deliveryHeadingTwo_6"> <a href="#deliveryHeadingTwo_6" class="anchor-heading" aria-labelledby="deliveryHeadingTwo_6"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseTwo_6" aria-expanded="true" aria-controls="collapseOne"> Response header exampel </button></h2><div id="deliveryCollapseTwo_6" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingTwo_6" data-bs-parent="#accordionExample"><div class="accordion-body"><pre>
+     access-control-allow-origin: * 
+     allow: GET,PUT,PATCH,DELETE,HEAD,OPTIONS 
+     content-length: 58 
+     content-type: application/json 
+     date: Sun,15 Aug 2021 14:39:46 GMT 
+     referrer-policy: same-origin 
+     server: WSGIServer/0.2 CPython/3.9.6 
+     vary: Accept,Origin,Cookie 
+     www-authenticate: Bearer realm="api" 
+     x-content-type-options: nosniff 
+     x-frame-options: DENY 
+     x-queryinspect-duplicate-sql-queries: 0 
+     x-queryinspect-num-sql-queries: 0 
+     x-queryinspect-total-request-time: 6 ms 
+     x-queryinspect-total-sql-time: 0 ms 
+     x-xss-protection: 1; mode=block
+    </pre></div></div><h2 class="accordion-header" id="deliveryHeadingThree_6"> <a href="#deliveryHeadingThree_6" class="anchor-heading" aria-labelledby="deliveryHeadingThree_6"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseThree_6" aria-expanded="true" aria-controls="collapseOne"> Response body exampel </button></h2><div id="deliveryCollapseThree_6" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingThree_6" data-bs-parent="#accordionExample"><div class="accordion-body"> In this end-point no response body.</div></div></div></div><p>This end-point allow you delete specific delivery based on his id.</p><li><div class="desc get-desc"><span class="request get">GET</span>/v1/merchants/{merchant_id}/delivery-order/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>check…</p></ol><li><a href="#">tracking</a> <br /><ol><li><div class="desc get-desc"><span class="request get">GET</span>/v1/delivery-order/{tracking_number}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>check…</p><li><div class="desc post-desc"><span class="request post">POST</span>/v1/delivery-order/{tracking_number}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>check…</p></ol><li><a href="#">upload</a> <br /><ol><li><div class="desc get-desc"><span class="request get">GET</span>/v1/delivery-order-upload/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>check…</p><li><div class="desc post-desc"><span class="request post">POST</span>/v1/delivery-order-upload/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>check…</p></ol><li><a href="#">uncompleted</a> <br /><ol><li><div id="accordionExample_1" class="desc get-desc accordion"><span class="request get">GET</span>/v1/delivery-orders-uncompleted/<div style="margin-top: 15px;"><h2 class="accordion-header" id="deliveryUncompletedHeadingOne_1"> <a href="#deliveryUncompletedHeadingOne_1" class="anchor-heading" aria-labelledby="deliveryUncompletedHeadingOne_1"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryUncompletedCollapseOne_1" aria-expanded="true" aria-controls="collapseOne"> Request body exampel </button></h2><div id="deliveryUncompletedCollapseOne_1" class="accordion-collapse collapse" aria-labelledby="deliveryUncompletedHeadingOne_1" data-bs-parent="#accordionExample"><div class="accordion-body"> In this end-point no request body needed.</div></div><h2 class="accordion-header" id="deliveryUncompletedHeadingTwo_1"> <a href="#deliveryUncompletedHeadingTwo_1" class="anchor-heading" aria-labelledby="deliveryUncompletedHeadingTwo_1"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryUncompletedCollapseTwo_1" aria-expanded="true" aria-controls="collapseOne"> Response header exampel </button></h2><div id="deliveryUncompletedCollapseTwo_1" class="accordion-collapse collapse" aria-labelledby="deliveryUncompletedHeadingTwo_1" data-bs-parent="#accordionExample"><div class="accordion-body"><pre>
+     allow: GET,HEAD,OPTIONS 
+     content-length: 58 
+     content-type: application/json 
+     date: Sun,15 Aug 2021 15:07:37 GMT 
+     referrer-policy: same-origin 
+     server: WSGIServer/0.2 CPython/3.9.6 
+     vary: Accept,Origin,Cookie 
+     www-authenticate: Bearer realm="api" 
+     x-content-type-options: nosniff 
+     x-frame-options: DENY 
+     x-queryinspect-duplicate-sql-queries: 0 
+     x-queryinspect-num-sql-queries: 0 
+     x-queryinspect-total-request-time: 6 ms 
+     x-queryinspect-total-sql-time: 0 ms 
+     x-xss-protection: 1; mode=block 
+    </pre></div></div><h2 class="accordion-header" id="deliveryUncompletedHeadingThree_1"> <a href="#deliveryUncompletedHeadingThree_1" class="anchor-heading" aria-labelledby="deliveryUncompletedHeadingThree_1"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryUncompletedCollapseThree_1" aria-expanded="true" aria-controls="collapseOne"> Response body exampel </button></h2><div id="deliveryUncompletedCollapseThree_1" class="accordion-collapse collapse" aria-labelledby="deliveryUncompletedHeadingThree_1" data-bs-parent="#accordionExample"><div class="accordion-body"><pre>
+    {
+         "count": integer,
+         "next": null,
+         "previous": null,
+         "results": [
+             {
+                 "id": integer,
+                 "packages": [
+                     {
+                         "id": integer,
+                         "supplies_required": boolean,
+                         "sms_confirmation_code": null,
+                         "package": {
+                             "id": integer,
+                             "created": string,
+                             "modified": string,
+                             "description": null,
+                             "weight": number,
+                             "volume": number,
+                             "fragile": boolean,
+                             "package_size": {
+                                 "id": integer,
+                                 "name": string,
+                                 "short_code": string,
+                                 "description": string
+                             }
+                         },
+                         "package_location": string
+                     }
+                 ],
+                 "delivery_attempts": string,
+                 "pickup_date": string,
+                 "delivered_date": string,
+                 "created": string,
+                 "modified": string,
+                 "tracking_number": string,
+                 "merchant_order_reference": null,
+                 "order_notes": null,
+                 "is_exchange": boolean,
+                 "is_pudo": boolean,
+                 "is_counter_dropoff": boolean,
+                 "cash_processing": boolean,
+                 "cash_amount": null,
+                 "preferred_date": null,
+                 "estimated_date": null,
+                 "status": "created",
+                 "intermediate_warehouses": [
+                     string,
+                     ...
+                 ],
+                 "dispatch_early": null,
+                 "dispatch_late": null,
+                 "merchant": {
+                     "id": integer,
+                     "created": string,
+                     "modified": string,
+                     "name": string,
+                     "store_url": string,
+                     "logo": string,
+                     "store_phone": string,
+                     "store_email": string,
+                     "status": string,
+                     "api_key": null,
+                     "cash_processing_fees": number,
+                     "cash_processing_fees_max": number,
+                     "cash_processing_percentage": number,
+                     "cash_processing_threshold": number,
+                     "address": {
+                         "id": integer,
+                         "created": string,
+                         "modified": string,
+                         "nickname": string,
+                         "line_1": string,
+                         "line_2": string,
+                         "line_3": null,
+                         "zip_code": null,
+                         "latitude": null,
+                         "longitude": null,
+                         "google_maps_link": null,
+                         "notes": null,
+                         "zone": {
+                             "id": integer,
+                             "name": string,
+                             "radius": number,
+                             "city": {
+                                 "id": integer,
+                                 "name": string,
+                                 "population": integer,
+                                 "is_captial": boolean,
+                                 "governorate": {
+                                     "id": integer,
+                                     "name": string
+                                 }
+                             },
+                             "served_by": {
+                                 "id": integer,
+                                 "name": string,
+                                 "code": string,
+                                 "capacity": number,
+                                 "current_utilization": number,
+                                 "size": number,
+                                 "latitude": number,
+                                 "longitude": number,
+                                 "address": string,
+                                 "is_virtual": boolean
+                             },
+                             "zone_group": []
+                         }
+                     },
+                     "subscription": {
+                         "id": integer,
+                         "name": string
+                     },
+                     "pricing_lookup_delivery": null,
+                     "pricing_lookup_return": null,
+                     "pricing_lookup_exchange": null,
+                     "pricing_lookup_cash_collection": null,
+                     "act_cod_account": {
+                         "account_number": string,
+                         "created": string,
+                         "modified": string,
+                         "name": string,
+                         "parent_account": {
+                             "account_number": string",
+                             "created": string,
+                             "modified": string,
+                             "name": string,
+                             "parent_account": object,
+                             "type": {
+                                 "id": integer,
+                                 "name": string
+                             }
+                         },
+                         "type": {
+                             "id": integer,
+                             "name": string
+                         }
+                     },
+                     "act_shipping_revenue_account": {
+                         "account_number": string,
+                         "created": string,
+                         "modified": string,
+                         "name": string,
+                         "parent_account": {
+                             "account_number": string",
+                             "created": string,
+                             "modified": string,
+                             "name": string,
+                             "parent_account": object,
+                             "type": {
+                                 "id": integer,
+                                 "name": string
+                             }
+                         },
+                         "type": {
+                             "id": integer,
+                             "name": string
+                         }
+                     },
+                     "act_discounts_account": {
+                         "account_number": string,
+                         "created": string,
+                         "modified": string,
+                         "name": string,
+                         "parent_account": {
+                             "account_number": string",
+                             "created": string,
+                             "modified": string,
+                             "name": string,
+                             "parent_account": object,
+                             "type": {
+                                 "id": integer,
+                                 "name": string
+                             }
+                         },
+                         "type": {
+                             "id": integer,
+                             "name": string
+                         }
+                     },
+                     "act_account_receivable": {
+                         "account_number": string,
+                         "created": string,
+                         "modified": string,
+                         "name": string,
+                         "parent_account": {
+                             "account_number": string",
+                             "created": string,
+                             "modified": string,
+                             "name": string,
+                             "parent_account": object,
+                             "type": {
+                                 "id": integer,
+                                 "name": string
+                             }
+                         },
+                         "type": {
+                             "id": integer,
+                             "name": string
+                         }
+                     },
+                     "act_supplies_revenue_account": {
+                         "account_number": string,
+                         "created": string,
+                         "modified": string,
+                         "name": string,
+                         "parent_account": {
+                             "account_number": string",
+                             "created": string,
+                             "modified": string,
+                             "name": string,
+                             "parent_account": object,
+                             "type": {
+                                 "id": integer,
+                                 "name": string
+                             }
+                         },
+                         "type": {
+                             "id": integer,
+                             "name": string
+                         }
+                     },
+                     "pickup_days": [],
+                     "billing_days": []
+                 },
+                 "customer": {
+                     "id": integer,
+                     "created": string,
+                     "modified": string,
+                     "first_name": string,
+                     "last_name": string,
+                     "email": null,
+                     "phone": string,
+                     "address": {
+                         "id": integer,
+                         "created": string,
+                         "modified": string,
+                         "nickname": string,
+                         "line_1": string,
+                         "line_2": string,
+                         "line_3": null,
+                         "zip_code": null,
+                         "latitude": null,
+                         "longitude": null,
+                         "google_maps_link": null,
+                         "notes": null,
+                         "zone": {
+                             "id": integer,
+                             "name": string,
+                             "radius": number,
+                             "city": {
+                                 "id": integer,
+                                 "name": string,
+                                 "population": integer,
+                                 "is_captial": boolean,
+                                 "governorate": {
+                                     "id": integer,
+                                     "name": string
+                                 }
+                             },
+                             "served_by": {
+                                 "id": 1,
+                                 "name": "Downtown Cairo",
+                                 "code": "DW",
+                                 "capacity": 0.0,
+                                 "current_utilization": 0.0,
+                                 "size": 0.0,
+                                 "latitude": 30.031367,
+                                 "longitude": 31.232819,
+                                 "address": "شارع كورنيش النيل",
+                                 "is_virtual": false
+                             },
+                             "zone_group": []
+                         }
+                     },
+                     "act_cash_account": null
+                 },
+                 "service_level": {
+                     "id": integer,
+                     "name": string,
+                     "short_code": string,
+                     "description": string
+                 },
+                 "pickup_point": null,
+                 "order_price": {
+                     "id": integer,
+                     "created": string,
+                     "modified": string,
+                     "subtotal": number,
+                     "vat": number,
+                     "postal_tax": number,
+                     "total": number
+                 },
+                 "current_warehouse": null,
+                 "inbound_warehouse": {
+                     "id": integer,
+                     "name": string,
+                     "code": string,
+                     "capacity": number,
+                     "current_utilization": number,
+                     "size": number,
+                     "latitude": number,
+                     "longitude": number,
+                     "address": string,
+                     "is_virtual": boolean
+                 },
+                 "outbound_warehouse": {
+                     "id": integer,
+                     "name": string,
+                     "code": string,
+                     "capacity": number,
+                     "current_utilization": number,
+                     "size": number,
+                     "latitude": number,
+                     "longitude": number,
+                     "address": string,
+                     "is_virtual": boolean
+                 },
+                 "preferred_window": []
+             },
+             .....
+     }
+    </pre></div></div></div></div><p>check…</p></ol></ul><h3 id="return"> <a href="#return" class="anchor-heading" aria-labelledby="return"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Return</h3><ul><li><a href="#">return order</a> <br /><ol><li><div class="desc get-desc"><span class="request get">GET</span>/v1/returns/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you to list all return orders.</p><li><div class="desc post-desc"><span class="request post">POST</span>/v1/returns/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you to create new return orde</p><li><div class="desc get-desc"> <span class="request get">GET</span>/v1/returns/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you retrieve specific return based on his id.</p><li><div class="desc put-desc"><span class="request put">PUT</span>/v1/returns/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you update specific return based on his id.</p><li><div class="desc patch-desc"><span class="request patch">PATCH</span>/v1/returns/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you partial update return based on his id.</p><li><div class="desc delete-desc"><span class="request delete">DELETE</span>/v1/returns/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you delete specific return based on his id.</p></ol><li><a href="#">tracking</a> <br /><ol><li><div class="desc get-desc"><span class="request get">GET</span>/v1/return/{tracking_number}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>check…</p><li><div class="desc post-desc"><span class="request post">POST</span>/v1/return/{tracking_number}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>check…</p></ol><li><a href="#">uncompleted</a> <br /><ol><li><div class="desc get-desc"><span class="request get">GET</span>/v1/return-orders-uncompleted/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>check…</p></ol></ul><h3 id="exchanges"> <a href="#exchanges" class="anchor-heading" aria-labelledby="exchanges"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Exchanges</h3><ul><li><a href="#">exchange order</a> <br /><ol><li><div class="desc get-desc"> <span class="request get">GET</span>/v1/exchanges/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div></ol><p>&lt;/div&gt; This end-point allow you to list all exchange orders.</p><ol><li><div class="desc post-desc"> <span class="request post">POST</span>/v1/exchanges/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div></ol><p>&lt;/div&gt; This end-point allow you to create new exchange orders.</p><ol><li><div class="desc get-desc"> <span class="request get">GET</span>/v1/exchanges/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div></ol><p>&lt;/div&gt; This end-point allow you retrieve specific exchange orders based on his id.</p><ol><li><div class="desc put-desc"><span class="request put">PUT</span>/v1/exchanges/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you update specific exchange orders based on his id.</p><li><div class="desc patch-desc"><span class="request patch">PATCH</span>/v1/exchanges/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you partial update specific exchange orders based on his id.</p><li><div class="desc delete-desc"><span class="request delete">DELETE</span>/v1/exchanges/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you delete specific exchange orders based on his id.</p></ol></ul><h3 id="cash-collection"> <a href="#cash-collection" class="anchor-heading" aria-labelledby="cash-collection"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Cash Collection</h3><p>Collect shipment cost from customer.</p><ul><li><a href="#">cash collection</a></ul><h2 id="billing-statements"> <a href="#billing-statements" class="anchor-heading" aria-labelledby="billing-statements"><svg viewBox="0 0 16 16" aria-hidden="true"><use xlink:href="#svg-link"></use></svg></a> Billing Statements</h2><ul><li><a href="#">invoices</a> <br /><ol><li><div class="desc get-desc"> <span class="request get">GET</span>/v1/billing/invoices/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you to list all invoices.</p><li><div class="desc get-desc"> <span class="request get">GET</span>/v1/billing/invoices/{id}/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you to retrieve specific invoice based on his id.</p><li><div class="desc post-desc"> <span class="request post">POST</span>/v1/billing/invoices/order/<div><p class="request black">Request body exampel</p><p class="request black">Response header exampel</p><p class="request black">Response body exampel</p></div></div><p>This end-point allow you to create new invoice for orders list.</p></ol><li><a href="#">statements</a></ul><script src="https://cdn.jsdelivr.net/npm/bootstrap@5.1.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-U1DAWAznBHeqEIlVSCgzq+c9gqGAJn5c/t99JyeKa9xxaYpSvHU5awsuZVVFIhvj" crossorigin="anonymous"></script><hr><footer><p><a href="#top" id="back-to-top">Back to top</a></p><p class="text-small text-grey-dk-100 mb-0">Copyright &copy; 2021 ShipBlu.</p><div class="d-flex mt-2"><p class="text-small text-grey-dk-000 mb-0"> <a href="https://github.com/ShipBlu/shipblu.github.io/tree/main/_docs/04_api_reference.md" id="edit-this-page">Edit this page on GitHub</a></p></div></footer></div></div><a href="#" id="search-button" class="search-button"> <svg viewBox="0 0 24 24" class="icon"><use xlink:href="#svg-search"></use></svg> </a><div class="search-overlay"></div></div>
