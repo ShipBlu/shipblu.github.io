@@ -62,7 +62,9 @@ permalink: /api-reference
 .accordion-body{
     font-size: 17px;
     font-weight: normal;
-
+}
+.item{
+    color: #7453ee
 }
 </style>
 </head>
@@ -70,199 +72,68 @@ permalink: /api-reference
 # API Reference
 {: .fs-9 }
 
-TO BE DOCUMENTED 
+This is ShipBlu api reference for merchants who's have an account on ShipBlu, and would like to integrate their online e-commerce store to our delivery service.<br />
+
+In this api reference we will focus on how you can use our API's quicly as possible so in some request body we focus on minimum attribute you can write to deal with api without headache.<br /> 
+
+Our API's requests divied on six categories:<br />
+
+1. List
+2. Retreive
+3. Create
+4. Update
+5. Partial update
+6. Delete
+
+Not mandatory each API request has all above six categories. We will show each API response or request body in JSON formate like:
+{
+     key: value,
+    ....
+}
+
+key is represent data column name.
+<br />
+value is represent data type.
+
+Let's start
 
 
 ## Geographic Availability
 
-- [pudos](#) <br />
+- <span id= "pudos" class="item">pudos</span> <br />
 
-  We can define pudos as meeting points between customer and CA.<br />
+  We can define PUDOs as drop off points that CA can drop shipments on it and the Customer receive it from this PUDO.<br /><br />
+  Shipblu provide this service to save merchant and customer order shipment cost.<br />
 
-  Now after know what is pudos, let's play with his API end-points.<br />
+  Now after know what is pudos, let's play with his API end-points.<br />   
 
-    1. <div class='desc get-desc'><span class='request get'>GET</span>/v1/pudos/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-        </div>
-        This end-point allow you to list all pudos.
-
-    2. <div class='desc post-desc'><span class='request post' >POST</span>/v1/pudos/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-        </div>
-        This end-point allow you to create new pudo point.  
-
-    3. <div class='desc get-desc'><span class='request get'>GET</span>/v1/pudos/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        This end-point allow you retrieve specific pudo based on his id.  
-
-    4. <div class='desc put-desc'><span class='request put' >PUT</span>/v1/pudos/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        This end-point allow you update specific pudo based on his id.
-
-    5. <div class='desc patch-desc'><span class='request patch'>PATCH</span>/v1/pudos/{id}/
-         <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        This end-point allow you partial update specific pudo based on his id.  
-
-    6. <div class='desc delete-desc'><span class='request delete' >DELETE</span>/v1/pudos/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        This end-point allow you delete specific pudo based on his id.  
-
-    7. <div class='desc get-desc'><span class='request get' >GET</span>/v1/pudo/cities/{city_id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        This end-point allow you retrieve pudos in specific city based on city id.     
-
-- [governorates](#) <br />
-
-    1. <div class='desc get-desc'><span class='request get'>GET</span>/v1/governorates/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div> 
-       </div>
-        This end-point allow you to list all governorates.
-
-    2. <div class='desc post-desc'><span class='request post' >POST</span>/v1/governorates/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        This end-point allow you to create new governorate.
-
-    3. <div class='desc get-desc'><span class='request get'>GET</span>/v1/governorates/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div> 
-       </div>
-        This end-point allow you to retrieve specific governorate based on his id.
-
-    4. <div class='desc put-desc'><span class='request put'>PUT</span>/v1/governorates/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div> 
-       </div>
-        This end-point allow you to update specific governorate based on his id.
-
-    5. <div class='desc patch-desc'><span class='request patch'>PATCH</span>/v1/governorates/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div> 
-       </div>
-        This end-point allow you to partial update specific governorate based on his id.
-
-    5. <div class='desc delete-desc'><span class='request delete'>DELETE</span>/v1/governorates/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div> 
-       </div>
-        This end-point allow you to delete specific governorate based on his id.                
-
-    6. <div class='desc get-desc'><span class='request get'>GET</span>/v1/governorates/{governorate_id}/cities/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        This end-point allow you retrieve all cities in specific governorate based on governorates id.
-- [warehouses](#) <br />
-
-    A large building where shipments may be stored before their export or distribution for sale.
-
-    1. <div class='desc get-desc'><span class='request get'>GET</span>/v1/warehouses/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        This end-point allow you to list all warehouses.
-
-    2. <div class='desc get-desc'><span class='request get'>GET</span>/v1/warehouses/{warehouse_code}/zone-groups/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        This end-point allow you to retrieve all zone-groups served by specific warehouse based on warehouse code.
-
-    3. <div class='desc post-desc'><span class='request post'>POST</span>/v1/warehouses/{warehouse_code}/zone-groups/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        This end-point allow you to create new zone-groups served by specific warehouse.
-
-    4. <div class='desc get-desc'><span class='request get'>GET</span>/v1/warehouses/{warehouse_code}/zones/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        This end-point allow you to retrieve all zones served by specific warehouse based on warehouse code.
-
-    5. <div class='desc get-desc'><span class='request get'>GET</span>/v1/warehouse/{warehouse_code}/agents/{agent_type}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <div>
-           In this end-point no request body needed but two parameters are required
-           <br />
-           <code>agent_type, warehouse_code</code>
+    1. <div class='desc get-desc accordion'><span class='request get' >GET</span>/v1/pudo/cities/{city_id}/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="pudoHeadingOne_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pudoCollapseOne_1" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="pudoCollapseOne_1" class="accordion-collapse collapse" aria-labelledby="pudoHeadingOne_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           In this end-point no request body needed.
+           </pre>
+           </div>
            </div>
 
-           <p class='request black'>Response header exampel</p>
+           <h2 class="accordion-header" id="pudoHeadingTwo_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pudoCollapseTwo_1" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="pudoCollapseTwo_1" class="accordion-collapse collapse" aria-labelledby="pudoHeadingTwo_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
            <pre>
             allow: GET,HEAD,OPTIONS 
             content-length: 58 
             content-type: application/json 
-            date: Sun,15 Aug 2021 08:36:49 GMT 
+            date: Mon,16 Aug 2021 08:57:43 GMT 
             referrer-policy: same-origin 
             server: WSGIServer/0.2 CPython/3.9.6 
             vary: Accept,Origin,Cookie 
@@ -271,11 +142,20 @@ TO BE DOCUMENTED
             x-frame-options: DENY 
             x-queryinspect-duplicate-sql-queries: 0 
             x-queryinspect-num-sql-queries: 0 
-            x-queryinspect-total-request-time: 7 ms 
+            x-queryinspect-total-request-time: 27 ms 
             x-queryinspect-total-sql-time: 0 ms 
-            x-xss-protection: 1; mode=bloc
+            x-xss-protection: 1; mode=block 
            </pre>
-           <p class='request black'>Response body exampel</p>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="pudoHeadingThree_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pudoCollapseThree_1" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="pudoCollapseThree_1" class="accordion-collapse collapse" aria-labelledby="pudoHeadingThree_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
            <pre>
            {
                 "count": integer,
@@ -286,52 +166,314 @@ TO BE DOCUMENTED
                         "id": integer,
                         "created": string,
                         "modified": string,
-                        "uid": string,
-                        "email": string,
-                        "first_name": string,
-                        "last_name": string,
-                        "phone_number": string,
-                        "national_id": string,
-                        "primary_warehouse": integer,
-                        "zone_group": integer,
-                        "act_cash_account": string
+                        "name": string,
+                        "display_name": string,
+                        "address": {
+                            "id": integer,
+                            "created": string,
+                            "modified": string,
+                            "nickname": string,
+                            "line_1": string,
+                            "line_2": string,
+                            "line_3": string,
+                            "zip_code": string,
+                            "latitude": number,
+                            "longitude": number,
+                            "google_maps_link": string,
+                            "notes": string,
+                            "zone": {
+                                "id": integer,
+                                "name": string,
+                                "radius": number,
+                                "city": {
+                                    "id": integer,
+                                    "name": string,
+                                    "population": integer,
+                                    "is_captial": boolean,
+                                    "governorate": {
+                                        "id": integer,
+                                        "name": string
+                                    }
+                                },
+                                "served_by": {
+                                    "id": integer,
+                                    "name": string,
+                                    "code": string,
+                                    "capacity": number,
+                                    "current_utilization": number,
+                                    "size": number,
+                                    "latitude": number,
+                                    "longitude": number,
+                                    "address": string,
+                                    "is_virtual": boolean
+                                },
+                                "zone_group": []
+                            }
+                        }
                     }
                 ]
             }
            </pre>
-          </div>
-       </div>
-        This end-point allow you to retrieve all agents based on warehouse code and agent type.
+           </div>
+           </div>
 
-    6. <div class='desc get-desc'><span class='request get'>GET</span>/v1/warehouse/{warehouse_code}/task-sheets/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
           </div>
-       </div>
-        This end-point allow you to retrieve all task sheets based on warehouse code. 
+          <p class='desc'>This end-point allow you retrieve pudos in specific city based on city id.</p>
+       </div>     
 
-- [zones](#) <br />
+- <span id= "governorates" class="item">governorates</span> <br />
+
+    1. <div class='desc get-desc accordion'><span class='request get'>GET</span>/v1/governorates/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="govHeadingOne_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#govCollapseOne_1" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="govCollapseOne_1" class="accordion-collapse collapse" aria-labelledby="govHeadingOne_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           In this end-point no request body needed.
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="govHeadingTwo_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#govCollapseTwo_1" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="govCollapseTwo_1" class="accordion-collapse collapse" aria-labelledby="geoHeadingTwo_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            allow: GET,POST,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Mon,16 Aug 2021 09:24:28 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 9 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block
+           </pre>
+           </div>
+           </div>
+           
+           <h2 class="accordion-header" id="govHeadingThree_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#govCollapseThree_1" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="govCollapseThree_1" class="accordion-collapse collapse" aria-labelledby="geoHeadingThree_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           [
+                {
+                    "id": integer,
+                    "name": string
+                },
+                ....
+           ]    
+           </pre>
+           </div>
+           </div>
+
+          </div> 
+          <p class='desc'>This end-point allow you to list all governorates.</p>
+       </div>              
+
+    2. <div class='desc get-desc accordion'><span class='request get'>GET</span>/v1/governorates/{governorate_id}/cities/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="govHeadingOne_2">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#govCollapseOne_2" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="govCollapseOne_2" class="accordion-collapse collapse" aria-labelledby="govHeadingOne_2" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           In this end-point no request body needed.
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="govHeadingTwo_2">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#govCollapseTwo_2" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="govCollapseTwo_2" class="accordion-collapse collapse" aria-labelledby="geoHeadingTwo_2" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            allow: GET,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Mon,16 Aug 2021 09:30:13 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 7 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block 
+           </pre>
+           </div>
+           </div>
+           
+           <h2 class="accordion-header" id="govHeadingThree_2">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#govCollapseThree_2" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="govCollapseThree_2" class="accordion-collapse collapse" aria-labelledby="geoHeadingThree_2" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           [
+                {
+                    "id": integer,
+                    "name": string,
+                    "population": integer,
+                    "is_captial": boolean,
+                    "governorate": integer
+                },
+                ....
+           ]    
+           </pre>
+           </div>
+           </div>
+
+          </div>
+          <p class='desc'>This end-point allow you retrieve all cities in specific governorate based on governorates id.</p>
+       </div>
+
+- <span id= "zones" class="item">zones</span> <br />
 
     We can define zones as specific areas in city.<br />
 
     Now after know what is zones, let's play with his API end-points.<br />
 
-    1. <div class='desc get-desc'><span class='request get'>GET</span>/v1/cities/{city_id}/zones/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <div>
-           In this end-point no request body needed but only one parameter is required
-           <br />
-           <code>city_id</code>
+    1. <div class='desc get-desc accordion'><span class='request get'>GET</span>/v1/cities/{city_id}/zones/
+          <div style='margin-top: 15px;'>
+
+           <h2 class="accordion-header" id="zoneHeadingOne_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#zoneCollapseOne_1" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="zoneCollapseOne_1" class="accordion-collapse collapse" aria-labelledby="zoneHeadingOne_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           In this end-point no request body needed
+           </pre>
            </div>
-           <p class='request black'>Response header exampel</p>
+           </div>
+
+           <h2 class="accordion-header" id="zoneHeadingTwo_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#zoneCollapseTwo_1" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="zoneCollapseTwo_1" class="accordion-collapse collapse" aria-labelledby="zoneHeadingTwo_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
            <pre>
             allow: GET,HEAD,OPTIONS 
             content-length: 58 
             content-type: application/json 
-            date: Sun,15 Aug 2021 09:18:53 GMT 
+            date: Mon,16 Aug 2021 09:47:35 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 9 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="zoneHeadingThree_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#zoneCollapseThree_1" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="zoneCollapseThree_1" class="accordion-collapse collapse" aria-labelledby="zoneHeadingThree_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           [
+                {
+                    "id": integer,
+                    "name": string,
+                    "radius": number,
+                    "city": integer,
+                    "served_by": integer,
+                    "zone_group": []
+                },
+                ....
+           ]
+           </pre>
+           </div>
+           </div>
+
+          </div>
+          <p class='desc'>This end-point allow you retrieve zones in specific city based on city id.</p>
+       </div>
+ 
+
+
+
+
+## Service Availability
+
+- <span class="item">service availability</span> <br />
+
+  Service availability is the services that shipblu can introduce it to merchants.
+  This services is represented in the following points:
+
+  - service level
+  - package size
+  - handshake type <br />
+
+   1. <div class='desc get-desc accordion'><span class='request get'>GET</span>/v1/services-availability/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="serviceHeadingOne_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#serviceCollapseOne_1" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="serviceCollapseOne_1" class="accordion-collapse collapse" aria-labelledby="serviceHeadingOne_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           In this end-point no request body needed
+           </pre>
+           </div>
+           </div>
+           
+           <h2 class="accordion-header" id="serviceHeadingTwo_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#serviceCollapseTwo_1" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="serviceCollapseTwo_1" class="accordion-collapse collapse" aria-labelledby="serviceHeadingTwo_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            allow: GET,POST,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Mon,16 Aug 2021 10:55:14 GMT 
             referrer-policy: same-origin 
             server: WSGIServer/0.2 CPython/3.9.6 
             vary: Accept,Origin,Cookie 
@@ -344,244 +486,939 @@ TO BE DOCUMENTED
             x-queryinspect-total-sql-time: 0 ms 
             x-xss-protection: 1; mode=block
            </pre>
-           <p class='request black'>Response body exampel</p>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="serviceHeadingThree_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#serviceCollapseThree_1" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="serviceCollapseThree_1" class="accordion-collapse collapse" aria-labelledby="servicesHeadingThree_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
            <pre>
            [
                 {
                     "id": integer,
-                    "name": string,
-                    "radius": float,
-                    "city": integer,
-                    "served_by": integer,
-                    "zone_group": list
+                    "subscription": {
+                        "id": integer,
+                        "name": string
+                    },
+                    "governorate": {
+                        "id": integer,
+                        "name": string
+                    },
+                    "service_level": {
+                        "id": integer,
+                        "name": string,
+                        "short_code": string,
+                        "description": string
+                    },
+                    "package_size": {
+                        "id": integer,
+                        "name": string,
+                        "short_code": string,
+                        "description": string
+                    },
+                    "handshake_type": {
+                        "id": integer,
+                        "name": string,
+                        "short_code": string,
+                        "description": string
+                    }
                 },
-                ....
-           ]
+                .....
+           ]    
            </pre>
+           </div>
+           </div>
+
           </div>
-       </div>
-        This end-point allow you retrieve zones in specific city based on city id.
- 
-- [zone groups](#) <br />
-
-    1. <div class='desc get-desc'><span class='request get'>GET</span>/v1/zone-groups/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div> 
-       </div>
-        This end-point allow you retrieve specific zone group based on his id.  
-
-    2. <div class='desc put-desc'><span class='request put' >PUT</span>/v1/zone-groups/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        This end-point allow you update specific zone group based on his id.
-
-    3. <div class='desc patch-desc'><span class='request patch'>PATCH</span>/v1/zone-groups/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        This end-point allow you partial update specific zone group based on his id.  
-
-    4. <div class='desc delete-desc'><span class='request delete' >DELETE</span>/v1/zone-groups/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        This end-point allow you delete specific zone group based on his id.
-
-- [cities](#) <br />
-
-    1. <div class='desc get-desc'><span class='request get'>GET</span>/v1/cities/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        This end-point allow you retrieve specific city based on his id.  
-
-    2. <div class='desc post-desc'><span class='request post'>POST</span>/v1/cities/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div> 
-       </div>
-        check...     
-
-    3. <div class='desc put-desc'><span class='request put' >PUT</span>/v1/cities/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        This end-point allow you update specific city based on his id.
-
-    4. <div class='desc patch-desc'><span class='request patch'>PATCH</span>/v1/cities/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        This end-point allow you partial update specific city based on his id.  
-
-    5. <div class='desc delete-desc'><span class='request delete' >DELETE</span>/v1/cities/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>  
-       </div>
-        This end-point allow you delete specific city based on his id.
-
-## Service Availability
-
-- [service availability](#) <br />
-
-  To be document
-
-   1. <div class='desc get-desc'><span class='request get'>GET</span>/v1/services-availability/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-        </div>
-        checks...
-
-    2. <div class='desc post-desc'><span class='request post' >POST</span>/v1/services-availability/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-        </div>
-        checks... 
-
-    3. <div class='desc get-desc'><span class='request get'>GET</span>/v1/services-availability/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        checks... 
-
-    4. <div class='desc put-desc'><span class='request put' >PUT</span>/v1/services-availability/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        checks...
-
-    5. <div class='desc patch-desc'><span class='request patch'>PATCH</span>/v1/services-availability/{id}/
-         <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        This end-point allow you partial update specific pudo based on his id.  
-
-    6. <div class='desc delete-desc'><span class='request delete' >DELETE</span>/v1/services-availability/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        checks...    
+          <p class='desc'>This end-point allow you to list all services availability.
+          </p>
+        </div>     
 
 ## Pickup Points
 
-- [pickup points](#) <br />
+- <span class="item">pickup points</span> <br />
 
    Meeting points between merchant and merchant agent.
 
-    1. <div class='desc get-desc'><span class='request get'>GET</span>/v1/merchants/{merchant_id}/pickup-points/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        This end-point allow you to list all pickup point of specific merchant based on merchant id.
+    1. <div class='desc get-desc accordion'><span class='request get'>GET</span>/v1/merchants/{merchant_id}/pickup-points/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="pickupHeadingOne_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pickupCollapseOne_1" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="pickupCollapseOne_1" class="accordion-collapse collapse" aria-labelledby="pickupHeadingOne_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           In this end-point no request body needed.
+           </pre>
+           </div>
+           </div>
 
-    2. <div class='desc post-desc'><span class='request post' >POST</span>/v1/merchants/{merchant_id}/pickup-points/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        This end-point allow you to create new pickup point to specific merchant based on merchant id.  
+           <h2 class="accordion-header" id="pickupHeadingTwo_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pickupCollapseTwo_1" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="pickupCollapseTwo_1" class="accordion-collapse collapse" aria-labelledby="pickupHeadingTwo_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            allow: GET,POST,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Mon,16 Aug 2021 11:07:34 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 9 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block
+           </pre>
+           </div>
+           </div>
 
-    3. <div class='desc get-desc'><span class='request get'>GET</span>/v1/merchants/{merchant_id}/pickup-points/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        This end-point allow you retrieve specific pickup point based on merchant id and his id.  
+           <h2 class="accordion-header" id="pickupHeadingThree_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pickupCollapseThree_1" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="pickupCollapseThree_1" class="accordion-collapse collapse" aria-labelledby="pickupHeadingThree_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           {
+                "count": integer,
+                "next": string,
+                "previous": string,
+                "results": [
+                    {
+                        "id": integer,
+                        "created": string,
+                        "modified": string,
+                        "is_default": boolean,
+                        "merchant": {
+                            "id": integer,
+                            "created": string,
+                            "modified": string,
+                            "name": string,
+                            "store_url": string,
+                            "logo": string,
+                            "store_phone": string,
+                            "store_email": string,
+                            "status": string,
+                            "api_key": string,
+                            "cash_processing_fees": number,
+                            "cash_processing_fees_max": number,
+                            "cash_processing_percentage": number,
+                            "cash_processing_threshold": number,
+                            "address": {
+                                "id": integer,
+                                "created": string,
+                                "modified": string,
+                                "nickname": string,
+                                "line_1": string,
+                                "line_2": string,
+                                "line_3": string,
+                                "zip_code": string,
+                                "latitude": number,
+                                "longitude": number,
+                                "google_maps_link": string,
+                                "notes": string,
+                                "zone": {
+                                    "id": integer,
+                                    "name": string,
+                                    "radius": number,
+                                    "city": {
+                                        "id": integer,
+                                        "name": string,
+                                        "population": integer,
+                                        "is_captial": boolean,
+                                        "governorate": integer
+                                    },
+                                    "served_by": {
+                                        "id": integer,
+                                        "name": string,
+                                        "code": string,
+                                        "capacity": number,
+                                        "current_utilization": number,
+                                        "size": number,
+                                        "latitude": number,
+                                        "longitude": number,
+                                        "address": string,
+                                        "is_virtual": boolean
+                                    },
+                                    "zone_group": []
+                                }
+                            },
+                            "subscription": {
+                                "id": integer,
+                                "name": string
+                            },
+                            "pricing_lookup_delivery": integer,
+                            "pricing_lookup_return": integer,
+                            "pricing_lookup_exchange": integer,
+                            "pricing_lookup_cash_collection": integer,
+                            "act_cod_account": {
+                                "account_number": string,
+                                "created": string,
+                                "modified": string,
+                                "name": string,
+                                "parent_account": {
+                                    "account_number": string,
+                                    "created": string,
+                                    "modified": string,
+                                    "name": string,
+                                    "parent_account": integer,
+                                    "type": {
+                                        "id": integer,
+                                        "name": string
+                                    }
+                                },
+                                "type": {
+                                    "id": integer,
+                                    "name": string
+                                }
+                            },
+                            "act_shipping_revenue_account": {
+                                "account_number": string,
+                                "created": string,
+                                "modified": string,
+                                "name": string,
+                                "parent_account": {
+                                    "account_number": string,
+                                    "created": string,
+                                    "modified": string,
+                                    "name": string,
+                                    "parent_account": integer,
+                                    "type": {
+                                        "id": integer,
+                                        "name": string
+                                    }
+                                },
+                                "type": {
+                                    "id": integer,
+                                    "name": string
+                                }
+                            },
+                            "act_discounts_account": {
+                                "account_number": string,
+                                "created": string,
+                                "modified": string,
+                                "name": string,
+                                "parent_account": {
+                                    "account_number": string,
+                                    "created": string,
+                                    "modified": string,
+                                    "name": string,
+                                    "parent_account": integer,
+                                    "type": {
+                                        "id": integer,
+                                        "name": string
+                                    }
+                                },
+                                "type": {
+                                    "id": integer,
+                                    "name": string
+                                }
+                            },
+                            "act_account_receivable": {
+                                "account_number": string,
+                                "created": string,
+                                "modified": string,
+                                "name": string,
+                                "parent_account": {
+                                    "account_number": string,
+                                    "created": string,
+                                    "modified": string,
+                                    "name": string,
+                                    "parent_account": integer,
+                                    "type": {
+                                        "id": integer,
+                                        "name": string
+                                    }
+                                },
+                                "type": {
+                                    "id": integer,
+                                    "name": string
+                                }
+                            },
+                            "act_supplies_revenue_account": {
+                                "account_number": string,
+                                "created": string,
+                                "modified": string,
+                                "name": string,
+                                "parent_account": {
+                                    "account_number": string,
+                                    "created": string,
+                                    "modified": string,
+                                    "name": string,
+                                    "parent_account": integer,
+                                    "type": {
+                                        "id": integer,
+                                        "name": string
+                                    }
+                                },
+                                "type": {
+                                    "id": integer,
+                                    "name": string
+                                }
+                            },
+                            "pickup_days": [],
+                            "billing_days": []
+                        },
+                        "address": {
+                            "id": integer,
+                            "created": string,
+                            "modified": string,
+                            "nickname": string,
+                            "line_1": string,
+                            "line_2": string,
+                            "line_3": string,
+                            "zip_code": string,
+                            "latitude": number,
+                            "longitude": number,
+                            "google_maps_link": string,
+                            "notes": string,
+                            "zone": {
+                                "id": integer,
+                                "name": string,
+                                "radius": number,
+                                "city": {
+                                    "id": integer,
+                                    "name": string,
+                                    "population": integer,
+                                    "is_captial": boolean,
+                                    "governorate": {
+                                        "id": integer,
+                                        "name": string
+                                    }
+                                },
+                                "served_by": {
+                                    "id": integer,
+                                    "name": string,
+                                    "code": string,
+                                    "capacity": number,
+                                    "current_utilization": number,
+                                    "size": number,
+                                    "latitude": number,
+                                    "longitude": number,
+                                    "address": string,
+                                    "is_virtual": boolean
+                                },
+                                "zone_group": []
+                            }
+                        }
+                    },
+                    .....
+                ]
+            }
+           </pre>
+           </div>
+           </div>
 
-    4. <div class='desc put-desc'><span class='request put' >PUT</span>/v1/merchants/{merchant_id}/pickup-points/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
           </div>
+          <p class='desc'>This end-point allow you to list all pickup point of specific merchant based on merchant id.</p>
        </div>
-        This end-point allow you update specific pickup point based on merchant id and his id.
 
-    5. <div class='desc patch-desc'><span class='request patch'>PATCH</span>/v1/merchants/{merchant_id}/pickup-points/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        This end-point allow you partial update pickup point based on merchant id and his id.  
+    2. <div class='desc post-desc accordion'><span class='request post' >POST</span>/v1/merchants/{merchant_id}/pickup-points/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="pickupHeadingOne_2">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pickupCollapseOne_2" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="pickupCollapseOne_2" class="accordion-collapse collapse" aria-labelledby="pickupHeadingOne_2" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           {
+                "address":{
+                    "nickname": string,
+                    "line_1": string,
+                    "line_2": string,
+                    "zone": integer
+                }
+            }
+           </pre>
+           </div>
+           </div>
 
-    6. <div class='desc delete-desc'><span class='request delete' >DELETE</span>/v1/merchants/{merchant_id}/pickup-points/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
+           <h2 class="accordion-header" id="pickupHeadingTwo_2">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pickupCollapseTwo_2" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="pickupCollapseTwo_2" class="accordion-collapse collapse" aria-labelledby="pickupHeadingTwo_2" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            access-control-allow-origin: * 
+            allow: GET,POST,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Mon,16 Aug 2021 11:54:53 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 7 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="pickupHeadingThree_2">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pickupCollapseThree_2" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="pickupCollapseThree_2" class="accordion-collapse collapse" aria-labelledby="pickupHeadingThree_2" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           {
+                "id": integer,
+                "address": {
+                    "id": integer,
+                    "created": string,
+                    "modified": string,
+                    "nickname": string,
+                    "line_1": string,
+                    "line_2": string,
+                    "line_3": string,
+                    "zip_code": string,
+                    "latitude": number,
+                    "longitude": number,
+                    "google_maps_link": string,
+                    "notes": string,
+                    "zone": integer
+                },
+                "created": string,
+                "modified": string,
+                "is_default": boolean,
+                "merchant": integer
+            }
+           </pre>
+           </div>
+           </div>
+
           </div>
+          <p class='desc'>This end-point allow you to create new pickup point to specific merchant based on merchant id.</p>
+       </div>  
+
+    3. <div class='desc get-desc accordion'><span class='request get'>GET</span>/v1/merchants/{merchant_id}/pickup-points/{id}/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="pickupHeadingOne_3">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pickupCollapseOne_3" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="pickupCollapseOne_3" class="accordion-collapse collapse" aria-labelledby="pickupHeadingOne_3" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           In this end-point no request body needed.
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="pickupHeadingTwo_3">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pickupCollapseTwo_3" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="pickupCollapseTwo_3" class="accordion-collapse collapse" aria-labelledby="pickupHeadingTwo_3" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            allow: GET,PUT,PATCH,DELETE,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Mon,16 Aug 2021 12:22:27 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 6 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block
+           </pre>
+           </div>
+           </div>
+
+          <h2 class="accordion-header" id="pickupHeadingThree_3">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pickupCollapseThree_3" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="pickupCollapseThree_3" class="accordion-collapse collapse" aria-labelledby="pickupHeadingThree_3" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           {
+                "id": integer,
+                "created": string,
+                "modified": string,
+                "is_default": boolean,
+                "merchant": {
+                    "id": integer,
+                    "created": string,
+                    "modified": string,
+                    "name": string,
+                    "store_url": string,
+                    "logo": string,
+                    "store_phone": string,
+                    "store_email": string,
+                    "status": string,
+                    "api_key": string,
+                    "cash_processing_fees": number,
+                    "cash_processing_fees_max": number,
+                    "cash_processing_percentage": number,
+                    "cash_processing_threshold": number,
+                    "address": {
+                        "id": integer,
+                        "created": string,
+                        "modified": string,
+                        "nickname": string,
+                        "line_1": string,
+                        "line_2": string,
+                        "line_3": string,
+                        "zip_code": string,
+                        "latitude": number,
+                        "longitude": number,
+                        "google_maps_link": string,
+                        "notes": string,
+                        "zone": {
+                            "id": integer,
+                            "name": string,
+                            "radius": number,
+                            "city": {
+                                "id": integer,
+                                "name": string,
+                                "population": integer,
+                                "is_captial": boolean,
+                                "governorate": integer
+                            },
+                            "served_by": {
+                                "id": integer,
+                                "name": string,
+                                "code": string,
+                                "capacity": number,
+                                "current_utilization": number,
+                                "size": number,
+                                "latitude": number,
+                                "longitude": number,
+                                "address": string,
+                                "is_virtual": boolean
+                            },
+                            "zone_group": []
+                        }
+                    },
+                    "subscription": {
+                        "id": integer,
+                        "name": string
+                    },
+                    "pricing_lookup_delivery": integer,
+                    "pricing_lookup_return": integer,
+                    "pricing_lookup_exchange": integer,
+                    "pricing_lookup_cash_collection": integer,
+                    "act_cod_account": {
+                        "account_number": string,
+                        "created": string,
+                        "modified": string,
+                        "name": string,
+                        "parent_account": {
+                            "account_number": string,
+                            "created": string,
+                            "modified": string,
+                            "name": string,
+                            "parent_account": integer,
+                            "type": {
+                                "id": integer,
+                                "name": string
+                            }
+                        },
+                        "type": {
+                            "id": integer,
+                            "name": string
+                        }
+                    },
+                    "act_shipping_revenue_account": {
+                        "account_number": string,
+                        "created": string,
+                        "modified": string,
+                        "name": string,
+                        "parent_account": {
+                            "account_number": string,
+                            "created": string,
+                            "modified": string,
+                            "name": string,
+                            "parent_account": integer,
+                            "type": {
+                                "id": integer,
+                                "name": string
+                            }
+                        },
+                        "type": {
+                            "id": integer,
+                            "name": string
+                        }
+                    },
+                    "act_discounts_account": {
+                        "account_number": string,
+                        "created": string,
+                        "modified": string,
+                        "name": string,
+                        "parent_account": {
+                            "account_number": string,
+                            "created": string,
+                            "modified": string,
+                            "name": string,
+                            "parent_account": integer,
+                            "type": {
+                                "id": integer,
+                                "name": string
+                            }
+                        },
+                        "type": {
+                            "id": integer,
+                            "name": string
+                        }
+                    },
+                    "act_account_receivable": {
+                        "account_number": string,
+                        "created": string,
+                        "modified": string,
+                        "name": string,
+                        "parent_account": {
+                            "account_number": string,
+                            "created": string,
+                            "modified": string,
+                            "name": string,
+                            "parent_account": integer,
+                            "type": {
+                                "id": integer,
+                                "name": string
+                            }
+                        },
+                        "type": {
+                            "id": integer,
+                            "name": string
+                        }
+                    },
+                    "act_supplies_revenue_account": {
+                        "account_number": string,
+                        "created": string,
+                        "modified": string,
+                        "name": string,
+                        "parent_account": {
+                            "account_number": string,
+                            "created": string,
+                            "modified": string,
+                            "name": string,
+                            "parent_account": integer,
+                            "type": {
+                                "id": integer,
+                                "name": string
+                            }
+                        },
+                        "type": {
+                            "id": integer,
+                            "name": string
+                        }
+                    },
+                    "pickup_days": [],
+                    "billing_days": []
+                },
+                "address": {
+                    "id": integer,
+                    "created": string,
+                    "modified": string,
+                    "nickname": string,
+                    "line_1": string,
+                    "line_2": string,
+                    "line_3": string,
+                    "zip_code": string,
+                    "latitude": number,
+                    "longitude": number,
+                    "google_maps_link": string,
+                    "notes": string,
+                    "zone": {
+                        "id": integer,
+                        "name": string,
+                        "radius": number,
+                        "city": {
+                            "id": integer,
+                            "name": string,
+                            "population": integer,
+                            "is_captial": boolean,
+                            "governorate": {
+                                "id": integer,
+                                "name": string
+                            }
+                        },
+                        "served_by": {
+                            "id": integer,
+                            "name": string,
+                            "code": string,
+                            "capacity": number,
+                            "current_utilization": number,
+                            "size": number,
+                            "latitude": number,
+                            "longitude": number,
+                            "address": string,
+                            "is_virtual": boolean
+                        },
+                        "zone_group": []
+                    }
+                }
+            }
+           </pre>
+           </div>
+           </div>
+
+          </div>
+          <p class='desc'>This end-point allow you retrieve specific pickup point based on merchant id and pickup point id.</p>
+       </div> 
+
+    4. <div class='desc put-desc accordion'><span class='request put' >PUT</span>/v1/merchants/{merchant_id}/pickup-points/{id}/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="pickupHeadingOne_4">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pickupCollapseOne_4" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="pickupCollapseOne_4" class="accordion-collapse collapse" aria-labelledby="pickupHeadingOne_4" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           {
+                "address":{
+                    "nickname": string,
+                    "line_1": string,
+                    "line_2": string,
+                    "zone": integer
+                },
+                "merchant": integer
+            }
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="pickupHeadingTwo_4">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pickupCollapseTwo_4" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="pickupCollapseTwo_4" class="accordion-collapse collapse" aria-labelledby="pickupHeadingTwo_4" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            access-control-allow-origin: * 
+            allow: GET,PUT,PATCH,DELETE,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Mon,16 Aug 2021 12:36:23 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 7 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="pickupHeadingThree_4">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pickupCollapseThree_4" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="pickupCollapseThree_4" class="accordion-collapse collapse" aria-labelledby="pickupHeadingThree_4" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           {
+                "id": integer,
+                "address": {
+                    "id": integer,
+                    "created": string,
+                    "modified": string,
+                    "nickname": string,
+                    "line_1": string,
+                    "line_2": string,
+                    "line_3": string,
+                    "zip_code": string,
+                    "latitude": number,
+                    "longitude": number,
+                    "google_maps_link": string,
+                    "notes": string,
+                    "zone": integer
+                },
+                "created": string,
+                "modified": string,
+                "is_default": boolean,
+                "merchant": integer
+            }
+           </pre>
+           </div>
+           </div>
+
+          </div>
+          <p class='desc'>This end-point allow you update specific pickup point based on merchant id and pickup point id.</p>
        </div>
-        This end-point allow you delete specific pickup point based on merchant id and his id.
+
+    5. <div class='desc patch-desc accordion'><span class='request patch'>PATCH</span>/v1/merchants/{merchant_id}/pickup-points/{id}/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="pickupHeadingOne_5">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pickupCollapseOne_5" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="pickupCollapseOne_5" class="accordion-collapse collapse" aria-labelledby="pickupHeadingOne_5" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           Request body as same as above request<br />
+           <code>PUT: /v1/merchants/{merchant_id}/pickup-points/{id}/</code> <br />
+           BUT you can ignore all or some of keys because it partial update.
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="pickupHeadingTwo_5">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pickupCollapseTwo_5" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="pickupCollapseTwo_5" class="accordion-collapse collapse" aria-labelledby="pickupHeadingTwo_5" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            access-control-allow-origin: * 
+            allow: GET,PUT,PATCH,DELETE,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Mon,16 Aug 2021 12:45:07 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 7 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="pickupHeadingThree_5">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pickupCollapseThree_5" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="pickupCollapseThree_5" class="accordion-collapse collapse" aria-labelledby="pickupHeadingThree_5" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           Response body as same as above request<br />
+           <code>PUT: /v1/merchants/{merchant_id}/pickup-points/{id}/</code>
+           </pre>
+           </div>
+           </div>
+
+          </div>
+          <p class='desc'>This end-point allow you partial update pickup point based on merchant id and pickup point id.</p>
+       </div> 
+
+    6. <div class='desc delete-desc accordion'><span class='request delete' >DELETE</span>/v1/merchants/{merchant_id}/pickup-points/{id}/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="pickupHeadingOne_6">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pickupCollapseOne_6" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="pickupCollapseOne_6" class="accordion-collapse collapse" aria-labelledby="pickupHeadingOne_6" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            In this end-point no request body needed.
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="pickupHeadingTwo_6">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pickupCollapseTwo_6" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="pickupCollapseTwo_6" class="accordion-collapse collapse" aria-labelledby="pickupHeadingTwo_6" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            access-control-allow-origin: * 
+            allow: GET,PUT,PATCH,DELETE,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Mon,16 Aug 2021 12:55:41 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 7 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="pickupHeadingThree_6">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#pickupCollapseThree_6" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="pickupCollapseThree_6" class="accordion-collapse collapse" aria-labelledby="pickupHeadingThree_6" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           In this end-point no response body.
+           </pre>
+           </div>
+           </div>
+
+          </div>
+          <p class='desc'>This end-point allow you delete specific pickup point based on merchant id and pickup point id.</p>
+       </div>
 
 ## Orders
-
-Orders divided on three categoricals
+<br />
+Orders are divided into three categoricals
 - Delivery
 - Return
 - Exchanges
 
 ### Delivery
-- [delivery order](#) <br />
-    1. <div id='accordionExample_1' class='desc get-desc accordion'><span class='request get'>GET</span>/v1/delivery-orders/
+- <span id= "delivery-order" class="item">delivery order</span> <br />
+    1. <div class='desc get-desc accordion'><span class='request get'>GET</span>/v1/delivery-orders/
           <div style='margin-top: 15px;'>
 
            <h2 class="accordion-header" id="deliveryHeadingOne">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseOne" aria-expanded="true" aria-controls="collapseOne">
-                Request body exampel
+                Request body example
            </button>
            </h2>
            <div id="deliveryCollapseOne" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingOne" data-bs-parent="#accordionExample">
@@ -592,7 +1429,7 @@ Orders divided on three categoricals
 
            <h2 class="accordion-header" id="deliveryHeadingTwo">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseTwo" aria-expanded="true" aria-controls="collapseOne">
-                Response header exampel
+                Response header example
            </button>
            </h2>
            <div id="deliveryCollapseTwo" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingTwo" data-bs-parent="#accordionExample">
@@ -619,7 +1456,7 @@ Orders divided on three categoricals
 
            <h2 class="accordion-header" id="deliveryHeadingThree">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseThree" aria-expanded="true" aria-controls="collapseOne">
-                Response body exampel
+                Response body example
            </button>
            </h2>
            <div id="deliveryCollapseThree" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingThree" data-bs-parent="#accordionExample">
@@ -657,7 +1494,6 @@ Orders divided on three categoricals
                             ],
                             "delivery_attempts": string,
                             "pickup_date": string,
-                            "cash_deposited": boolean
                             "delivered_date": string,
                             "created": string,
                             "modified": string,
@@ -672,7 +1508,10 @@ Orders divided on three categoricals
                             "preferred_date": string,
                             "estimated_date": string,
                             "status": string,
-                            "intermediate_warehouses": [string],
+                            "intermediate_warehouses": [
+                                string,
+                                ....
+                            ],
                             "dispatch_early": string,
                             "dispatch_late": string,
                             "merchant": {
@@ -729,90 +1568,17 @@ Orders divided on three categoricals
                                             "address": string,
                                             "is_virtual": boolean
                                         },
-                                        "zone_group": [{
-                                            "id": integer,
-                                            "created": string,
-                                            "modified": string,
-                                            "name": string,
-                                            "served_by": {
-                                                "id": integer,
-                                                "name": string,
-                                                "code": string,
-                                                "capacity": number,
-                                                "current_utilization": number,
-                                                "size": number,
-                                                "latitude": number,
-                                                "longitude": number,
-                                                "address": string,
-                                                "is_virtual": boolean
-                                            },
-                                        }]
+                                        "zone_group": []
                                     }
                                 },
                                 "subscription": {
                                     "id": integer,
                                     "name": string
                                 },
-                                "pricing_lookup_delivery": {
-                                    "id": integer,
-                                    "created": string,
-                                    "modified": string,
-                                    "status": string,
-                                    "service_type": string,
-                                    "package": {
-                                        "id": integer,
-                                        "created": string,
-                                        "modified": string,
-                                        "status": string,
-                                        "name": string,
-                                        "google_sheet_url": string
-                                    }
-                                },
-                                "pricing_lookup_return": {
-                                    "id": integer,
-                                    "created": string,
-                                    "modified": string,
-                                    "status": string,
-                                    "service_type": string,
-                                    "package": {
-                                        "id": integer,
-                                        "created": string,
-                                        "modified": string,
-                                        "status": string,
-                                        "name": string,
-                                        "google_sheet_url": string
-                                    }
-                                },
-                                "pricing_lookup_exchange": {
-                                    "id": integer,
-                                    "created": string,
-                                    "modified": string,
-                                    "status": string,
-                                    "service_type": string,
-                                    "package": {
-                                        "id": integer,
-                                        "created": string,
-                                        "modified": string,
-                                        "status": string,
-                                        "name": string,
-                                        "google_sheet_url": string
-                                    }
-                                },
-                                "pricing_lookup_cash_collection": {
-                                    "id": integer,
-                                    "created": string,
-                                    "modified": string,
-                                    "status": string,
-                                    "service_type": string,
-                                    "package": {
-                                        "id": integer,
-                                        "created": string,
-                                        "modified": string,
-                                        "status": string,
-                                        "name": string,
-                                        "google_sheet_url": string
-                                    }
-                                },
+                                "pricing_lookup_delivery": integer,
+                                "pricing_lookup_return": integer,
+                                "pricing_lookup_exchange": integer,
+                                "pricing_lookup_cash_collection": integer,
                                 "act_cod_account": {
                                     "account_number": string,
                                     "created": string,
@@ -974,24 +1740,7 @@ Orders divided on three categoricals
                                             "address": string,
                                             "is_virtual": boolean
                                         },
-                                        "zone_group": [{
-                                            "id": integer,
-                                            "created": string,
-                                            "modified": string,
-                                            "name": string,
-                                            "served_by": {
-                                                "id": integer,
-                                                "name": string,
-                                                "code": string,
-                                                "capacity": number,
-                                                "current_utilization": number,
-                                                "size": number,
-                                                "latitude": number,
-                                                "longitude": number,
-                                                "address": string,
-                                                "is_virtual": boolean
-                                            },
-                                        }]
+                                        "zone_group": []
                                     }
                                 },
                                 "act_cash_account": {
@@ -1075,25 +1824,23 @@ Orders divided on three categoricals
                                 "address": string,
                                 "is_virtual": boolean
                             },
-                            "preferred_window": [{
-                                "id": integer,
-                                "display_name": string
-                            }]
-                        }
+                            "preferred_window": []
+                        },
+                        .....
                     ]
                 }
            </pre>
            </div>
            </div>
           </div>
+          <p class='desc'>This end-point allow you to list all delivery orders.</p>
        </div>
-        This end-point allow you to list all delivery orders.
 
-    2. <div id='accordionExample_2' class='desc post-desc accordion'><span class='request post' >POST</span>/v1/delivery-orders/
+    2. <div class='desc post-desc accordion'><span class='request post' >POST</span>/v1/delivery-orders/
           <div style='margin-top: 15px;'>
            <h2 class="accordion-header" id="deliveryHeadingOne_2">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseOne_2" aria-expanded="true" aria-controls="collapseOne">
-                Request body exampel
+                Request body example
            </button>
            </h2>
            <div id="deliveryCollapseOne_2" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingOne_2" data-bs-parent="#accordionExample">
@@ -1123,7 +1870,7 @@ Orders divided on three categoricals
 
            <h2 class="accordion-header" id="deliveryHeadingTwo_2">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseTwo_2" aria-expanded="true" aria-controls="collapseOne">
-                Response header exampel
+                Response header example
            </button>
            </h2>
            <div id="deliveryCollapseTwo_2" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingTwo_2" data-bs-parent="#accordionExample">
@@ -1151,7 +1898,7 @@ Orders divided on three categoricals
 
            <h2 class="accordion-header" id="deliveryHeadingThree_2">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseThree_2" aria-expanded="true" aria-controls="collapseOne">
-                Response body exampel
+                Response body example
            </button>
            </h2>
            <div id="deliveryCollapseThree_2" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingThree_2" data-bs-parent="#accordionExample">
@@ -1215,27 +1962,26 @@ Orders divided on three categoricals
            </pre>
            </div>
           </div>
+          <p class='desc'>This end-point allow you to create new delivery order.</p>
        </div>
-       This end-point allow you to create new delivery order.
 
-    3. <div id='accordionExample_3' class='desc get-desc accordion'>
+    3. <div class='desc get-desc accordion'>
         <span class='request get'>GET</span>/v1/delivery-orders/{id}/
           <div style='margin-top: 15px;'>
            <h2 class="accordion-header" id="deliveryHeadingOne_3">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseOne_3" aria-expanded="true" aria-controls="collapseOne">
-                Request body exampel
+                Request body example
            </button>
            </h2>
            <div id="deliveryCollapseOne_3" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingOne_3" data-bs-parent="#accordionExample">
            <div class="accordion-body">
-           In this end-point no request body needed, but one parameter is required: 
-           <code>id</code>
+           In this end-point no request body needed.
            </div>
            </div>
 
            <h2 class="accordion-header" id="deliveryHeadingTwo_3">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseTwo_3" aria-expanded="true" aria-controls="collapseOne">
-                Response header exampel
+                Response header example
            </button>
            </h2>
            <div id="deliveryCollapseTwo_3" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingTwo_3" data-bs-parent="#accordionExample">
@@ -1262,22 +2008,23 @@ Orders divided on three categoricals
 
            <h2 class="accordion-header" id="deliveryHeadingThree_3">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseThree_3" aria-expanded="true" aria-controls="collapseOne">
-                Response body exampel
+                Response body example
            </button>
            </h2>
            <div id="deliveryCollapseThree_3" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingThree_3" data-bs-parent="#accordionExample">
            <div class="accordion-body">
-           Request body as same as <code>GET: v1/delivery-orders/</code> BUT for specific delivery order id
+           Response body as same as <code>GET: v1/delivery-orders/</code> BUT for specific delivery order id
            </div>
           </div>
-       </div>
-        This end-point allow you retrieve specific delivery based on his id.  
 
-    4. <div id='accordionExample_4' class='desc put-desc accordion'><span class='request put' >PUT</span>/v1/delivery-orders/{id}/
+          <p class='desc'>This end-point allow you retrieve specific delivery based on delivery order id.</p>
+       </div> 
+
+    4. <div class='desc put-desc accordion'><span class='request put' >PUT</span>/v1/delivery-orders/{id}/
           <div style='margin-top: 15px;'>
            <h2 class="accordion-header" id="deliveryHeadingOne_4">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseOne_4" aria-expanded="true" aria-controls="collapseOne">
-                Request body exampel
+                Request body example
            </button>
            </h2>
            <div id="deliveryCollapseOne_4" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingOne_4" data-bs-parent="#accordionExample">
@@ -1309,7 +2056,7 @@ Orders divided on three categoricals
 
            <h2 class="accordion-header" id="deliveryHeadingTwo_4">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseTwo_4" aria-expanded="true" aria-controls="collapseOne">
-                Response header exampel
+                Response header example
            </button>
            </h2>
            <div id="deliveryCollapseTwo_4" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingTwo_4" data-bs-parent="#accordionExample">
@@ -1337,7 +2084,7 @@ Orders divided on three categoricals
 
            <h2 class="accordion-header" id="deliveryHeadingThree_4">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseThree_4" aria-expanded="true" aria-controls="collapseOne">
-                Response body exampel
+                Response body example
            </button>
            </h2>
            <div id="deliveryCollapseThree_4" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingThree_4" data-bs-parent="#accordionExample">
@@ -1402,25 +2149,26 @@ Orders divided on three categoricals
            </div>
 
           </div>
-       </div>
-        This end-point allow you update specific delivery based on his id.
 
-    5. <div id='accordionExample_5' class='desc patch-desc accordion'><span class='request patch'>PATCH</span>/v1/delivery-orders/{id}/
+          <p class='desc'>This end-point allow you update specific delivery based on delivery order id.</p>
+       </div>
+
+    5. <div class='desc patch-desc accordion'><span class='request patch'>PATCH</span>/v1/delivery-orders/{id}/
           <div style='margin-top: 15px;'>
            <h2 class="accordion-header" id="deliveryHeadingOne_5">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseOne_5" aria-expanded="true" aria-controls="collapseOne">
-                Request body exampel
+                Request body example
            </button>
            </h2>
            <div id="deliveryCollapseOne_5" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingOne_5" data-bs-parent="#accordionExample">
            <div class="accordion-body">
-           Request body as same as <code>PUT: /v1/delivery-orders/{id}/</code> BUT you can ignore some of keys because it partial update
+           Request body as same as <code>PUT: /v1/delivery-orders/{id}/</code> BUT you can ignore all or some of keys because it partial update.
            </div>
            </div>
 
            <h2 class="accordion-header" id="deliveryHeadingTwo_5">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseTwo_5" aria-expanded="true" aria-controls="collapseOne">
-                Response header exampel
+                Response header example
            </button>
            </h2>
            <div id="deliveryCollapseTwo_5" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingTwo_5" data-bs-parent="#accordionExample">
@@ -1448,7 +2196,7 @@ Orders divided on three categoricals
 
            <h2 class="accordion-header" id="deliveryHeadingThree_5">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseThree_5" aria-expanded="true" aria-controls="collapseOne">
-                Response body exampel
+                Response body example
            </button>
            </h2>
            <div id="deliveryCollapseThree_5" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingThree_5" data-bs-parent="#accordionExample">
@@ -1456,25 +2204,26 @@ Orders divided on three categoricals
             Response body as same as <code>PUT: /v1/delivery-orders/{id}/</code>
            </div>
           </div> 
-       </div>
-        This end-point allow you partial update delivery based on his id.  
 
-    6. <div id='accordionExample_6' class='desc delete-desc accordion'><span class='request delete' >DELETE</span>/v1/delivery-orders/{id}/
+          <p class='desc'>This end-point allow you partial update delivery based on delivery order id.</p>
+       </div>  
+
+    6. <div class='desc delete-desc accordion'><span class='request delete' >DELETE</span>/v1/delivery-orders/{id}/
           <div style='margin-top: 15px;'>
            <h2 class="accordion-header" id="deliveryHeadingOne_6">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseOne_6" aria-expanded="true" aria-controls="collapseOne">
-                Request body exampel
+                Request body example
            </button>
            </h2>
            <div id="deliveryCollapseOne_6" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingOne_6" data-bs-parent="#accordionExample">
            <div class="accordion-body">
-           In this end-point no request body needed, but one parameter is required:    <code>id</code>
+           In this end-point no request body needed.
            </div>
            </div>
 
            <h2 class="accordion-header" id="deliveryHeadingTwo_6">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseTwo_6" aria-expanded="true" aria-controls="collapseOne">
-                Response header exampel
+                Response header example
            </button>
            </h2>
            <div id="deliveryCollapseTwo_6" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingTwo_6" data-bs-parent="#accordionExample">
@@ -1502,92 +2251,226 @@ Orders divided on three categoricals
 
            <h2 class="accordion-header" id="deliveryHeadingThree_6">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryCollapseThree_6" aria-expanded="true" aria-controls="collapseOne">
-                Response body exampel
+                Response body example
            </button>
            </h2>
            <div id="deliveryCollapseThree_6" class="accordion-collapse collapse" aria-labelledby="deliveryHeadingThree_6" data-bs-parent="#accordionExample">
            <div class="accordion-body">
-            In this end-point no response body.
+           <pre>
+           In this end-point no response body.
+           </pre>
            </div>
           </div>
 
           </div>  
+
+          <p class='desc'>This end-point allow you delete specific delivery based on delivery order id.</p>
        </div>
-        This end-point allow you delete specific delivery based on his id.
 
-    7. <div class='desc get-desc'><span class='request get' >GET</span>/v1/merchants/{merchant_id}/delivery-order/
-          <div>
-
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>  
-       </div>
-        check...       
-
-- [tracking](#) <br />
-    1. <div class='desc get-desc'><span class='request get'>GET</span>/v1/delivery-order/{tracking_number}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-      </div>
-       check...
-
-    2. <div class='desc post-desc'><span class='request post' >POST</span>/v1/delivery-order/{tracking_number}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-    check...
-
-- [upload](#)  <br />
-    1. <div class='desc get-desc'><span class='request get'>GET</span>/v1/delivery-order-upload/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-    check...
-
-    2. <div class='desc post-desc'><span class='request post' >POST</span>/v1/delivery-order-upload/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        check...
-- [uncompleted](#)  <br />
-    1. <div id='accordionExample_1' class='desc get-desc accordion'><span class='request get'>GET</span>/v1/delivery-orders-uncompleted/
+   
+- <span id= "delivery-order-tracking" class="item">tracking</span> <br />
+    1. <div class='desc get-desc accordion'><span class='request get'>GET</span>/v1/delivery-order/{tracking_number}/
           <div style='margin-top: 15px;'>
-           <h2 class="accordion-header" id="deliveryUncompletedHeadingOne_1">
-           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryUncompletedCollapseOne_1" aria-expanded="true" aria-controls="collapseOne">
-                Request body exampel
+           <h2 class="accordion-header" id="deliveryTrackingHeadingOne_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryTrackingCollapseOne_1" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
            </button>
            </h2>
-           <div id="deliveryUncompletedCollapseOne_1" class="accordion-collapse collapse" aria-labelledby="deliveryUncompletedHeadingOne_1" data-bs-parent="#accordionExample">
+           <div id="deliveryTrackingCollapseOne_1" class="accordion-collapse collapse" aria-labelledby="deliveryTrackingHeadingOne_1" data-bs-parent="#accordionExample">
            <div class="accordion-body">
            In this end-point no request body needed.
            </div>
            </div>
 
-           <h2 class="accordion-header" id="deliveryUncompletedHeadingTwo_1">
-           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryUncompletedCollapseTwo_1" aria-expanded="true" aria-controls="collapseOne">
-                Response header exampel
+           <h2 class="accordion-header" id="deliveryTrackingHeadingTwo_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryTrackingCollapseTwo_1" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
            </button>
            </h2>
-           <div id="deliveryUncompletedCollapseTwo_1" class="accordion-collapse collapse" aria-labelledby="deliveryUncompletedHeadingTwo_1" data-bs-parent="#accordionExample">
+           <div id="deliveryTrackingCollapseTwo_1" class="accordion-collapse collapse" aria-labelledby="deliveryTrackingHeadingTwo_1" data-bs-parent="#accordionExample">
            <div class="accordion-body">
            <pre>
-            allow: GET,HEAD,OPTIONS 
+            allow: GET,POST,HEAD,OPTIONS 
+            content-length: 23 
+            content-type: application/json 
+            date: Mon,16 Aug 2021 14:26:19 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 2 
+            x-queryinspect-total-request-time: 6 ms 
+            x-queryinspect-total-sql-time: 2 ms 
+            x-xss-protection: 1; mode=block
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="deliveryTrackingHeadingThree_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryTrackingCollapseThree_1" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="deliveryTrackingCollapseThree_1" class="accordion-collapse collapse" aria-labelledby="deliveryTrackingHeadingThree_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           Response body as same as <code>GET: /v1/delivery-orders/</code> <br />
+           BUT for one specific delivery order based on delivery order tracking number.
+           </pre>
+           </div>
+          </div>
+
+          </div>
+          <p class='desc'>This end-point allow you to retrieve specific delivery order based on delivery order tracking number.</p>
+      </div>
+
+    2. <div class='desc post-desc accordion'><span class='request post' >POST</span>/v1/delivery-order/{tracking_number}/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="deliveryTrackingHeadingOne_2">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryTrackingCollapseOne_2" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="deliveryTrackingCollapseOne_2" class="accordion-collapse collapse" aria-labelledby="deliveryTrackingHeadingOne_2" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           {
+                "preferred_window": [integer, ...],
+                "latitude": number,
+                "longitude": number
+            }
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="deliveryTrackingHeadingTwo_2">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryTrackingCollapseTwo_2" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="deliveryTrackingCollapseTwo_2" class="accordion-collapse collapse" aria-labelledby="deliveryTrackingHeadingTwo_2" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            access-control-allow-origin: * 
+            allow: GET,POST,HEAD,OPTIONS 
+            content-length: 52 
+            content-type: application/json 
+            date: Mon,16 Aug 2021 15:00:20 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 2 
+            x-queryinspect-total-request-time: 26 ms 
+            x-queryinspect-total-sql-time: 5 ms 
+            x-xss-protection: 1; mode=block
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="deliveryTrackingHeadingThree_2">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryTrackingCollapseThree_2" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="deliveryTrackingCollapseThree_2" class="accordion-collapse collapse" aria-labelledby="deliveryTrackingHeadingThree_2" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           {
+                "id": integer,
+                "customer": {
+                    "id": integer,
+                    "address": {
+                        "id": integer,
+                        "created": string,
+                        "modified": string,
+                        "nickname": string,
+                        "line_1": string,
+                        "line_2": string,
+                        "line_3": string,
+                        "zip_code": string,
+                        "latitude": number,
+                        "longitude": number,
+                        "google_maps_link": number,
+                        "notes": number,
+                        "zone": integer
+                    },
+                    "created": string,
+                    "modified": string,
+                    "first_name": string,
+                    "last_name": string,
+                    "email": string,
+                    "phone": string,
+                    "act_cash_account": integer
+                },
+                "created": string,
+                "modified": string,
+                "tracking_number": string,
+                "merchant_order_reference": string,
+                "order_notes": string,
+                "is_exchange": boolean,
+                "is_pudo": boolean,
+                "is_counter_dropoff": boolean,
+                "cash_processing": boolean,
+                "cash_amount": number,
+                "preferred_date": string,
+                "estimated_date": string,
+                "status": string,
+                "intermediate_warehouses": [
+                    string,
+                    ....
+                ],
+                "dispatch_early": string,
+                "dispatch_late": string,
+                "merchant": integer,
+                "service_level": integer,
+                "pickup_point": integer,
+                "order_price": integer,
+                "current_warehouse": integer,
+                "inbound_warehouse": integer,
+                "outbound_warehouse": integer,
+                "preferred_window": [integer, ...]
+            }
+           </pre>
+           </div>
+          </div>
+
+          </div>
+          <p class='desc'>This end-point allow you to update
+          <code>preferred_window, latitude and longitude</code> <br />of specific delivery order based on delivery order tracking number.
+          </p>
+       </div>
+
+- <span id= "delivery-order-upload" class="item">upload</span>  <br />
+    1. <div class='desc get-desc accordion'><span class='request get'>GET</span>/v1/delivery-order-upload/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="deliveryUploadHeadingOne_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryUploadCollapseOne_1" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="deliveryUploadCollapseOne_1" class="accordion-collapse collapse" aria-labelledby="deliveryUploadHeadingOne_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           In this end-point no request body needed.
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="deliveryUploadHeadingTwo_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryUploadCollapseTwo_1" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="deliveryUploadCollapseTwo_1" class="accordion-collapse collapse" aria-labelledby="deliveryUploadHeadingTwo_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            allow: GET,POST,HEAD,OPTIONS 
             content-length: 58 
             content-type: application/json 
-            date: Sun,15 Aug 2021 15:07:37 GMT 
+            date: Mon,16 Aug 2021 15:23:25 GMT 
             referrer-policy: same-origin 
             server: WSGIServer/0.2 CPython/3.9.6 
             vary: Accept,Origin,Cookie 
@@ -1596,25 +2479,148 @@ Orders divided on three categoricals
             x-frame-options: DENY 
             x-queryinspect-duplicate-sql-queries: 0 
             x-queryinspect-num-sql-queries: 0 
-            x-queryinspect-total-request-time: 6 ms 
+            x-queryinspect-total-request-time: 7 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="deliveryUploadHeadingThree_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryUploadCollapseThree_1" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="deliveryUploadCollapseThree_1" class="accordion-collapse collapse" aria-labelledby="deliveryUploadHeadingThree_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           {
+               "file_url": string
+           }
+           </pre>
+           </div>
+          </div>
+
+          </div>
+          <p class='desc'>In this end-point you can get delivery order template file to add multiple delivery orders.</p>
+       </div>
+
+    2. <div class='desc post-desc accordion'><span class='request post' >POST</span>/v1/delivery-order-upload/
+           <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="deliveryUploadHeadingOne_2">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryUploadCollapseOne_2" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="deliveryUploadCollapseOne_2" class="accordion-collapse collapse" aria-labelledby="deliveryUploadHeadingOne_2" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           In this end-point request body is form data with 
+           key = orders and value = File.
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="deliveryUploadHeadingTwo_2">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryUploadCollapseTwo_2" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="deliveryUploadCollapseTwo_2" class="accordion-collapse collapse" aria-labelledby="deliveryUploadHeadingTwo_2" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            access-control-allow-origin: * 
+            allow: GET,POST,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Mon,16 Aug 2021 15:29:00 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 7 ms 
             x-queryinspect-total-sql-time: 0 ms 
             x-xss-protection: 1; mode=block 
            </pre>
            </div>
            </div>
 
-           <h2 class="accordion-header" id="deliveryUncompletedHeadingThree_1">
-           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryUncompletedCollapseThree_1" aria-expanded="true" aria-controls="collapseOne">
-                Response body exampel
+           <h2 class="accordion-header" id="deliveryUploadHeadingThree_2">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#deliveryUploadCollapseThree_2" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
            </button>
            </h2>
-           <div id="deliveryUncompletedCollapseThree_1" class="accordion-collapse collapse" aria-labelledby="deliveryUncompletedHeadingThree_1" data-bs-parent="#accordionExample">
+           <div id="deliveryUploadCollapseThree_2" class="accordion-collapse collapse" aria-labelledby="deliveryUploadHeadingThree_2" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           In this end-point no response body.
+           </pre>
+           </div>
+          </div>
+
+          </div>
+          <p class='desc'>In this end-point you can upload delivery order template file after added multiple delivery orders.</p>
+       </div>
+
+
+### Return
+
+- <span id= "return-order" class="item">return order</span> <br />
+    1. <div class='desc get-desc accordion'><span class='request get'>GET</span>/v1/returns/
+          <div style='margin-top: 15px;'>
+
+           <h2 class="accordion-header" id="returnHeadingOne_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#returnCollapseOne_1" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="returnCollapseOne_1" class="accordion-collapse collapse" aria-labelledby="returnHeadingOne_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           In this end-point no request body needed.
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="returnHeadingTwo_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#returnCollapseTwo_1" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="returnCollapseTwo_1" class="accordion-collapse collapse" aria-labelledby="returnHeadingTwo_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            allow: GET,POST,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Sun,15 Aug 2021 18:41:37 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 7 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="returnHeadingThree_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#returnCollapseThree_1" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="returnCollapseThree_1" class="accordion-collapse collapse" aria-labelledby="returnHeadingThree_1" data-bs-parent="#accordionExample">
            <div class="accordion-body">
            <pre>
            {
                 "count": integer,
-                "next": null,
-                "previous": null,
+                "next": string,
+                "previous": string,
                 "results": [
                     {
                         "id": integer,
@@ -1622,7 +2628,6 @@ Orders divided on three categoricals
                             {
                                 "id": integer,
                                 "supplies_required": boolean,
-                                "sms_confirmation_code": null,
                                 "package": {
                                     "id": integer,
                                     "created": string,
@@ -1637,13 +2642,11 @@ Orders divided on three categoricals
                                         "short_code": string,
                                         "description": string
                                     }
-                                },
-                                "package_location": string
+                                }
                             }
                         ],
-                        "delivery_attempts": string,
                         "pickup_date": string,
-                        "delivered_date": string,
+                        "returned_date": string,
                         "created": string,
                         "modified": string,
                         "tracking_number": string,
@@ -1656,7 +2659,7 @@ Orders divided on three categoricals
                         "cash_amount": null,
                         "preferred_date": null,
                         "estimated_date": null,
-                        "status": "created",
+                        "status": string,
                         "intermediate_warehouses": [
                             string,
                             ...
@@ -1734,11 +2737,11 @@ Orders divided on three categoricals
                                 "modified": string,
                                 "name": string,
                                 "parent_account": {
-                                    "account_number": string",
+                                    "account_number": string,
                                     "created": string,
                                     "modified": string,
                                     "name": string,
-                                    "parent_account": object,
+                                    "parent_account": null,
                                     "type": {
                                         "id": integer,
                                         "name": string
@@ -1755,11 +2758,11 @@ Orders divided on three categoricals
                                 "modified": string,
                                 "name": string,
                                 "parent_account": {
-                                    "account_number": string",
+                                    "account_number": string,
                                     "created": string,
                                     "modified": string,
                                     "name": string,
-                                    "parent_account": object,
+                                    "parent_account": null,
                                     "type": {
                                         "id": integer,
                                         "name": string
@@ -1776,11 +2779,11 @@ Orders divided on three categoricals
                                 "modified": string,
                                 "name": string,
                                 "parent_account": {
-                                    "account_number": string",
+                                    "account_number": string,
                                     "created": string,
                                     "modified": string,
                                     "name": string,
-                                    "parent_account": object,
+                                    "parent_account": null,
                                     "type": {
                                         "id": integer,
                                         "name": string
@@ -1797,11 +2800,11 @@ Orders divided on three categoricals
                                 "modified": string,
                                 "name": string,
                                 "parent_account": {
-                                    "account_number": string",
+                                    "account_number": string,
                                     "created": string,
                                     "modified": string,
                                     "name": string,
-                                    "parent_account": object,
+                                    "parent_account": null,
                                     "type": {
                                         "id": integer,
                                         "name": string
@@ -1812,17 +2815,17 @@ Orders divided on three categoricals
                                     "name": string
                                 }
                             },
-                            "act_supplies_revenue_account": {
+                            "act_supplies_revenue_account":{
                                 "account_number": string,
                                 "created": string,
                                 "modified": string,
                                 "name": string,
                                 "parent_account": {
-                                    "account_number": string",
+                                    "account_number": string,
                                     "created": string,
                                     "modified": string,
                                     "name": string,
-                                    "parent_account": object,
+                                    "parent_account": null,
                                     "type": {
                                         "id": integer,
                                         "name": string
@@ -1872,22 +2875,41 @@ Orders divided on three categoricals
                                         }
                                     },
                                     "served_by": {
-                                        "id": 1,
-                                        "name": "Downtown Cairo",
-                                        "code": "DW",
-                                        "capacity": 0.0,
-                                        "current_utilization": 0.0,
-                                        "size": 0.0,
-                                        "latitude": 30.031367,
-                                        "longitude": 31.232819,
-                                        "address": "شارع كورنيش النيل",
-                                        "is_virtual": false
+                                         "id": integer,
+                                        "name": string,
+                                        "code": string,
+                                        "capacity": number,
+                                        "current_utilization": number,
+                                        "size": number,
+                                        "latitude": number,
+                                        "longitude": number,
+                                        "address": string,
+                                        "is_virtual": boolean
                                     },
                                     "zone_group": []
                                 }
                             },
-                            "act_cash_account": null
-                        },
+                            "act_cash_account": {
+                                "account_number": string,
+                                "created": string,
+                                "modified": string,
+                                "name": string,
+                                "parent_account": {
+                                    "account_number": string,
+                                    "created": string,
+                                    "modified": string,
+                                    "name": string,
+                                    "parent_account": null,
+                                    "type": {
+                                        "id": integer,
+                                        "name": string
+                                    }
+                                },
+                                "type": {
+                                    "id": integer,
+                                    "name": string
+                                }
+                            },
                         "service_level": {
                             "id": integer,
                             "name": string,
@@ -1930,202 +2952,2490 @@ Orders divided on three categoricals
                             "is_virtual": boolean
                         },
                         "preferred_window": []
+                    }
+                ]
+            }
+           </pre>
+           </div>
+
+          </div>
+
+          <p class='desc'>This end-point allow you to list all return orders.</p>
+       </div>
+
+    2. <div class='desc post-desc accordion'><span class='request post' >POST</span>/v1/returns/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="returnHeadingOne_2">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#returnCollapseOne_2" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="returnCollapseOne_2" class="accordion-collapse collapse" aria-labelledby="returnHeadingOne_2" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           {
+                "customer": {
+                    "first_name": string,
+                    "last_name": string,
+                    "phone": string,
+                    "address":{
+                        "line_1":string,
+                        "line_2":string,
+                        "zone": integer
+                    }
+                },
+                "service_level": integer,
+                "packages":[
+                    {
+                        "package_size": integer
+                    }
+                ]
+            }
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="returnHeadingTwo_2">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#returnCollapseTwo_2" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="returnCollapseTwo_2" class="accordion-collapse collapse" aria-labelledby="returnHeadingTwo_2" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            access-control-allow-origin: * 
+            allow: GET,POST,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Sun,15 Aug 2021 19:13:39 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 7 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block 
+           </pre>
+           </div>
+           </div>
+
+
+           <h2 class="accordion-header" id="returnHeadingThree_2">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#returnCollapseThree_2" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="returnCollapseThree_2" class="accordion-collapse collapse" aria-labelledby="returnHeadingThree_2" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           {
+                "id": integer,
+                "customer": {
+                    "id": integer,
+                    "address": {
+                        "id": integer,
+                        "created": string,
+                        "modified": string,
+                        "nickname": string,
+                        "line_1": string,
+                        "line_2": string,
+                        "line_3": null,
+                        "zip_code": null,
+                        "latitude": null,
+                        "longitude": null,
+                        "google_maps_link": null,
+                        "notes": null,
+                        "zone": integer
                     },
-                    .....
+                    "created": string,
+                    "modified": string,
+                    "first_name": string,
+                    "last_name": string,
+                    "email": null,
+                    "phone": string,
+                    "act_cash_account": null
+                },
+                "created": string,
+                "modified": string,
+                "tracking_number": string,
+                "merchant_order_reference": null,
+                "order_notes": null,
+                "is_exchange": boolean,
+                "is_pudo": boolean,
+                "is_counter_dropoff": boolean,
+                "cash_processing": boolean,
+                "cash_amount": null,
+                "preferred_date": null,
+                "estimated_date": null,
+                "status": string,
+                "intermediate_warehouses": [
+                    string,
+                    ...
+                ],
+                "dispatch_early": null,
+                "dispatch_late": null,
+                "merchant": integer,
+                "service_level": integer,
+                "pickup_point": null,
+                "order_price": integer,
+                "current_warehouse": null,
+                "inbound_warehouse": integer,
+                "outbound_warehouse": integer,
+                "preferred_window": []
+            }
+           </pre>
+           </div>
+           </div>
+
+          </div>
+          <p class='desc'>This end-point allow you to create new return order.</p>
+       </div>
+
+    3. <div class='desc get-desc accordion'>
+        <span class='request get'>GET</span>/v1/returns/{id}/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="returnHeadingOne_3">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#returnCollapseOne_3" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="returnCollapseOne_3" class="accordion-collapse collapse" aria-labelledby="returnHeadingOne_3" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           In this end-point no request body needed.
+           </div>
+
+           <h2 class="accordion-header" id="returnHeadingTwo_3">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#returnCollapseTwo_3" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="returnCollapseTwo_3" class="accordion-collapse collapse" aria-labelledby="returnHeadingTwo_3" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            allow: GET,PUT,PATCH,DELETE,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Sun,15 Aug 2021 19:23:21 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 8 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block
+           </pre>
+           </div>
+           </div>
+
+
+           <h2 class="accordion-header" id="returnHeadingThree_3">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#returnCollapseThree_3" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="returnCollapseThree_3" class="accordion-collapse collapse" aria-labelledby="returnHeadingThree_3" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           Response body as same as <code>GET: v1/returns/</code> BUT for specific return order id
+           </div>
+          </div>
+
+          </div>
+
+          <p class='desc'>This end-point allow you retrieve specific return based on return order id.</p>
+       </div>  
+
+    4. <div class='desc put-desc accordion'><span class='request put' >PUT</span>/v1/returns/{id}/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="returnHeadingOne_4">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#returnCollapseOne_4" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="returnCollapseOne_4" class="accordion-collapse collapse" aria-labelledby="returnHeadingOne_4" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           {
+                "customer": {
+                    "first_name": string,
+                    "last_name": string,
+                    "phone": string,
+                    "address":{
+                        "line_1":string,
+                        "line_2":string,
+                        "zone": integer
+                    }
+                },
+                "service_level": integer,
+                "packages":[
+                    {
+                        "package_size": integer
+                    }
+                ],
+                "tracking_number":string",
+                "merchant":integer
+            }
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="returnHeadingTwo_4">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#returnCollapseTwo_4" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="returnCollapseTwo_4" class="accordion-collapse collapse" aria-labelledby="returnHeadingTwo_4" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            access-control-allow-origin: * 
+            allow: GET,PUT,PATCH,DELETE,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Sun,15 Aug 2021 19:37:04 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 9 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="returnHeadingThree_4">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#returnCollapseThree_4" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="returnCollapseThree_4" class="accordion-collapse collapse" aria-labelledby="returnHeadingThree_4" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           {
+                "id": integer,
+                "customer": {
+                    "id": integer,
+                    "address": {
+                        "id": integer,
+                        "created": string,
+                        "modified": string,
+                        "nickname": string,
+                        "line_1": string,
+                        "line_2": "string,
+                        "line_3": null,
+                        "zip_code": null,
+                        "latitude": null,
+                        "longitude": null,
+                        "google_maps_link": null,
+                        "notes": null,
+                        "zone": integer
+                    },
+                    "created": string,
+                    "modified": string,
+                    "first_name": string,
+                    "last_name": string,
+                    "email": null,
+                    "phone": string,
+                    "act_cash_account": null
+                },
+                "created": "string,
+                "modified": string,
+                "tracking_number": string,
+                "merchant_order_reference": null,
+                "order_notes": null,
+                "is_exchange": boolean,
+                "is_pudo": boolean,
+                "is_counter_dropoff": boolean,
+                "cash_processing": boolean,
+                "cash_amount": null,
+                "preferred_date": null,
+                "estimated_date": null,
+                "status": string",
+                "intermediate_warehouses": [
+                    string,
+                    ...
+                ],
+                "dispatch_early": null,
+                "dispatch_late": null,
+                "merchant": integer,
+                "service_level": integer,
+                "pickup_point": null,
+                "order_price": integer,
+                "current_warehouse": null,
+                "inbound_warehouse": integer,
+                "outbound_warehouse": integer,
+                "preferred_window": []
+            }
+           </pre>
+           </div>
+
+          </div>
+
+          <p class='desc'> This end-point allow you update specific return based on return order id.</p>
+       </div>
+
+    5. <div class='desc patch-desc accordion'><span class='request patch'>PATCH</span>/v1/returns/{id}/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="returnHeadingOne_5">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#returnCollapseOne_5" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="returnCollapseOne_5" class="accordion-collapse collapse" aria-labelledby="returnHeadingOne_5" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           Request body as same as <code>PUT: /v1/returns/{id}/</code> BUT you can ignore all or some of keys because it partial update.
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="deliveryHeadingTwo_5">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#returnCollapseTwo_5" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="returnCollapseTwo_5" class="accordion-collapse collapse" aria-labelledby="returnHeadingTwo_5" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            access-control-allow-origin: * 
+            allow: GET,PUT,PATCH,DELETE,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Sun,15 Aug 2021 19:47:03 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 6 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block 
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="returnHeadingThree_5">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#returnCollapseThree_5" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="returnCollapseThree_5" class="accordion-collapse collapse" aria-labelledby="returnHeadingThree_5" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+            Response body as same as <code>PUT: /v1/returns/{id}/</code>
+           </div>
+          </div> 
+
+          <p class='desc'>This end-point allow you partial update return based on return order id.</p>
+       </div>  
+
+    6. <div class='desc delete-desc accordion'><span class='request delete' >DELETE</span>/v1/returns/{id}/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="returnHeadingOne_6">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#returnCollapseOne_6" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="returnCollapseOne_6" class="accordion-collapse collapse" aria-labelledby="returnHeadingOne_6" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           In this end-point no request body needed.
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="returnHeadingTwo_6">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#returnCollapseTwo_6" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="returnCollapseTwo_6" class="accordion-collapse collapse" aria-labelledby="returnHeadingTwo_6" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            access-control-allow-origin: * 
+            allow: GET,PUT,PATCH,DELETE,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Sun,15 Aug 2021 19:52:26 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 7 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="returnHeadingThree_6">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#returnCollapseThree_6" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="returnCollapseThree_6" class="accordion-collapse collapse" aria-labelledby="returnHeadingThree_6" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+            In this end-point no response body.
+           </div>
+          </div>
+
+          </div>  
+
+          <p class='desc'>This end-point allow you delete specific return based on return order id.</p>
+       </div>
+
+- <span id= "return-order-tracking" class="item">tracking</span> <br />
+    1. <div class='desc get-desc accordion'><span class='request get'>GET</span>/v1/return/{tracking_number}/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="returnTrackingHeadingOne_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#returnTrackingCollapseOne_1" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="returnTrackingCollapseOne_1" class="accordion-collapse collapse" aria-labelledby="returnTrackingHeadingOne_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           In this end-point no request body needed.
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="returnTrackingHeadingTwo_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#returnTrackingCollapseTwo_1" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="returnTrackingCollapseTwo_1" class="accordion-collapse collapse" aria-labelledby="returnTrackingHeadingTwo_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            allow: GET,POST,HEAD,OPTIONS 
+            content-length: 23 
+            content-type: application/json 
+            date: Mon,16 Aug 2021 14:25:04 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 1 
+            x-queryinspect-total-request-time: 11 ms 
+            x-queryinspect-total-sql-time: 2 ms 
+            x-xss-protection: 1; mode=block
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="returnTrackingHeadingThree_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#returnTrackingCollapseThree_1" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="returnTrackingCollapseThree_1" class="accordion-collapse collapse" aria-labelledby="returnTrackingHeadingThree_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           Response body as same as <code>GET: /v1/returns/</code> <br />
+           BUT for one specific return order based on return order tracking number.
+           </pre>
+           </div>
+          </div>
+
+          </div> 
+
+          <p class='desc'>This end-point allow you to retrieve specific return order based on return order tracking number.</p>
+       </div>
+
+    2. <div class='desc post-desc accordion'><span class='request post' >POST</span>/v1/return/{tracking_number}/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="returnTrackingHeadingOne_2">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#returnTrackingCollapseOne_2" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="returnTrackingCollapseOne_2" class="accordion-collapse collapse" aria-labelledby="returnTrackingHeadingOne_2" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           {
+                "phone": string,
+                "preferred_window": [integer, ...],
+                "latitude": number,
+                "longitude": number
+            }
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="returnTrackingHeadingTwo_2">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#returnTrackingCollapseTwo_2" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="returnTrackingCollapseTwo_2" class="accordion-collapse collapse" aria-labelledby="returnTrackingHeadingTwo_2" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            access-control-allow-origin: * 
+            allow: GET,POST,HEAD,OPTIONS 
+            content-length: 23 
+            content-type: application/json 
+            date: Mon,16 Aug 2021 16:41:53 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 1 
+            x-queryinspect-total-request-time: 565 ms 
+            x-queryinspect-total-sql-time: 57 ms 
+            x-xss-protection: 1; mode=block
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="returnTrackingHeadingThree_2">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#returnTrackingCollapseThree_2" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="returnTrackingCollapseThree_2" class="accordion-collapse collapse" aria-labelledby="returnTrackingHeadingThree_2" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           {
+                "id": integer,
+                "customer": {
+                    "id": integer,
+                    "address": {
+                        "id": integer,
+                        "created": string,
+                        "modified": string,
+                        "nickname": string,
+                        "line_1": string,
+                        "line_2": string,
+                        "line_3": string,
+                        "zip_code": string,
+                        "latitude": number,
+                        "longitude": number,
+                        "google_maps_link": number,
+                        "notes": number,
+                        "zone": integer
+                    },
+                    "created": string,
+                    "modified": string,
+                    "first_name": string,
+                    "last_name": string,
+                    "email": string,
+                    "phone": string,
+                    "act_cash_account": integer
+                },
+                "created": string,
+                "modified": string,
+                "tracking_number": string,
+                "merchant_order_reference": string,
+                "order_notes": string,
+                "is_exchange": boolean,
+                "is_pudo": boolean,
+                "is_counter_dropoff": boolean,
+                "cash_processing": boolean,
+                "cash_amount": number,
+                "preferred_date": string,
+                "estimated_date": string,
+                "status": string,
+                "intermediate_warehouses": [
+                    string,
+                    ....
+                ],
+                "dispatch_early": string,
+                "dispatch_late": string,
+                "merchant": integer,
+                "service_level": integer,
+                "pickup_point": integer,
+                "order_price": integer,
+                "current_warehouse": integer,
+                "inbound_warehouse": integer,
+                "outbound_warehouse": integer,
+                "preferred_window": [integer, ...]
             }
            </pre>
            </div>
           </div>
 
-          </div>  
-       </div>
-    check...
-
-### Return
-
-- [return order](#) <br />
-    1. <div class='desc get-desc'><span class='request get'>GET</span>/v1/returns/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
           </div>
-       </div>
-        This end-point allow you to list all return orders.
 
-    2. <div class='desc post-desc'><span class='request post' >POST</span>/v1/returns/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
+          <p class='desc'>This end-point allow you to update
+          <code>preferred_window, latitude and longitude</code> <br />of specific return order based on return order tracking number.
+          </p>
        </div>
-        This end-point allow you to create new return orde
 
-    3. <div class='desc get-desc'>
-        <span class='request get'>GET</span>/v1/returns/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        This end-point allow you retrieve specific return based on his id.  
 
-    4. <div class='desc put-desc'><span class='request put' >PUT</span>/v1/returns/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        This end-point allow you update specific return based on his id.
-
-    5. <div class='desc patch-desc'><span class='request patch'>PATCH</span>/v1/returns/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div> 
-       </div>
-        This end-point allow you partial update return based on his id.  
-
-    6. <div class='desc delete-desc'><span class='request delete' >DELETE</span>/v1/returns/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>  
-       </div>
-        This end-point allow you delete specific return based on his id.
-
-- [tracking](#) <br />
-    1. <div class='desc get-desc'><span class='request get'>GET</span>/v1/return/{tracking_number}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div> 
-       </div>
-        check...
-
-    2. <div class='desc post-desc'><span class='request post' >POST</span>/v1/return/{tracking_number}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        check...
-
-- [uncompleted](#) <br />
-    1. <div class='desc get-desc'><span class='request get'>GET</span>/v1/return-orders-uncompleted/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        check...
 
 ### Exchanges
 
-- [exchange order](#) <br />
-    1. <div class='desc get-desc'>
+- <span id= "exchange-order" class="item">exchange order</span> <br />
+    1. <div class='desc get-desc accordion'>
         <span class='request get'>GET</span>/v1/exchanges/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="exchangeHeadingOne_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exchangeCollapseOne_1" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="exchangeCollapseOne_1" class="accordion-collapse collapse" aria-labelledby="exchangeHeadingOne_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           In this end-point no request body needed.
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="exchangeHeadingTwo_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exchangeCollapseTwo_1" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="exchangeCollapseTwo_1" class="accordion-collapse collapse" aria-labelledby="exchangeHeadingTwo_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            allow: GET,POST,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Mon,16 Aug 2021 17:00:14 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 642 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block 
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="exchangeHeadingThree_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exchangeCollapseThree_1" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="exchangeCollapseThree_1" class="accordion-collapse collapse" aria-labelledby="exchangeHeadingThree_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           {
+                "count": integer,
+                "next": string,
+                "previous": string,
+                "results": [
+                    {
+                        "id": integer,
+                        "created": string,
+                        "modified": string,
+                        "notes": string,
+                        "delivery_order": {
+                            "id": integer,
+                            "created": string,
+                            "modified": string,
+                            "tracking_number": string,
+                            "merchant_order_reference": string,
+                            "order_notes": string,
+                            "is_exchange": boolean,
+                            "is_pudo": boolean,
+                            "is_counter_dropoff": boolean,
+                            "cash_processing": boolean,
+                            "cash_amount": number,
+                            "preferred_date": string,
+                            "estimated_date": string,
+                            "status": string,
+                            "intermediate_warehouses": [
+                                string,
+                                ....
+                            ],
+                            "dispatch_early": string,
+                            "dispatch_late": string,
+                            "merchant": {
+                                "id": integer,
+                                "created": string,
+                                "modified": string,
+                                "name": string,
+                                "store_url": string,
+                                "logo": string,
+                                "store_phone": string,
+                                "store_email": string,
+                                "status": string",
+                                "api_key": string,
+                                "cash_processing_fees": number,
+                                "cash_processing_fees_max": number,
+                                "cash_processing_percentage": number,
+                                "cash_processing_threshold": number,
+                                "address": {
+                                    "id": integer,
+                                    "created": string,
+                                    "modified": string,
+                                    "nickname": string,
+                                    "line_1": string,
+                                    "line_2": string,
+                                    "line_3": string,
+                                    "zip_code": string,
+                                    "latitude": number,
+                                    "longitude": number,
+                                    "google_maps_link": number,
+                                    "notes": number,
+                                    "zone": {
+                                        "id": integer,
+                                        "name": string,
+                                        "radius": number,
+                                        "city": {
+                                            "id": integer,
+                                            "name": string,
+                                            "population": integer,
+                                            "is_captial": boolean,
+                                            "governorate": {
+                                                "id": integer,
+                                                "name": string
+                                            }
+                                        },
+                                        "served_by": {
+                                            "id": integer,
+                                            "name": string,
+                                            "code": string,
+                                            "capacity": number,
+                                            "current_utilization": number,
+                                            "size": number,
+                                            "latitude": number,
+                                            "longitude": number,
+                                            "address": string,
+                                            "is_virtual": boolean
+                                        },
+                                        "zone_group": []
+                                    }
+                                },
+                                "subscription": {
+                                    "id": integer,
+                                    "name": string
+                                },
+                                "pricing_lookup_delivery": integer,
+                                "pricing_lookup_return": integer,
+                                "pricing_lookup_exchange": integer,
+                                "pricing_lookup_cash_collection": integer,
+                                "act_cod_account": {
+                                    "account_number": string,
+                                    "created": string,
+                                    "modified": string,
+                                    "name": string,
+                                    "parent_account": {
+                                        "account_number": string",
+                                        "created": string,
+                                        "modified": string,
+                                        "name": string,
+                                        "parent_account": object,
+                                        "type": {
+                                            "id": integer,
+                                            "name": string
+                                        }
+                                    },
+                                    "type": {
+                                        "id": integer,
+                                        "name": string
+                                    }
+                                },
+                                "act_shipping_revenue_account": {
+                                    "account_number": string,
+                                    "created": string,
+                                    "modified": string,
+                                    "name": string,
+                                    "parent_account": {
+                                        "account_number": string",
+                                        "created": string,
+                                        "modified": string,
+                                        "name": string,
+                                        "parent_account": object,
+                                        "type": {
+                                            "id": integer,
+                                            "name": string
+                                        }
+                                    },
+                                    "type": {
+                                        "id": integer,
+                                        "name": string
+                                    }
+                                },
+                                "act_discounts_account": {
+                                    "account_number": string,
+                                    "created": string,
+                                    "modified": string,
+                                    "name": string,
+                                    "parent_account": {
+                                        "account_number": string",
+                                        "created": string,
+                                        "modified": string,
+                                        "name": string,
+                                        "parent_account": object,
+                                        "type": {
+                                            "id": integer,
+                                            "name": string
+                                        }
+                                    },
+                                    "type": {
+                                        "id": integer,
+                                        "name": string
+                                    }
+                                },
+                                "act_account_receivable": {
+                                    "account_number": string,
+                                    "created": string,
+                                    "modified": string,
+                                    "name": string,
+                                    "parent_account": {
+                                        "account_number": string",
+                                        "created": string,
+                                        "modified": string,
+                                        "name": string,
+                                        "parent_account": object,
+                                        "type": {
+                                            "id": integer,
+                                            "name": string
+                                        }
+                                    },
+                                    "type": {
+                                        "id": integer,
+                                        "name": string
+                                    }
+                                },
+                                "act_supplies_revenue_account": {
+                                    "account_number": string,
+                                    "created": string,
+                                    "modified": string,
+                                    "name": string,
+                                    "parent_account": {
+                                        "account_number": string",
+                                        "created": string,
+                                        "modified": string,
+                                        "name": string,
+                                        "parent_account": object,
+                                        "type": {
+                                            "id": integer,
+                                            "name": string
+                                        }
+                                    },
+                                    "type": {
+                                        "id": integer,
+                                        "name": string
+                                    }
+                                },
+                                "pickup_days": [{
+                                    "id": integer,
+                                    "day": string
+                                }],
+                                "billing_days": [{
+                                    "id": integer,
+                                    "day": string
+                                }]
+                            },
+                            "customer": {
+                                "id": integer,
+                                "created": string,
+                                "modified": string,
+                                "first_name": string,
+                                "last_name": string,
+                                "email": string,
+                                "phone": string,
+                                "address": {
+                                    "id": integer,
+                                    "created": string,
+                                    "modified": string,
+                                    "nickname": string,
+                                    "line_1": string,
+                                    "line_2": string,
+                                    "line_3": string,
+                                    "zip_code": string,
+                                    "latitude": number,
+                                    "longitude": number,
+                                    "google_maps_link": string,
+                                    "notes": string,
+                                    "zone": {
+                                        "id": integer,
+                                        "name": string,
+                                        "radius": number,
+                                        "city": {
+                                            "id": integer,
+                                            "name": string,
+                                            "population": integer,
+                                            "is_captial": boolean,
+                                            "governorate": {
+                                                "id": integer,
+                                                "name": string
+                                            }
+                                        },
+                                        "served_by": {
+                                            "id": integer,
+                                            "name": string,
+                                            "code": string,
+                                            "capacity": number,
+                                            "current_utilization": number,
+                                            "size": number,
+                                            "latitude": number,
+                                            "longitude": number,
+                                            "address": string,
+                                            "is_virtual": boolean
+                                        },
+                                        "zone_group": []
+                                    }
+                                },
+                                "act_cash_account": {
+                                    "account_number": string,
+                                    "created": string,
+                                    "modified": string,
+                                    "name": string,
+                                    "parent_account": {
+                                        "account_number": string",
+                                        "created": string,
+                                        "modified": string,
+                                        "name": string,
+                                        "parent_account": object,
+                                        "type": {
+                                            "id": integer,
+                                            "name": string
+                                        }
+                                    },
+                                    "type": {
+                                        "id": integer,
+                                        "name": string
+                                    }
+                                }
+                            },
+                            "service_level": {
+                                "id": integer,
+                                "name": string,
+                                "short_code": string,
+                                "description": string
+                            },
+                            "pickup_point": {
+                                "id": integer,
+                                "created": string,
+                                "modified": string,
+                                "is_default": boolean,
+                                "merchant": object,
+                                "address":object
+                            },
+                            "order_price": {
+                                "id": integer,
+                                "created": string,
+                                "modified": string,
+                                "subtotal": number,
+                                "vat": number,
+                                "postal_tax": number,
+                                "total": number
+                            },
+                            "current_warehouse": {
+                                "id": integer,
+                                "name": string,
+                                "code": string",
+                                "capacity": number,
+                                "current_utilization": number,
+                                "size": number,
+                                "latitude": number,
+                                "longitude": number,
+                                "address": string,
+                                "is_virtual": boolean
+                            },
+                            "inbound_warehouse": {
+                                "id": integer,
+                                "name": string,
+                                "code": string",
+                                "capacity": number,
+                                "current_utilization": number,
+                                "size": number,
+                                "latitude": number,
+                                "longitude": number,
+                                "address": string,
+                                "is_virtual": boolean
+                            },
+                            "outbound_warehouse": {
+                                "id": integer,
+                                "name": string,
+                                "code": string",
+                                "capacity": number,
+                                "current_utilization": number,
+                                "size": number,
+                                "latitude": number,
+                                "longitude": number,
+                                "address": string,
+                                "is_virtual": boolean
+                            },
+                            "preferred_window": []
+                        },
+                        "return_order": {
+                            "id": integer,
+                            "created": string,
+                            "modified": string,
+                            "tracking_number": string,
+                            "merchant_order_reference": string,
+                            "order_notes": string,
+                            "is_exchange": boolean,
+                            "is_pudo": boolean,
+                            "is_counter_dropoff": boolean,
+                            "cash_processing": boolean,
+                            "cash_amount": number,
+                            "preferred_date": string,
+                            "estimated_date": string,
+                            "status": string,
+                            "intermediate_warehouses": [
+                                string,
+                                ....
+                            ],
+                            "dispatch_early": string,
+                            "dispatch_late": string,
+                            "merchant": {
+                                "id": integer,
+                                "created": string,
+                                "modified": string,
+                                "name": string,
+                                "store_url": string,
+                                "logo": string,
+                                "store_phone": string,
+                                "store_email": string,
+                                "status": string",
+                                "api_key": string,
+                                "cash_processing_fees": number,
+                                "cash_processing_fees_max": number,
+                                "cash_processing_percentage": number,
+                                "cash_processing_threshold": number,
+                                "address": {
+                                    "id": integer,
+                                    "created": string,
+                                    "modified": string,
+                                    "nickname": string,
+                                    "line_1": string,
+                                    "line_2": string,
+                                    "line_3": string,
+                                    "zip_code": string,
+                                    "latitude": number,
+                                    "longitude": number,
+                                    "google_maps_link": number,
+                                    "notes": number,
+                                    "zone": {
+                                        "id": integer,
+                                        "name": string,
+                                        "radius": number,
+                                        "city": {
+                                            "id": integer,
+                                            "name": string,
+                                            "population": integer,
+                                            "is_captial": boolean,
+                                            "governorate": {
+                                                "id": integer,
+                                                "name": string
+                                            }
+                                        },
+                                        "served_by": {
+                                            "id": integer,
+                                            "name": string,
+                                            "code": string,
+                                            "capacity": number,
+                                            "current_utilization": number,
+                                            "size": number,
+                                            "latitude": number,
+                                            "longitude": number,
+                                            "address": string,
+                                            "is_virtual": boolean
+                                        },
+                                        "zone_group": []
+                                    }
+                                },
+                                "subscription": {
+                                    "id": integer,
+                                    "name": string
+                                },
+                                "pricing_lookup_delivery": integer,
+                                "pricing_lookup_return": integer,
+                                "pricing_lookup_exchange": integer,
+                                "pricing_lookup_cash_collection": integer,
+                                "act_cod_account": {
+                                    "account_number": string,
+                                    "created": string,
+                                    "modified": string,
+                                    "name": string,
+                                    "parent_account": {
+                                        "account_number": string",
+                                        "created": string,
+                                        "modified": string,
+                                        "name": string,
+                                        "parent_account": object,
+                                        "type": {
+                                            "id": integer,
+                                            "name": string
+                                        }
+                                    },
+                                    "type": {
+                                        "id": integer,
+                                        "name": string
+                                    }
+                                },
+                                "act_shipping_revenue_account": {
+                                    "account_number": string,
+                                    "created": string,
+                                    "modified": string,
+                                    "name": string,
+                                    "parent_account": {
+                                        "account_number": string",
+                                        "created": string,
+                                        "modified": string,
+                                        "name": string,
+                                        "parent_account": object,
+                                        "type": {
+                                            "id": integer,
+                                            "name": string
+                                        }
+                                    },
+                                    "type": {
+                                        "id": integer,
+                                        "name": string
+                                    }
+                                },
+                                "act_discounts_account": {
+                                    "account_number": string,
+                                    "created": string,
+                                    "modified": string,
+                                    "name": string,
+                                    "parent_account": {
+                                        "account_number": string",
+                                        "created": string,
+                                        "modified": string,
+                                        "name": string,
+                                        "parent_account": object,
+                                        "type": {
+                                            "id": integer,
+                                            "name": string
+                                        }
+                                    },
+                                    "type": {
+                                        "id": integer,
+                                        "name": string
+                                    }
+                                },
+                                "act_account_receivable": {
+                                    "account_number": string,
+                                    "created": string,
+                                    "modified": string,
+                                    "name": string,
+                                    "parent_account": {
+                                        "account_number": string",
+                                        "created": string,
+                                        "modified": string,
+                                        "name": string,
+                                        "parent_account": object,
+                                        "type": {
+                                            "id": integer,
+                                            "name": string
+                                        }
+                                    },
+                                    "type": {
+                                        "id": integer,
+                                        "name": string
+                                    }
+                                },
+                                "act_supplies_revenue_account": {
+                                    "account_number": string,
+                                    "created": string,
+                                    "modified": string,
+                                    "name": string,
+                                    "parent_account": {
+                                        "account_number": string",
+                                        "created": string,
+                                        "modified": string,
+                                        "name": string,
+                                        "parent_account": object,
+                                        "type": {
+                                            "id": integer,
+                                            "name": string
+                                        }
+                                    },
+                                    "type": {
+                                        "id": integer,
+                                        "name": string
+                                    }
+                                },
+                                "pickup_days": [{
+                                    "id": integer,
+                                    "day": string
+                                }],
+                                "billing_days": [{
+                                    "id": integer,
+                                    "day": string
+                                }]
+                            },
+                            "customer": {
+                                "id": integer,
+                                "created": string,
+                                "modified": string,
+                                "first_name": string,
+                                "last_name": string,
+                                "email": string,
+                                "phone": string,
+                                "address": {
+                                     "id": integer,
+                                    "created": string,
+                                    "modified": string,
+                                    "nickname": string,
+                                    "line_1": string,
+                                    "line_2": string,
+                                    "line_3": string,
+                                    "zip_code": string,
+                                    "latitude": number,
+                                    "longitude": number,
+                                    "google_maps_link": string,
+                                    "notes": string,
+                                    "zone": {
+                                        "id": integer,
+                                        "name": string,
+                                        "radius": number,
+                                        "city": {
+                                            "id": integer,
+                                            "name": string,
+                                            "population": integer,
+                                            "is_captial": boolean,
+                                            "governorate": {
+                                                "id": integer,
+                                                "name": string
+                                            }
+                                        },
+                                        "served_by": {
+                                            "id": integer,
+                                            "name": string,
+                                            "code": string,
+                                            "capacity": number,
+                                            "current_utilization": number,
+                                            "size": number,
+                                            "latitude": number,
+                                            "longitude": number,
+                                            "address": string,
+                                            "is_virtual": boolean
+                                        },
+                                        "zone_group": []
+                                    }
+                                },
+                                "act_cash_account": {
+                                    "account_number": string,
+                                    "created": string,
+                                    "modified": string,
+                                    "name": string,
+                                    "parent_account": {
+                                        "account_number": string,
+                                        "created": string,
+                                        "modified": string,
+                                        "name": string,
+                                        "parent_account": {
+                                            "account_number": string,
+                                            "created": string,
+                                            "modified": string,
+                                            "name": string,
+                                            "parent_account": null,
+                                            "type": {
+                                                "id": integer,
+                                                "name": string
+                                            }
+                                        },
+                                        "type": {
+                                            "id": integer,
+                                            "name": string
+                                        }
+                                    },
+                                    "type": {
+                                        "id": integer,
+                                        "name": string
+                                    }
+                                }
+                            },
+                            "service_level": {
+                                "id": integer,
+                                "name": string,
+                                "short_code": string,
+                                "description": string
+                            },
+                            "pickup_point": {
+                                "id": integer,
+                                "created": string,
+                                "modified": string,
+                                "is_default": boolean,
+                                "merchant": object,
+                                "address":object
+                            },
+                            "order_price": {
+                                "id": integer,
+                                "created": string,
+                                "modified": string,
+                                "subtotal": number,
+                                "vat": number,
+                                "postal_tax": number,
+                                "total": number
+                            },
+                            "current_warehouse": {
+                                "id": integer,
+                                "name": string,
+                                "code": string",
+                                "capacity": number,
+                                "current_utilization": number,
+                                "size": number,
+                                "latitude": number,
+                                "longitude": number,
+                                "address": string,
+                                "is_virtual": boolean
+                            },
+                            "inbound_warehouse": {
+                                "id": integer,
+                                "name": string,
+                                "code": string",
+                                "capacity": number,
+                                "current_utilization": number,
+                                "size": number,
+                                "latitude": number,
+                                "longitude": number,
+                                "address": string,
+                                "is_virtual": boolean
+                            },
+                            "outbound_warehouse": {
+                                "id": integer,
+                                "name": string,
+                                "code": string",
+                                "capacity": number,
+                                "current_utilization": number,
+                                "size": number,
+                                "latitude": number,
+                                "longitude": number,
+                                "address": string,
+                                "is_virtual": boolean
+                            },
+                            "preferred_window": []
+                        },
+                        "order_price": integer
+                    }
+                ]
+            }
+           </pre>
+           </div>
+           </div>
+
           </div> 
-    </div>
-        This end-point allow you to list all exchange orders.
 
-    2. <div class='desc post-desc'>
+          <p class='desc'>This end-point allow you to list all exchange orders.</p>
+        </div>
+        
+
+    2. <div class='desc post-desc accordion'>
         <span class='request post' >POST</span>/v1/exchanges/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-    </div>
-        This end-point allow you to create new exchange orders.  
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="exchangeHeadingOne_2">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exchangeCollapseOne_2" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="exchangeCollapseOne_2" class="accordion-collapse collapse" aria-labelledby="exchangeHeadingOne_2" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           {
+                "service_level": integer,
+                "new_packages": [
+                    {
+                        "package_size": integer,
+                        "description": string
+                    }
+                ],
+                "old_packages": [
+                    {
+                        "package_size": integer,
+                        "description": string
+                    }
+                ],
+                "order": integer,
+                "notes": string,
+                "refund": boolean,
+                "refund_amount": integer,
+                "cash_processing": boolean,
+                "cash_amount": number
+            }
+           </pre>
+           </div>
+           </div>
 
-    3. <div class='desc get-desc'>
+           <h2 class="accordion-header" id="exchangeHeadingTwo_2">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exchangeCollapseTwo_2" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="exchangeCollapseTwo_2" class="accordion-collapse collapse" aria-labelledby="exchangeHeadingTwo_2" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            access-control-allow-origin: * 
+            allow: GET,POST,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Mon,16 Aug 2021 19:54:47 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 1 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block 
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="exchangeHeadingThree_2">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exchangeCollapseThree_2" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="exchangeCollapseThree_2" class="accordion-collapse collapse" aria-labelledby="exchangeHeadingThree_2" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           {
+                "id": integer,
+                "created": string,
+                "modified": string,
+                "notes": string,
+                "delivery_order": integer,
+                "return_order": integer,
+                "order_price": integer
+            }
+           </pre>
+           </div>
+           </div>
+
+          </div>
+          <p class='desc'>This end-point allow you to create new exchange orders.</p>
+        </div>  
+
+    3. <div class='desc get-desc accordion'>
         <span class='request get'>GET</span>/v1/exchanges/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-    </div>
-        This end-point allow you retrieve specific exchange orders based on his id.  
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="exchangeHeadingOne_3">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exchangeCollapseOne_3" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="exchangeCollapseOne_3" class="accordion-collapse collapse" aria-labelledby="exchangeHeadingOne_3" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           In this end-point no request body needed.
+           </div>
+           </div>
 
-    4. <div class='desc put-desc'><span class='request put' >PUT</span>/v1/exchanges/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        This end-point allow you update specific exchange orders based on his id.
+           <h2 class="accordion-header" id="exchangeHeadingTwo_3">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exchangeCollapseTwo_3" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="exchangeCollapseTwo_3" class="accordion-collapse collapse" aria-labelledby="exchangeHeadingTwo_3" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            allow: GET,PUT,PATCH,DELETE,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Mon,16 Aug 2021 20:06:29 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 6 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block
+           </pre>
+           </div>
+           </div>
 
-    5. <div class='desc patch-desc'><span class='request patch'>PATCH</span>/v1/exchanges/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
+           <h2 class="accordion-header" id="exchangeHeadingThree_3">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exchangeCollapseThree_3" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="exchangeCollapseThree_3" class="accordion-collapse collapse" aria-labelledby="exchangeHeadingThree_3" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           Response body as same as <code>GET: v1/exchanges/</code> BUT for specific exchange order id
+           </div>
           </div>
-       </div>
-        This end-point allow you partial update specific exchange orders based on his id.  
 
-    6. <div class='desc delete-desc'><span class='request delete' >DELETE</span>/v1/exchanges/{id}/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
           </div>
+
+          <p class='desc'>This end-point allow you retrieve specific exchange orders based on exchange order id.</p>
+        </div>
+          
+
+    4. <div class='desc put-desc accordion'><span class='request put' >PUT</span>/v1/exchanges/{id}/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="exchangeHeadingOne_4">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exchangeCollapseOne_4" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="exchangeCollapseOne_4" class="accordion-collapse collapse" aria-labelledby="exchangeHeadingOne_4" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           {
+                "service_level": integer,
+                "new_packages": [
+                    {
+                        "package_size": integer,
+                        "description": string
+                    }
+                ],
+                "old_packages": [
+                    {
+                        "package_size": integer,
+                        "description": string
+                    }
+                ],
+                "order": integer,
+                "notes": string,
+                "refund": boolean,
+                "refund_amount": integer,
+                "cash_processing": boolean,
+                "cash_amount": number
+            }
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="exchangeHeadingTwo_4">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exchangeCollapseTwo_4" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="exchangeCollapseTwo_4" class="accordion-collapse collapse" aria-labelledby="exchangeHeadingTwo_4" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            access-control-allow-origin: * 
+            allow: GET,PUT,PATCH,DELETE,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Mon,16 Aug 2021 20:12:37 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 36 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="exchangeHeadingThree_4">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exchangeCollapseThree_4" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="exchangeCollapseThree_4" class="accordion-collapse collapse" aria-labelledby="exchangeHeadingThree_4" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            {
+                "id": integer,
+                "created": string,
+                "modified": string,
+                "notes": string,
+                "delivery_order": integer,
+                "return_order": integer,
+                "order_price": integer
+            }
+           </pre>
+           </div>
+           </div>
+
+          </div>
+
+          <p class='desc'>This end-point allow you update specific exchange orders based on exchange order id.</p>
        </div>
-        This end-point allow you delete specific exchange orders based on his id.
+
+    5. <div class='desc patch-desc accordion'><span class='request patch'>PATCH</span>/v1/exchanges/{id}/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="exchangeHeadingOne_5">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exchangeCollapseOne_5" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="exchangeCollapseOne_5" class="accordion-collapse collapse" aria-labelledby="exchangeHeadingOne_5" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           Request body as same as <code>PUT: /v1/exchanges/{id}/</code> BUT you can ignore all or some of keys because it partial update.
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="deliveryHeadingTwo_5">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exchangeCollapseTwo_5" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="exchangeCollapseTwo_5" class="accordion-collapse collapse" aria-labelledby="exchangeHeadingTwo_5" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            access-control-allow-origin: * 
+            allow: GET,PUT,PATCH,DELETE,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Mon,16 Aug 2021 20:18:16 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 7 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block 
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="exchangeHeadingThree_5">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exchangeCollapseThree_5" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="exchangeCollapseThree_5" class="accordion-collapse collapse" aria-labelledby="exchangeHeadingThree_5" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+            Response body as same as <code>PUT: /v1/exchanges/{id}/</code>
+           </div>
+          </div> 
+
+          </div>
+          <p class='desc'>This end-point allow you partial update specific exchange orders based on exchange order id.</p>
+       </div>  
+
+    6. <div class='desc delete-desc accordion'><span class='request delete' >DELETE</span>/v1/exchanges/{id}/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="exchangeHeadingOne_6">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exchangeCollapseOne_6" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="exchangeCollapseOne_6" class="accordion-collapse collapse" aria-labelledby="exchangeHeadingOne_6" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           In this end-point no request body needed.
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="exchangeHeadingTwo_6">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exchangeCollapseTwo_6" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="exchangeCollapseTwo_6" class="accordion-collapse collapse" aria-labelledby="exchangeHeadingTwo_6" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            access-control-allow-origin: * 
+            allow: GET,PUT,PATCH,DELETE,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Mon,16 Aug 2021 20:23:03 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 1 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="exchangeHeadingThree_6">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exchangeCollapseThree_6" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="exchangeCollapseThree_6" class="accordion-collapse collapse" aria-labelledby="exchangeHeadingThree_6" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+            In this end-point no response body.
+           </div>
+          </div>
+
+          </div>
+
+          <p class='desc'>This end-point allow you delete specific exchange order based on exchange order id.</p>
+         </div>
 
 ### Cash Collection
-
+<br />
 Collect shipment cost from customer.
-- [cash collection](#) 
+- <span id= "cash_collection" class="item">cash collection</span> 
+
+   1. <div class='desc get-desc accordion'>
+        <span class='request get'>GET</span>/v1/cash-collections/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="cashHeadingOne_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cashCollapseOne_1" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="cashCollapseOne_1" class="accordion-collapse collapse" aria-labelledby="cashHeadingOne_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           In this end-point no request body needed.
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="cashHeadingTwo_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cashCollapseTwo_1" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="cashCollapseTwo_1" class="accordion-collapse collapse" aria-labelledby="cashHeadingTwo_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            allow: GET,POST,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Mon,16 Aug 2021 21:04:59 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 6 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="cashHeadingThree_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cashCollapseThree_1" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="cashCollapseThree_1" class="accordion-collapse collapse" aria-labelledby="cashHeadingThree_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           {
+                "count": integer,
+                "next": string,
+                "previous": string,
+                "results": [
+                    {
+                        "id": integer,
+                        "status": string,
+                        "customer": {
+                            "id": integer,
+                            "created": string,
+                            "modified": string,
+                            "first_name": string,
+                            "last_name": string,
+                            "email": string,
+                            "phone": string,
+                            "address": {
+                                "id": integer,
+                                "created": string,
+                                "modified": string,
+                                "nickname": string,
+                                "line_1": string,
+                                "line_2": string,
+                                "line_3": string,
+                                "zip_code": string,
+                                "latitude": number,
+                                "longitude": number,
+                                "google_maps_link": string,
+                                "notes": string,
+                                "zone": {
+                                    "id": integer,
+                                    "name": string,
+                                    "radius": number,
+                                    "city": {
+                                        "id": integer,
+                                        "name": string,
+                                        "population": integer,
+                                        "is_captial": boolean,
+                                        "governorate": {
+                                            "id": integer,
+                                            "name": string
+                                        }
+                                    },
+                                    "served_by": {
+                                        "id": integer,
+                                        "name": string,
+                                        "code": string,
+                                        "capacity": number,
+                                        "current_utilization": number,
+                                        "size": number,
+                                        "latitude": number,
+                                        "longitude": number,
+                                        "address": string,
+                                        "is_virtual": boolean
+                                    },
+                                    "zone_group": []
+                                }
+                            },
+                            "act_cash_account": {
+                                "account_number": string,
+                                "created": string,
+                                "modified": string,
+                                "name": string,
+                                "parent_account": {
+                                    "account_number": string,
+                                    "created": string,
+                                    "modified": string,
+                                    "name": string,
+                                    "parent_account": {
+                                        "account_number": string,
+                                        "created": string,
+                                        "modified": string,
+                                        "name": string,
+                                        "parent_account": object,
+                                        "type": {
+                                            "id": integer,
+                                            "name": string
+                                        }
+                                    },
+                                    "type": {
+                                        id": integer,
+                                        "name": string
+                                    }
+                                },
+                                "type": {
+                                    id": integer,
+                                    "name": string
+                                }
+                            }
+                        },
+                        "amount": number,
+                        "request_price": {
+                            "id": integer,
+                            "created": string,
+                            "modified": string,
+                            "subtotal": number,
+                            "vat": number,
+                            "postal_tax": number,
+                            "total": number
+                        }
+                    }
+                ]
+            }
+           </pre>
+           </div>
+           </div>
+
+          </div>  
+          <p class='desc'>In this end-point you can list all requested cash collections from customers.</p>
+        </div> 
+
+   2. <div class='desc post-desc accordion'>
+        <span class='request post'>POST</span>/v1/cash-collections/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="cashHeadingOne_2">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cashCollapseOne_2" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="cashCollapseOne_2" class="accordion-collapse collapse" aria-labelledby="cashHeadingOne_2" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           {
+                "customer": {
+                    "address": {
+                        "nickname": string,
+                        "line_1": string,
+                        "line_2": string,
+                        "zone": integer
+                    },
+                    "first_name": string,
+                    "last_name": string,
+                    "phone": string
+                },
+                "amount": number
+            }
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="cashHeadingTwo_2">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cashCollapseTwo_2" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="cashCollapseTwo_2" class="accordion-collapse collapse" aria-labelledby="cashHeadingTwo_2" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            access-control-allow-origin: * 
+            allow: GET,POST,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Mon,16 Aug 2021 21:22:12 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 6 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block 
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="cashHeadingThree_2">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cashCollapseThree_2" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="cashCollapseThree_2" class="accordion-collapse collapse" aria-labelledby="cashHeadingThree_2" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           {
+                "id": integer,
+                "customer": {
+                    "id": integer,
+                    "address": {
+                        "id": integer,
+                        "created": string,
+                        "modified": string,
+                        "nickname": string,
+                        "line_1": string,
+                        "line_2": string,
+                        "line_3": string,
+                        "zip_code": string,
+                        "latitude": number,
+                        "longitude": number,
+                        "google_maps_link": string,
+                        "notes": string,
+                        "zone": integer
+                    },
+                    "created": string,
+                    "modified": string,
+                    "first_name": string,
+                    "last_name": string,
+                    "email": string,
+                    "phone": string,
+                    "act_cash_account": integer
+                },
+                "created": string,
+                "modified": string,
+                "status": string,
+                "amount": number,
+                "merchant": integer,
+                "request_price": integer
+            }
+           </pre>
+           </div>
+           </div>
+
+          </div>  
+          <p class='desc'>In this end-point you can create new request for cash collections from customers.</p>
+        </div> 
+
+
+   3. <div class='desc get-desc accordion'>
+        <span class='request get'>GET</span>/v1/cash-collections/{id}/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="cashHeadingOne_3">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cashCollapseOne_3" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="cashCollapseOne_3" class="accordion-collapse collapse" aria-labelledby="cashHeadingOne_3" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           In this end-point no request body needed.
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="cashHeadingTwo_3">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cashCollapseTwo_3" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="cashCollapseTwo_3" class="accordion-collapse collapse" aria-labelledby="cashHeadingTwo_3" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            allow: GET,PUT,PATCH,DELETE,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Tue,17 Aug 2021 08:06:18 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 6 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block 
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="cashHeadingThree_3">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cashCollapseThree_3" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="cashCollapseThree_3" class="accordion-collapse collapse" aria-labelledby="cashHeadingThree_3" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           {
+                "id": integer,
+                "status": string,
+                "customer": {
+                    "id": integer,
+                    "created": string,
+                    "modified": string,
+                    "first_name": string,
+                    "last_name": string,
+                    "email": string,
+                    "phone": string,
+                    "address": {
+                        "id": integer,
+                        "created": string,
+                        "modified": string,
+                        "nickname": string,
+                        "line_1": string,
+                        "line_2": string,
+                        "line_3": string,
+                        "zip_code": string,
+                        "latitude": number,
+                        "longitude": number,
+                        "google_maps_link": string,
+                        "notes": string,
+                        "zone": {
+                            "id": integer,
+                            "name": string,
+                            "radius": number,
+                            "city": {
+                                "id": integer,
+                                "name": string,
+                                "population": integer,
+                                "is_captial": boolean,
+                                "governorate": {
+                                    "id": integer,
+                                    "name": string
+                                }
+                            },
+                            "served_by": {
+                                "id": integer,
+                                "name": string,
+                                "code": string,
+                                "capacity": number,
+                                "current_utilization": number,
+                                "size": number,
+                                "latitude": number,
+                                "longitude": number,
+                                "address": string,
+                                "is_virtual": boolean
+                            },
+                            "zone_group": []
+                        }
+                    },
+                    "act_cash_account": {
+                        "account_number": string,
+                        "created": string,
+                        "modified": string,
+                        "name": string,
+                        "parent_account": {
+                            "account_number": string,
+                            "created": string,
+                            "modified": string,
+                            "name": string,
+                            "parent_account": {
+                                "account_number": string,
+                                "created": string,
+                                "modified": string,
+                                "name": string,
+                                "parent_account": object,
+                                "type": {
+                                    "id": integer,
+                                    "name": string
+                                }
+                            },
+                            "type": {
+                                id": integer,
+                                "name": string
+                            }
+                        },
+                        "type": {
+                            id": integer,
+                            "name": string
+                        }
+                    }
+                },
+                "amount": number,
+                "request_price": {
+                    "id": integer,
+                    "created": string,
+                    "modified": string,
+                    "subtotal": number,
+                    "vat": number,
+                    "postal_tax": number,
+                    "total": number
+                }
+            }
+           </pre>
+           </div>
+           </div>
+
+          </div>  
+          <p class='desc'>In this end-point you can retrieve specific cash collections request from customers based on cash collections id.</p>
+        </div> 
+
+
+   4. <div class='desc put-desc accordion'>
+        <span class='request put'>PUT</span>/v1/cash-collections/{id}/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="cashHeadingOne_4">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cashCollapseOne_4" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="cashCollapseOne_4" class="accordion-collapse collapse" aria-labelledby="cashHeadingOne_4" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           {
+                "customer": {
+                    "address": {
+                        "nickname": string,
+                        "line_1": string,
+                        "line_2": string,
+                        "zone": integer
+                    },
+                    "first_name": string,
+                    "last_name": string,
+                    "phone": string
+                }
+            }
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="cashHeadingTwo_4">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cashCollapseTwo_4" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="cashCollapseTwo_4" class="accordion-collapse collapse" aria-labelledby="cashHeadingTwo_4" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            access-control-allow-origin: * 
+            allow: GET,PUT,PATCH,DELETE,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Tue,17 Aug 2021 08:17:20 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 9 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block 
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="cashHeadingThree_4">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cashCollapseThree_4" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="cashCollapseThree_4" class="accordion-collapse collapse" aria-labelledby="cashHeadingThree_4" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           {
+                "id": integer,
+                "customer": {
+                    "id": integer,
+                    "address": {
+                        "id": integer,
+                        "created": string,
+                        "modified": string,
+                        "nickname": string,
+                        "line_1": string,
+                        "line_2": string,
+                        "line_3": string,
+                        "zip_code": string,
+                        "latitude": number,
+                        "longitude": number,
+                        "google_maps_link": string,
+                        "notes": string,
+                        "zone": integer
+                    },
+                    "created": string,
+                    "modified": string,
+                    "first_name": string,
+                    "last_name": string,
+                    "email": string,
+                    "phone": string,
+                    "act_cash_account": integer
+                },
+                "created": string
+                "modified": string,
+                "status": string,
+                "amount": number,
+                "merchant": integer,
+                "request_price": integer
+            }
+           </pre>
+           </div>
+           </div>
+
+          </div>  
+          <p class='desc'>In this end-point you can update specific cash collections request from customers based on cash collections id.</p>
+        </div> 
+
+   
+
+   5. <div class='desc patch-desc accordion'>
+        <span class='request patch'>PATCH</span>/v1/cash-collections/{id}/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="cashHeadingOne_5">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cashCollapseOne_5" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="cashCollapseOne_5" class="accordion-collapse collapse" aria-labelledby="cashHeadingOne_5" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           Request body as same as <code>PUT: /v1/cash-collections/{id}/</code> 
+           <br />
+           BUT you can ignore all or some of keys because it partial update.
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="cashHeadingTwo_5">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cashCollapseTwo_5" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="cashCollapseTwo_5" class="accordion-collapse collapse" aria-labelledby="cashHeadingTwo_5" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            access-control-allow-origin: * 
+            allow: GET,PUT,PATCH,DELETE,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Tue,17 Aug 2021 08:25:22 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 7 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block 
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="cashHeadingThree_5">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cashCollapseThree_5" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="cashCollapseThree_5" class="accordion-collapse collapse" aria-labelledby="cashHeadingThree_5" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            Request body as same as <code>PUT: /v1/cash-collections/{id}/</code>
+           </pre>
+           </div>
+           </div>
+
+          </div>  
+          <p class='desc'>In this end-point you can partial update specific cash collections request from customers based on cash collections id.</p>
+        </div> 
+
+
+   
+   6. <div class='desc delete-desc accordion'>
+        <span class='request delete'>PATCH</span>/v1/cash-collections/{id}/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="cashHeadingOne_6">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cashCollapseOne_6" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="cashCollapseOne_6" class="accordion-collapse collapse" aria-labelledby="cashHeadingOne_6" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           In this end-point no request body needed. 
+           <br />
+           BUT you can ignore all or some of keys because it partial update.
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="cashHeadingTwo_6">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cashCollapseTwo_6" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="cashCollapseTwo_6" class="accordion-collapse collapse" aria-labelledby="cashHeadingTwo_6" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            access-control-allow-origin: * 
+            allow: GET,PUT,PATCH,DELETE,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Tue,17 Aug 2021 08:33:07 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 8 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block 
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="cashHeadingThree_6">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#cashCollapseThree_6" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="cashCollapseThree_6" class="accordion-collapse collapse" aria-labelledby="cashHeadingThree_6" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            In this end-point no response body.
+           </pre>
+           </div>
+           </div>
+
+          </div>  
+          <p class='desc'>In this end-point you can delete specific cash collections request from customers based on cash collections id.</p>
+        </div> 
+
 
 ## Billing Statements
 
-- [invoices](#) <br />
-    1. <div class='desc get-desc'>
-        <span class='request get'>GET</span>/v1/billing/invoices/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        This end-point allow you to list all invoices.
+- <span id= "statements" class="item">statements</span>
 
-    2. <div class='desc get-desc'>
-        <span class='request get'>GET</span>/v1/billing/invoices/{id}/
-           <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
-          </div>
-       </div>
-        This end-point allow you to retrieve specific invoice based on his id. 
+    1. <div class='desc get-desc accordion'>
+        <span class='request get'>GET</span>/v1/billing/statements/
+          <div style='margin-top: 15px;'>
+           <h2 class="accordion-header" id="statementHeadingOne_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#statementCollapseOne_1" aria-expanded="true" aria-controls="collapseOne">
+                Request body example
+           </button>
+           </h2>
+           <div id="statementCollapseOne_1" class="accordion-collapse collapse" aria-labelledby="statementHeadingOne_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           In this end-point no request body needed.
+           </pre>
+           </div>
+           </div>
 
-    3. <div class='desc post-desc'>
-        <span class='request post' >POST</span>/v1/billing/invoices/order/
-          <div>
-           <p class='request black'>Request body exampel</p>
-           <p class='request black'>Response header exampel</p>
-           <p class='request black'>Response body exampel</p>
+           <h2 class="accordion-header" id="statementHeadingTwo_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#statementCollapseTwo_1" aria-expanded="true" aria-controls="collapseOne">
+                Response header example
+           </button>
+           </h2>
+           <div id="statementCollapseTwo_1" class="accordion-collapse collapse" aria-labelledby="statementHeadingTwo_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+            allow: GET,POST,HEAD,OPTIONS 
+            content-length: 58 
+            content-type: application/json 
+            date: Tue,17 Aug 2021 09:18:42 GMT 
+            referrer-policy: same-origin 
+            server: WSGIServer/0.2 CPython/3.9.6 
+            vary: Accept,Origin,Cookie 
+            www-authenticate: Bearer realm="api" 
+            x-content-type-options: nosniff 
+            x-frame-options: DENY 
+            x-queryinspect-duplicate-sql-queries: 0 
+            x-queryinspect-num-sql-queries: 0 
+            x-queryinspect-total-request-time: 7 ms 
+            x-queryinspect-total-sql-time: 0 ms 
+            x-xss-protection: 1; mode=block
+           </pre>
+           </div>
+           </div>
+
+           <h2 class="accordion-header" id="statementHeadingThree_1">
+           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#statementCollapseThree_1" aria-expanded="true" aria-controls="collapseOne">
+                Response body example
+           </button>
+           </h2>
+           <div id="statementCollapseThree_1" class="accordion-collapse collapse" aria-labelledby="statementHeadingThree_1" data-bs-parent="#accordionExample">
+           <div class="accordion-body">
+           <pre>
+           {
+               "count": integer,
+               "next": string,
+               "previous": integer,
+               "results":[
+                   {
+                        "id": integer,
+                        "discounts": [],
+                        "bank_deposits": [],
+                        "created": string,
+                        "modified": string,
+                        "number": string,
+                        "net_service_fees_due": number,
+                        "net_cod_due": number,
+                        "status": string,
+                        "accounting_status": string,
+                        "expected_net_cod_deposit_date": string,
+                        "pdf_link": string,
+                        "merchant": integer
+                   },
+                   .....
+               ]
+           }
+           </pre>
+           </div>
+           </div>
+
           </div>
+          <p class='desc'>This end-point allow you to list all statements.</p>
        </div>
-        This end-point allow you to create new invoice for orders list.
-- [statements](#) 
+
 
 
 
