@@ -207,7 +207,7 @@ Let's start
                                     "address": string,
                                     "is_virtual": boolean
                                 },
-                                "zone_group": []
+                                "zone_group": [object]
                             }
                         }
                     }
@@ -420,7 +420,7 @@ Let's start
                     "radius": number,
                     "city": integer,
                     "served_by": integer,
-                    "zone_group": []
+                    "zone_group": [object]
                 },
                 ....
            ]
@@ -655,17 +655,17 @@ Let's start
                                         "address": string,
                                         "is_virtual": boolean
                                     },
-                                    "zone_group": []
+                                    "zone_group": [object]
                                 }
                             },
                             "subscription": {
                                 "id": integer,
                                 "name": string
                             },
-                            "pricing_lookup_delivery": integer,
-                            "pricing_lookup_return": integer,
-                            "pricing_lookup_exchange": integer,
-                            "pricing_lookup_cash_collection": integer,
+                            "pricing_lookup_delivery":  object,
+                            "pricing_lookup_return": object,
+                            "pricing_lookup_exchange": object,
+                            "pricing_lookup_cash_collection": object,
                             "act_cod_account": {
                                 "account_number": string,
                                 "created": string,
@@ -676,7 +676,7 @@ Let's start
                                     "created": string,
                                     "modified": string,
                                     "name": string,
-                                    "parent_account": integer,
+                                    "parent_account": object,
                                     "type": {
                                         "id": integer,
                                         "name": string
@@ -697,7 +697,7 @@ Let's start
                                     "created": string,
                                     "modified": string,
                                     "name": string,
-                                    "parent_account": integer,
+                                    "parent_account": object,
                                     "type": {
                                         "id": integer,
                                         "name": string
@@ -718,7 +718,7 @@ Let's start
                                     "created": string,
                                     "modified": string,
                                     "name": string,
-                                    "parent_account": integer,
+                                    "parent_account": object,
                                     "type": {
                                         "id": integer,
                                         "name": string
@@ -739,7 +739,7 @@ Let's start
                                     "created": string,
                                     "modified": string,
                                     "name": string,
-                                    "parent_account": integer,
+                                    "parent_account": object,
                                     "type": {
                                         "id": integer,
                                         "name": string
@@ -760,7 +760,7 @@ Let's start
                                     "created": string,
                                     "modified": string,
                                     "name": string,
-                                    "parent_account": integer,
+                                    "parent_account": object,
                                     "type": {
                                         "id": integer,
                                         "name": string
@@ -771,8 +771,8 @@ Let's start
                                     "name": string
                                 }
                             },
-                            "pickup_days": [],
-                            "billing_days": []
+                            "pickup_days": [object],
+                            "billing_days": [object]
                         },
                         "address": {
                             "id": integer,
@@ -813,7 +813,7 @@ Let's start
                                     "address": string,
                                     "is_virtual": boolean
                                 },
-                                "zone_group": []
+                                "zone_group": [object]
                             }
                         }
                     },
@@ -1022,17 +1022,17 @@ Let's start
                                 "address": string,
                                 "is_virtual": boolean
                             },
-                            "zone_group": []
+                            "zone_group": [object]
                         }
                     },
                     "subscription": {
                         "id": integer,
                         "name": string
                     },
-                    "pricing_lookup_delivery": integer,
-                    "pricing_lookup_return": integer,
-                    "pricing_lookup_exchange": integer,
-                    "pricing_lookup_cash_collection": integer,
+                    "pricing_lookup_delivery":  object,
+                    "pricing_lookup_return": object,
+                    "pricing_lookup_exchange": object,
+                    "pricing_lookup_cash_collection": object,
                     "act_cod_account": {
                         "account_number": string,
                         "created": string,
@@ -1043,7 +1043,7 @@ Let's start
                             "created": string,
                             "modified": string,
                             "name": string,
-                            "parent_account": integer,
+                            "parent_account": object,
                             "type": {
                                 "id": integer,
                                 "name": string
@@ -1064,7 +1064,7 @@ Let's start
                             "created": string,
                             "modified": string,
                             "name": string,
-                            "parent_account": integer,
+                            "parent_account": object,
                             "type": {
                                 "id": integer,
                                 "name": string
@@ -1085,7 +1085,7 @@ Let's start
                             "created": string,
                             "modified": string,
                             "name": string,
-                            "parent_account": integer,
+                            "parent_account": object,
                             "type": {
                                 "id": integer,
                                 "name": string
@@ -1106,7 +1106,7 @@ Let's start
                             "created": string,
                             "modified": string,
                             "name": string,
-                            "parent_account": integer,
+                            "parent_account": object,
                             "type": {
                                 "id": integer,
                                 "name": string
@@ -1127,7 +1127,7 @@ Let's start
                             "created": string,
                             "modified": string,
                             "name": string,
-                            "parent_account": integer,
+                            "parent_account": object,
                             "type": {
                                 "id": integer,
                                 "name": string
@@ -1138,8 +1138,8 @@ Let's start
                             "name": string
                         }
                     },
-                    "pickup_days": [],
-                    "billing_days": []
+                    "pickup_days": [object],
+                    "billing_days": [object]
                 },
                 "address": {
                     "id": integer,
@@ -1180,7 +1180,7 @@ Let's start
                             "address": string,
                             "is_virtual": boolean
                         },
-                        "zone_group": []
+                        "zone_group": [object]
                     }
                 }
             }
@@ -1568,17 +1568,17 @@ Orders are divided into three categoricals
                                             "address": string,
                                             "is_virtual": boolean
                                         },
-                                        "zone_group": []
+                                        "zone_group": [object]
                                     }
                                 },
                                 "subscription": {
                                     "id": integer,
                                     "name": string
                                 },
-                                "pricing_lookup_delivery": integer,
-                                "pricing_lookup_return": integer,
-                                "pricing_lookup_exchange": integer,
-                                "pricing_lookup_cash_collection": integer,
+                                "pricing_lookup_delivery":  object,
+                                "pricing_lookup_return": object,
+                                "pricing_lookup_exchange": object,
+                                "pricing_lookup_cash_collection": object,
                                 "act_cod_account": {
                                     "account_number": string,
                                     "created": string,
@@ -1740,7 +1740,7 @@ Orders are divided into three categoricals
                                             "address": string,
                                             "is_virtual": boolean
                                         },
-                                        "zone_group": []
+                                        "zone_group": [object]
                                     }
                                 },
                                 "act_cash_account": {
@@ -1824,7 +1824,7 @@ Orders are divided into three categoricals
                                 "address": string,
                                 "is_virtual": boolean
                             },
-                            "preferred_window": []
+                            "preferred_window": [integer]
                         },
                         .....
                     ]
@@ -1915,49 +1915,49 @@ Orders are divided into three categoricals
                         "nickname": string,
                         "line_1": string,
                         "line_2": string,
-                        "line_3": null,
-                        "zip_code": null,
-                        "latitude": null,
-                        "longitude": null,
-                        "google_maps_link": null,
-                        "notes": null,
+                        "line_3": string,
+                        "zip_code": string,
+                        "latitude": number,
+                        "longitude": number,
+                        "google_maps_link": string,
+                        "notes": string,
                         "zone": integer
                     },
                     "created": string,
                     "modified": string,
                     "first_name": string,
                     "last_name": string,
-                    "email": null,
+                    "email": string,
                     "phone": string,
                     "act_cash_account": null
                 },
                 "created": string,
                 "modified": string,
                 "tracking_number": string,
-                "merchant_order_reference": null,
-                "order_notes": null,
+                "merchant_order_reference": string,
+                "order_notes": string,
                 "is_exchange": boolean,
                 "is_pudo": boolean,
                 "is_counter_dropoff": boolean,
                 "cash_processing": boolean,
-                "cash_amount": null,
-                "preferred_date": null,
-                "estimated_date": null,
+                "cash_amount": number,
+                "preferred_date": string,
+                "estimated_date": string,
                 "status": string,
                 "intermediate_warehouses": [
                     string,
                     ...
                 ],
-                "dispatch_early": null,
-                "dispatch_late": null,
+                "dispatch_early": string,
+                "dispatch_late": string,
                 "merchant": integer,
                 "service_level": integer,
-                "pickup_point": null,
+                "pickup_point": integer,
                 "order_price": integer,
-                "current_warehouse": null,
+                "current_warehouse": integer,
                 "inbound_warehouse": integer,
                 "outbound_warehouse": integer,
-                "preferred_window": []
+                "preferred_window": [integer]
             }
            </pre>
            </div>
@@ -2101,49 +2101,49 @@ Orders are divided into three categoricals
                         "nickname": string,
                         "line_1": string,
                         "line_2": "string,
-                        "line_3": null,
-                        "zip_code": null,
-                        "latitude": null,
-                        "longitude": null,
-                        "google_maps_link": null,
-                        "notes": null,
+                        "line_3": string,
+                        "zip_code": string,
+                        "latitude": number,
+                        "longitude": number,
+                        "google_maps_link": string,
+                        "notes": string,
                         "zone": integer
                     },
                     "created": string,
                     "modified": string,
                     "first_name": string,
                     "last_name": string,
-                    "email": null,
+                    "email": string,
                     "phone": string,
                     "act_cash_account": null
                 },
                 "created": "string,
                 "modified": string,
                 "tracking_number": string,
-                "merchant_order_reference": null,
-                "order_notes": null,
+                "merchant_order_reference": string,
+                "order_notes": string,
                 "is_exchange": boolean,
                 "is_pudo": boolean,
                 "is_counter_dropoff": boolean,
                 "cash_processing": boolean,
-                "cash_amount": null,
-                "preferred_date": null,
-                "estimated_date": null,
+                "cash_amount": number,
+                "preferred_date": string,
+                "estimated_date": string,
                 "status": string",
                 "intermediate_warehouses": [
                     string,
                     ...
                 ],
-                "dispatch_early": null,
-                "dispatch_late": null,
+                "dispatch_early": string,
+                "dispatch_late": string,
                 "merchant": integer,
                 "service_level": integer,
-                "pickup_point": null,
+                "pickup_point": integer,
                 "order_price": integer,
-                "current_warehouse": null,
+                "current_warehouse": integer,
                 "inbound_warehouse": integer,
                 "outbound_warehouse": integer,
-                "preferred_window": []
+                "preferred_window": [integer]
             }
            </pre>
            </div>
@@ -2337,7 +2337,7 @@ Orders are divided into three categoricals
            <div class="accordion-body">
            <pre>
            {
-                "preferred_window": [integer, ...],
+                "preferred_window": [integer],
                 "latitude": number,
                 "longitude": number
             }
@@ -2433,7 +2433,7 @@ Orders are divided into three categoricals
                 "current_warehouse": integer,
                 "inbound_warehouse": integer,
                 "outbound_warehouse": integer,
-                "preferred_window": [integer, ...]
+                "preferred_window": [integer]
             }
            </pre>
            </div>
@@ -2632,7 +2632,7 @@ Orders are divided into three categoricals
                                     "id": integer,
                                     "created": string,
                                     "modified": string,
-                                    "description": null,
+                                    "description": string,
                                     "weight": number,
                                     "volume": number,
                                     "fragile": boolean,
@@ -2650,22 +2650,22 @@ Orders are divided into three categoricals
                         "created": string,
                         "modified": string,
                         "tracking_number": string,
-                        "merchant_order_reference": null,
-                        "order_notes": null,
+                        "merchant_order_reference": string,
+                        "order_notes": string,
                         "is_exchange": boolean,
                         "is_pudo": boolean,
                         "is_counter_dropoff": boolean,
                         "cash_processing": boolean,
-                        "cash_amount": null,
-                        "preferred_date": null,
-                        "estimated_date": null,
+                        "cash_amount": number,
+                        "preferred_date": string,
+                        "estimated_date": string,
                         "status": string,
                         "intermediate_warehouses": [
                             string,
                             ...
                         ],
-                        "dispatch_early": null,
-                        "dispatch_late": null,
+                        "dispatch_early":  string,
+                        "dispatch_late":  string,
                         "merchant": {
                             "id": integer,
                             "created": string,
@@ -2676,7 +2676,7 @@ Orders are divided into three categoricals
                             "store_phone": string,
                             "store_email": string,
                             "status": string,
-                            "api_key": null,
+                            "api_key":  string,
                             "cash_processing_fees": number,
                             "cash_processing_fees_max": number,
                             "cash_processing_percentage": number,
@@ -2688,12 +2688,12 @@ Orders are divided into three categoricals
                                 "nickname": string,
                                 "line_1": string,
                                 "line_2": string,
-                                "line_3": null,
-                                "zip_code": null,
-                                "latitude": null,
-                                "longitude": null,
-                                "google_maps_link": null,
-                                "notes": null,
+                                "line_3":  string,
+                                "zip_code":  string,
+                                "latitude":  number,
+                                "longitude":  number,
+                                "google_maps_link":  string,
+                                "notes":  string,
                                 "zone": {
                                     "id": integer,
                                     "name": string,
@@ -2720,17 +2720,17 @@ Orders are divided into three categoricals
                                         "address": string,
                                         "is_virtual": boolean
                                     },
-                                    "zone_group": []
+                                    "zone_group": [object]
                                 }
                             },
                             "subscription": {
                                 "id": integer,
                                 "name": string
                             },
-                            "pricing_lookup_delivery": null,
-                            "pricing_lookup_return": null,
-                            "pricing_lookup_exchange": null,
-                            "pricing_lookup_cash_collection": null,
+                            "pricing_lookup_delivery": object,
+                            "pricing_lookup_return": object,
+                            "pricing_lookup_exchange": object,
+                            "pricing_lookup_cash_collection": object,
                             "act_cod_account": {
                                 "account_number": string,
                                 "created": string,
@@ -2741,7 +2741,7 @@ Orders are divided into three categoricals
                                     "created": string,
                                     "modified": string,
                                     "name": string,
-                                    "parent_account": null,
+                                    "parent_account": object,
                                     "type": {
                                         "id": integer,
                                         "name": string
@@ -2762,7 +2762,7 @@ Orders are divided into three categoricals
                                     "created": string,
                                     "modified": string,
                                     "name": string,
-                                    "parent_account": null,
+                                    "parent_account": object,
                                     "type": {
                                         "id": integer,
                                         "name": string
@@ -2783,7 +2783,7 @@ Orders are divided into three categoricals
                                     "created": string,
                                     "modified": string,
                                     "name": string,
-                                    "parent_account": null,
+                                    "parent_account": object,
                                     "type": {
                                         "id": integer,
                                         "name": string
@@ -2804,7 +2804,7 @@ Orders are divided into three categoricals
                                     "created": string,
                                     "modified": string,
                                     "name": string,
-                                    "parent_account": null,
+                                    "parent_account": object,
                                     "type": {
                                         "id": integer,
                                         "name": string
@@ -2825,7 +2825,7 @@ Orders are divided into three categoricals
                                     "created": string,
                                     "modified": string,
                                     "name": string,
-                                    "parent_account": null,
+                                    "parent_account": object,
                                     "type": {
                                         "id": integer,
                                         "name": string
@@ -2836,8 +2836,8 @@ Orders are divided into three categoricals
                                     "name": string
                                 }
                             },
-                            "pickup_days": [],
-                            "billing_days": []
+                            "pickup_days": [object],
+                            "billing_days": [object]
                         },
                         "customer": {
                             "id": integer,
@@ -2845,7 +2845,7 @@ Orders are divided into three categoricals
                             "modified": string,
                             "first_name": string,
                             "last_name": string,
-                            "email": null,
+                            "email": string,
                             "phone": string,
                             "address": {
                                 "id": integer,
@@ -2854,12 +2854,12 @@ Orders are divided into three categoricals
                                 "nickname": string,
                                 "line_1": string,
                                 "line_2": string,
-                                "line_3": null,
-                                "zip_code": null,
-                                "latitude": null,
-                                "longitude": null,
-                                "google_maps_link": null,
-                                "notes": null,
+                                "line_3":  string,
+                                "zip_code":  string,
+                                "latitude":  number,
+                                "longitude":  number,
+                                "google_maps_link":  string,
+                                "notes":  string,
                                 "zone": {
                                     "id": integer,
                                     "name": string,
@@ -2886,7 +2886,7 @@ Orders are divided into three categoricals
                                         "address": string,
                                         "is_virtual": boolean
                                     },
-                                    "zone_group": []
+                                    "zone_group": [object]
                                 }
                             },
                             "act_cash_account": {
@@ -2899,7 +2899,7 @@ Orders are divided into three categoricals
                                     "created": string,
                                     "modified": string,
                                     "name": string,
-                                    "parent_account": null,
+                                    "parent_account": object,
                                     "type": {
                                         "id": integer,
                                         "name": string
@@ -2951,7 +2951,7 @@ Orders are divided into three categoricals
                             "address": string,
                             "is_virtual": boolean
                         },
-                        "preferred_window": []
+                        "preferred_window": [integer]
                     }
                 ]
             }
@@ -3043,41 +3043,41 @@ Orders are divided into three categoricals
                         "nickname": string,
                         "line_1": string,
                         "line_2": string,
-                        "line_3": null,
-                        "zip_code": null,
-                        "latitude": null,
-                        "longitude": null,
-                        "google_maps_link": null,
-                        "notes": null,
+                        "line_3":  string,
+                        "zip_code":  string,
+                        "latitude":  number,
+                        "longitude":  number,
+                        "google_maps_link":  string,
+                        "notes":  string,
                         "zone": integer
                     },
                     "created": string,
                     "modified": string,
                     "first_name": string,
                     "last_name": string,
-                    "email": null,
+                    "email": string,
                     "phone": string,
                     "act_cash_account": null
                 },
                 "created": string,
                 "modified": string,
                 "tracking_number": string,
-                "merchant_order_reference": null,
-                "order_notes": null,
+                "merchant_order_reference": string,
+                "order_notes": string,
                 "is_exchange": boolean,
                 "is_pudo": boolean,
                 "is_counter_dropoff": boolean,
                 "cash_processing": boolean,
-                "cash_amount": null,
-                "preferred_date": null,
-                "estimated_date": null,
+                "cash_amount": number,
+                "preferred_date": string,
+                "estimated_date": string,
                 "status": string,
                 "intermediate_warehouses": [
                     string,
                     ...
                 ],
-                "dispatch_early": null,
-                "dispatch_late": null,
+                "dispatch_early":  string,
+                "dispatch_late":  string,
                 "merchant": integer,
                 "service_level": integer,
                 "pickup_point": null,
@@ -3085,7 +3085,7 @@ Orders are divided into three categoricals
                 "current_warehouse": null,
                 "inbound_warehouse": integer,
                 "outbound_warehouse": integer,
-                "preferred_window": []
+                "preferred_window": [integer]
             }
            </pre>
            </div>
@@ -3106,6 +3106,7 @@ Orders are divided into three categoricals
            <div id="returnCollapseOne_3" class="accordion-collapse collapse" aria-labelledby="returnHeadingOne_3" data-bs-parent="#accordionExample">
            <div class="accordion-body">
            In this end-point no request body needed.
+           </div>
            </div>
 
            <h2 class="accordion-header" id="returnHeadingTwo_3">
@@ -3233,41 +3234,41 @@ Orders are divided into three categoricals
                         "nickname": string,
                         "line_1": string,
                         "line_2": "string,
-                        "line_3": null,
-                        "zip_code": null,
-                        "latitude": null,
-                        "longitude": null,
-                        "google_maps_link": null,
-                        "notes": null,
+                        "line_3":  string,
+                        "zip_code":  string,
+                        "latitude":  number,
+                        "longitude":  number,
+                        "google_maps_link":  string,
+                        "notes":  string,
                         "zone": integer
                     },
                     "created": string,
                     "modified": string,
                     "first_name": string,
                     "last_name": string,
-                    "email": null,
+                    "email": string,
                     "phone": string,
                     "act_cash_account": null
                 },
                 "created": "string,
                 "modified": string,
                 "tracking_number": string,
-                "merchant_order_reference": null,
-                "order_notes": null,
+                "merchant_order_reference": string,
+                "order_notes": string,
                 "is_exchange": boolean,
                 "is_pudo": boolean,
                 "is_counter_dropoff": boolean,
                 "cash_processing": boolean,
-                "cash_amount": null,
-                "preferred_date": null,
-                "estimated_date": null,
+                "cash_amount": number,
+                "preferred_date": string,
+                "estimated_date": string,
                 "status": string",
                 "intermediate_warehouses": [
                     string,
                     ...
                 ],
-                "dispatch_early": null,
-                "dispatch_late": null,
+                "dispatch_early":  string,
+                "dispatch_late":  string,
                 "merchant": integer,
                 "service_level": integer,
                 "pickup_point": null,
@@ -3275,7 +3276,7 @@ Orders are divided into three categoricals
                 "current_warehouse": null,
                 "inbound_warehouse": integer,
                 "outbound_warehouse": integer,
-                "preferred_window": []
+                "preferred_window": [integer]
             }
            </pre>
            </div>
@@ -3468,7 +3469,7 @@ Orders are divided into three categoricals
            <pre>
            {
                 "phone": string,
-                "preferred_window": [integer, ...],
+                "preferred_window": [integer],
                 "latitude": number,
                 "longitude": number
             }
@@ -3564,7 +3565,7 @@ Orders are divided into three categoricals
                 "current_warehouse": integer,
                 "inbound_warehouse": integer,
                 "outbound_warehouse": integer,
-                "preferred_window": [integer, ...]
+                "preferred_window": [integer]
             }
            </pre>
            </div>
@@ -3718,17 +3719,17 @@ Orders are divided into three categoricals
                                             "address": string,
                                             "is_virtual": boolean
                                         },
-                                        "zone_group": []
+                                        "zone_group": [object]
                                     }
                                 },
                                 "subscription": {
                                     "id": integer,
                                     "name": string
                                 },
-                                "pricing_lookup_delivery": integer,
-                                "pricing_lookup_return": integer,
-                                "pricing_lookup_exchange": integer,
-                                "pricing_lookup_cash_collection": integer,
+                                "pricing_lookup_delivery":  object,
+                                "pricing_lookup_return": object,
+                                "pricing_lookup_exchange": object,
+                                "pricing_lookup_cash_collection": object,
                                 "act_cod_account": {
                                     "account_number": string,
                                     "created": string,
@@ -3890,7 +3891,7 @@ Orders are divided into three categoricals
                                             "address": string,
                                             "is_virtual": boolean
                                         },
-                                        "zone_group": []
+                                        "zone_group": [object]
                                     }
                                 },
                                 "act_cash_account": {
@@ -3974,7 +3975,7 @@ Orders are divided into three categoricals
                                 "address": string,
                                 "is_virtual": boolean
                             },
-                            "preferred_window": []
+                            "preferred_window": [integer]
                         },
                         "return_order": {
                             "id": integer,
@@ -4051,17 +4052,17 @@ Orders are divided into three categoricals
                                             "address": string,
                                             "is_virtual": boolean
                                         },
-                                        "zone_group": []
+                                        "zone_group": [object]
                                     }
                                 },
                                 "subscription": {
                                     "id": integer,
                                     "name": string
                                 },
-                                "pricing_lookup_delivery": integer,
-                                "pricing_lookup_return": integer,
-                                "pricing_lookup_exchange": integer,
-                                "pricing_lookup_cash_collection": integer,
+                                "pricing_lookup_delivery":  object,
+                                "pricing_lookup_return": object,
+                                "pricing_lookup_exchange": object,
+                                "pricing_lookup_cash_collection": object,
                                 "act_cod_account": {
                                     "account_number": string,
                                     "created": string,
@@ -4223,7 +4224,7 @@ Orders are divided into three categoricals
                                             "address": string,
                                             "is_virtual": boolean
                                         },
-                                        "zone_group": []
+                                        "zone_group": [object]
                                     }
                                 },
                                 "act_cash_account": {
@@ -4241,7 +4242,7 @@ Orders are divided into three categoricals
                                             "created": string,
                                             "modified": string,
                                             "name": string,
-                                            "parent_account": null,
+                                            "parent_account": object,
                                             "type": {
                                                 "id": integer,
                                                 "name": string
@@ -4317,7 +4318,7 @@ Orders are divided into three categoricals
                                 "address": string,
                                 "is_virtual": boolean
                             },
-                            "preferred_window": []
+                            "preferred_window": [integer]
                         },
                         "order_price": integer
                     }
@@ -4480,152 +4481,8 @@ Orders are divided into three categoricals
         </div>
           
 
-    4. <div class='desc put-desc accordion'><span class='request put' >PUT</span>/v1/exchanges/{id}/
-          <div style='margin-top: 15px;'>
-           <h2 class="accordion-header" id="exchangeHeadingOne_4">
-           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exchangeCollapseOne_4" aria-expanded="true" aria-controls="collapseOne">
-                Request body example
-           </button>
-           </h2>
-           <div id="exchangeCollapseOne_4" class="accordion-collapse collapse" aria-labelledby="exchangeHeadingOne_4" data-bs-parent="#accordionExample">
-           <div class="accordion-body">
-           <pre>
-           {
-                "service_level": integer,
-                "new_packages": [
-                    {
-                        "package_size": integer,
-                        "description": string
-                    }
-                ],
-                "old_packages": [
-                    {
-                        "package_size": integer,
-                        "description": string
-                    }
-                ],
-                "order": integer,
-                "notes": string,
-                "refund": boolean,
-                "refund_amount": integer,
-                "cash_processing": boolean,
-                "cash_amount": number
-            }
-           </pre>
-           </div>
-           </div>
-
-           <h2 class="accordion-header" id="exchangeHeadingTwo_4">
-           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exchangeCollapseTwo_4" aria-expanded="true" aria-controls="collapseOne">
-                Response header example
-           </button>
-           </h2>
-           <div id="exchangeCollapseTwo_4" class="accordion-collapse collapse" aria-labelledby="exchangeHeadingTwo_4" data-bs-parent="#accordionExample">
-           <div class="accordion-body">
-           <pre>
-            access-control-allow-origin: * 
-            allow: GET,PUT,PATCH,DELETE,HEAD,OPTIONS 
-            content-length: 58 
-            content-type: application/json 
-            date: Mon,16 Aug 2021 20:12:37 GMT 
-            referrer-policy: same-origin 
-            server: WSGIServer/0.2 CPython/3.9.6 
-            vary: Accept,Origin,Cookie 
-            www-authenticate: Bearer realm="api" 
-            x-content-type-options: nosniff 
-            x-frame-options: DENY 
-            x-queryinspect-duplicate-sql-queries: 0 
-            x-queryinspect-num-sql-queries: 0 
-            x-queryinspect-total-request-time: 36 ms 
-            x-queryinspect-total-sql-time: 0 ms 
-            x-xss-protection: 1; mode=block
-           </pre>
-           </div>
-           </div>
-
-           <h2 class="accordion-header" id="exchangeHeadingThree_4">
-           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exchangeCollapseThree_4" aria-expanded="true" aria-controls="collapseOne">
-                Response body example
-           </button>
-           </h2>
-           <div id="exchangeCollapseThree_4" class="accordion-collapse collapse" aria-labelledby="exchangeHeadingThree_4" data-bs-parent="#accordionExample">
-           <div class="accordion-body">
-           <pre>
-            {
-                "id": integer,
-                "created": string,
-                "modified": string,
-                "notes": string,
-                "delivery_order": integer,
-                "return_order": integer,
-                "order_price": integer
-            }
-           </pre>
-           </div>
-           </div>
-
-          </div>
-
-          <p class='desc'>This end-point allow you update specific exchange orders based on exchange order id.</p>
-       </div>
-
-    5. <div class='desc patch-desc accordion'><span class='request patch'>PATCH</span>/v1/exchanges/{id}/
-          <div style='margin-top: 15px;'>
-           <h2 class="accordion-header" id="exchangeHeadingOne_5">
-           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exchangeCollapseOne_5" aria-expanded="true" aria-controls="collapseOne">
-                Request body example
-           </button>
-           </h2>
-           <div id="exchangeCollapseOne_5" class="accordion-collapse collapse" aria-labelledby="exchangeHeadingOne_5" data-bs-parent="#accordionExample">
-           <div class="accordion-body">
-           Request body as same as <code>PUT: /v1/exchanges/{id}/</code> BUT you can ignore all or some of keys because it partial update.
-           </div>
-           </div>
-
-           <h2 class="accordion-header" id="deliveryHeadingTwo_5">
-           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exchangeCollapseTwo_5" aria-expanded="true" aria-controls="collapseOne">
-                Response header example
-           </button>
-           </h2>
-           <div id="exchangeCollapseTwo_5" class="accordion-collapse collapse" aria-labelledby="exchangeHeadingTwo_5" data-bs-parent="#accordionExample">
-           <div class="accordion-body">
-           <pre>
-            access-control-allow-origin: * 
-            allow: GET,PUT,PATCH,DELETE,HEAD,OPTIONS 
-            content-length: 58 
-            content-type: application/json 
-            date: Mon,16 Aug 2021 20:18:16 GMT 
-            referrer-policy: same-origin 
-            server: WSGIServer/0.2 CPython/3.9.6 
-            vary: Accept,Origin,Cookie 
-            www-authenticate: Bearer realm="api" 
-            x-content-type-options: nosniff 
-            x-frame-options: DENY 
-            x-queryinspect-duplicate-sql-queries: 0 
-            x-queryinspect-num-sql-queries: 0 
-            x-queryinspect-total-request-time: 7 ms 
-            x-queryinspect-total-sql-time: 0 ms 
-            x-xss-protection: 1; mode=block 
-           </pre>
-           </div>
-           </div>
-
-           <h2 class="accordion-header" id="exchangeHeadingThree_5">
-           <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exchangeCollapseThree_5" aria-expanded="true" aria-controls="collapseOne">
-                Response body example
-           </button>
-           </h2>
-           <div id="exchangeCollapseThree_5" class="accordion-collapse collapse" aria-labelledby="exchangeHeadingThree_5" data-bs-parent="#accordionExample">
-           <div class="accordion-body">
-            Response body as same as <code>PUT: /v1/exchanges/{id}/</code>
-           </div>
-          </div> 
-
-          </div>
-          <p class='desc'>This end-point allow you partial update specific exchange orders based on exchange order id.</p>
-       </div>  
-
-    6. <div class='desc delete-desc accordion'><span class='request delete' >DELETE</span>/v1/exchanges/{id}/
+    
+    4. <div class='desc delete-desc accordion'><span class='request delete' >DELETE</span>/v1/exchanges/{id}/
           <div style='margin-top: 15px;'>
            <h2 class="accordion-header" id="exchangeHeadingOne_6">
            <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#exchangeCollapseOne_6" aria-expanded="true" aria-controls="collapseOne">
@@ -4793,7 +4650,7 @@ Collect shipment cost from customer.
                                         "address": string,
                                         "is_virtual": boolean
                                     },
-                                    "zone_group": []
+                                    "zone_group": [object]
                                 }
                             },
                             "act_cash_account": {
@@ -5058,7 +4915,7 @@ Collect shipment cost from customer.
                                 "address": string,
                                 "is_virtual": boolean
                             },
-                            "zone_group": []
+                            "zone_group": [object]
                         }
                     },
                     "act_cash_account": {
@@ -5412,8 +5269,8 @@ Collect shipment cost from customer.
                "results":[
                    {
                         "id": integer,
-                        "discounts": [],
-                        "bank_deposits": [],
+                        "discounts": [object],
+                        "bank_deposits": [object],
                         "created": string,
                         "modified": string,
                         "number": string,

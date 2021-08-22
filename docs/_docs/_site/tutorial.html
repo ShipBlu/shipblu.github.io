@@ -1,0 +1,233 @@
+<style>
+.point{
+    color: #0f81a2
+}
+.list{
+    color: #000
+}
+</style>
+
+<h1 class="fs-9" id="shipblu-api-tutorial">ShipBlu API Tutorial</h1>
+
+<p>In this tutorial we will tell a story of a merchant who wants to integrate their online e-commerce store to our delivery service.</p>
+
+<p>Before start we need to introduce only two major concept:</p>
+
+<ol>
+  <li><span class="point">Customer Agent (CA):</span> Is a person that deliver shipment to customer.</li>
+  <li><span class="point">Merchant Agent (MA):</span> Is a person that deal with merchant.</li>
+</ol>
+
+<p>After we introduce above two concepts let’s don’t waste a lot of time and let’s start.</p>
+
+<p>We will start tutorial by passing on following points:</p>
+
+<p><a href="api-reference#geographic-availability">geo availability</a>, to <a href="api-reference#service-availability">service availability</a> to placing an <a href="api-reference#orders">orders</a> and viewing orders.</p>
+
+<h2 id="geo-availability">Geo Availability</h2>
+<p><br />
+ShipBlu offers four major concepts that illustrate  geo availability that introduce it.</p>
+
+<div style="text-align:left"><img src="/assets/img/geo.png" width="340px" /></div>
+
+<ol>
+  <li>
+    <p><span class="point">Governorates</span></p>
+
+    <p>ShipBlu introduce his service in all egypt governorates from Alexandria to Aswan.
+<br />
+You can deliver your shipment to any place in egypt without any  headache about how deliver it.</p>
+    <hr />
+  </li>
+  <li>
+    <p><span class="point">Cities &amp; Zones</span></p>
+
+    <p>AS we know each governorate has many cities, and each city consist of some zones.
+<br /> 
+For good ShipBlu can deliver your shipment to any place within city.</p>
+    <hr />
+  </li>
+  <li>
+    <p><span class="point">PUDOs</span></p>
+
+    <p>We can define PUDOs as drop off points that CA can drop shipments on it and the Customer receive it from this PUDO.</p>
+
+    <p>ShipBlu provide this service to save merchant and customer order shipment cost.</p>
+    <hr />
+  </li>
+</ol>
+
+<p>You can discover geo availability ShipBlu APIs from <a href="api-reference#geographic-availability">here</a>.</p>
+
+<p>Now after we talked about <a href="#geo-availability">geo availability</a> and how ShipBlu categories it and deal with it.<br />
+let’s talk about other concept called service availability.</p>
+
+<h2 id="service-availability">Service Availability</h2>
+<p><br />
+Service availability is the services that ShipBlu can introduce it to merchants. This services is represented in the following points:</p>
+
+<ul>
+  <li>
+    <p><span class="point">Service Level</span></p>
+
+    <p>ShipBlu introduce service level concept that determine periods that shipment delivered to customer within. Service level determined by merchant based on his governorate and subscription, it consist of four categories.</p>
+
+    <p>Availabel service level:</p>
+
+    <ul>
+      <li><span class="list">overnight</span></li>
+      <li><span class="list">2 days</span></li>
+      <li><span class="list">3 to 5 days</span></li>
+      <li><span class="list">5 to 7 days</span></li>
+    </ul>
+
+    <hr />
+  </li>
+  <li>
+    <p><span class="point">Package Size</span></p>
+
+    <p>ShipBlu introduce two package size option:</p>
+
+    <ul>
+      <li><span class="list">Small Flyer (25x35cm)</span></li>
+      <li><span class="list">Large Flyer (50x45cm)</span></li>
+    </ul>
+
+    <hr />
+  </li>
+  <li>
+    <p><span class="point">Handshake Type</span></p>
+
+    <p>ShipBlu introduce handshake type concept that determine how CA will deliver shipment to customer. it consist of two categories:</p>
+
+    <ul>
+      <li>
+        <p><span class="list">D2D (Door To Door)</span></p>
+
+        <p>From its name, CA will deliver shipment to customer door.</p>
+      </li>
+      <li>
+        <p><span class="list">PUDO</span></p>
+
+        <p>As we mention <a href="#geo-availability">PUDO</a> is drop off points that CA can drop shipments on it and the Customer receive it from this point.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>You can discover service availability ShipBlu APIs from <a href="api-reference#service-availability">here</a>.</p>
+
+<p>Now after we talked about <a href="#geo-availability">geo availability</a> and <a href="#service-availability">service availability</a>. let’s talk about how placing an orders and viewing it.</p>
+
+<h2 id="orders">Orders</h2>
+<p><br />
+ShipBlu introduce awesome features to merchant to control his orders.<br /></p>
+
+<p>Before discover these features let’s talk shortly and quickly about orders types.</p>
+
+<p>Orders are divided into three categoricals:</p>
+
+<ul>
+  <li>
+    <p><span class="point">Delivery</span></p>
+
+    <p>Delivery order: is order that merchant want to deliver it to customer.</p>
+
+    <hr />
+  </li>
+  <li>
+    <p><span class="point">Return</span></p>
+
+    <p>Return order: is order that merchant want to get it from customer.</p>
+
+    <hr />
+  </li>
+  <li>
+    <p><span class="point">Exchanges</span></p>
+
+    <p>exchange order: is order to deliver shipment to customer and get another shipment from him.</p>
+  </li>
+</ul>
+
+<hr />
+
+<p>Now after we talked about orders types, Let’s discover these features together:</p>
+
+<ul>
+  <li>
+    <p><span class="point">List all orders</span></p>
+
+    <p>Merchant can show all (delivery, return, and exchange) orders info that he has created its.</p>
+    <hr />
+  </li>
+  <li>
+    <p><span class="point">Create new one</span></p>
+
+    <p>Merchant can create new (delivery, return, and exchange) orders.</p>
+    <hr />
+  </li>
+  <li>
+    <p><span class="point">Retrieve specific one</span></p>
+
+    <p>Merchant can show specific (delivery, return, and exchange) order info.</p>
+    <hr />
+  </li>
+  <li>
+    <p><span class="point">Update specific one</span></p>
+
+    <p>Merchant can update all info of specific (delivery, return, and exchange) order.</p>
+    <hr />
+  </li>
+  <li>
+    <p><span class="point">Partial update specific one</span></p>
+
+    <p>Merchant can update some info of specific (delivery, return, and exchange) order.</p>
+    <hr />
+  </li>
+  <li>
+    <p><span class="point">Delete update specific one</span></p>
+
+    <p>Merchant can delete specific (delivery, return, and exchange) order.</p>
+    <hr />
+  </li>
+</ul>
+
+<p>You can discover ShipBlu APIs of all above features from following links:</p>
+
+<ul>
+  <li><a href="api-reference#delivery">Delivery</a></li>
+  <li><a href="api-reference#return">Return</a></li>
+  <li><a href="api-reference#exchanges">Exchanges</a></li>
+</ul>
+
+<p>There is other feature ShipBlu introduce it to merchant to save his time to create multiple delivery order.</p>
+
+<ul>
+  <li>
+    <p><span class="point">Create multiple delivery orders</span></p>
+
+    <p>This feature divides into two steps:</p>
+
+    <ul>
+      <li>
+        <p><span class="list">Download template file</span></p>
+
+        <p>In this step you can download delivery order template file to add multiple delivery orders.</p>
+      </li>
+      <li>
+        <p><span class="list">Upload template file</span></p>
+
+        <p>In this step you can create your multiple delivery orders by upload this file.</p>
+      </li>
+    </ul>
+  </li>
+</ul>
+
+<p>You can discover this feature from <a href="api-reference#delivery-order-upload">here</a></p>
+
+<p>And you can discover more full features that ShipBlu introduce it to merchant from <a href="api-reference">API Reference</a> page.</p>
+
+<h2 id="api-reference">API Reference</h2>
+
+<p>Refer to our <a href="tutorial">Tutorial</a> or the <a href="api-reference">API Reference</a>
+for detailed API functionality.</p>
