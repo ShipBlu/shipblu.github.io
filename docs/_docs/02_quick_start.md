@@ -9,134 +9,84 @@ permalink: /quick-start
 # Quick Start
 {: .fs-9 }
 
-IN this part you will know only two things to deal with ShipBlu API's<br />
+In this part, we will learn how to:
 
-1. Getting Your API Key
-2. Test Your Setup
+1. Get your API key
+2. Test your setup
 
-Don't waste a lot of time and let's go.
 
 ## Getting Your API Key
 <br />
-In this part we will show to you how get your API key.
+
+In order to use ShipBlu APIs, you need to generate an API key from your merchant account.
+Follow the below steps to generate your API key.
  
-1. <span style="color: #7453ee">Login page</span>
+1. <span style="color: #7453ee">Login to the merchant account</span>
 
-    This is login page that you will see it when visit ShipBlu site.
+    Go to [https://shipblu.com](https://shipblu.com) and click Sign In from the top-right corner.
+    After that, click to loging and enter your merchant user credentials.
 
-    <div style="text-align:center"><img src="/assets/img/login_page.png" /></div>
+    <div style="text-align:center"><img src="/assets/img/01_quick_start_login_form.png" /></div>
 
-2. <span style="color: #7453ee">Login form</span>
 
-    This is a login form page that will appear for you when click on login button
-    <div style="text-align:center"><img src="/assets/img/login_form.png" /></div>
-
-3. <span style="color: #7453ee">Deal with merchant portal</span>
+2. <span style="color: #7453ee">Go to Account Settings</span>
     
-    After successfully login you will see merchant portal that you can use it for many awsome thing.<br />
+    After successfully logging in, click on the profile avatar and select Account Settings.<br />
 
-    This is a navigation bar of merchant portal.
-    <div style="text-align:center"><img src="/assets/img/merchant_portal_nav.png" /></div>
+    <div style="text-align:center"><img src="/assets/img/02_quick_start_avatar.png" /></div>
 
-4. <span style="color: #7453ee">Get your API key</span>
+3. <span style="color: #7453ee">Generate an API key</span>
 
-    <span style="color: #000">Step 1:</span> click on your picture as viewed in below picture.
-    <div style="text-align:center"><img src="/assets/img/api_key_step_1.png" /></div>
+    Click (+) from the top right corner to generate an API key
+    <div style="text-align:center"><img src="/assets/img/03_quick_start_api_keys.png" /></div>
 
-    <span style="color: #000">Step 2:</span> choose Account Settings from drop down menu. After click on account settings you will see this page. then choose API Keys at bottom left.
-    <div style="text-align:center"><img src="/assets/img/api_key_step_2.png" /></div>
+    This will generate a new API key that you can use to interact with the API.
+    <div style="text-align:center"><img src="/assets/img/04_quick_start_api_key.png" /></div>
 
-    <span style="color: #000">Step 3:</span> click on (+) button at the right then choose New API Key from drop down menu.
-    <div style="text-align:center"><img src="/assets/img/api_key_step_3.png" /></div>
-
-    <span style="color: #000">Step 4:</span> congratulations you get your API key
-    <div style="text-align:center"><img src="/assets/img/api_key_step_4.png" /></div>
 
 ## Test Your Setup
 
-Hello World
+Let's start by testing your setup using `curl`.
+Open the terminal and execute the following command to get your merchant account info:
 
-Let's start by testing our setup. Open up a command prompt and enter the following command that retrieve specific merchant info based on merchant id:
+```
+$ curl -H 'Authorization: Api-Key <YOUR-API-KEY> -X GET https://api.shipblu.com/api/v1/merchants/'
+```
 
-<div style='background: #f6f8fa; padding: 11px; box-sizing: border-box; overflow: scroll; color: #24292e;'>
-curl -X GET https://api.staging.shipblu.com/api/v1/merchants/1/ \ <br />
--H 'authorization: Api-Key YOUR_API_KEY'
-
-<pre>
+Response
+```
 {
-    "id":1,
-    "name":"Souq",
-    "store_url":"https://souq.com",
-    "logo":"https://staging-publicstorage1123538a-1p8k71zpb6h3c.s3.eu-west-3.amazonaws.com/auth0.5f633d876f356400703ba94a.unnamed.png",
-    "store_phone":"01012345678",
-    "address":{
-        "id":137,
-        "line_1":"10 شارع قصر النيل",
-        "line_2":"متفرع من الميدان الكبير",
-        "line_3":null,
-        "zip_code":null,
-        "google_maps_link":null,
-        "zone":{
-            "id":17,
-            "name":"الياسمين 4  - El-Yasmeen 4",
-            "city":{
-                "id":1,
-                "name":"القاهرة الجديدة - New Cairo",
-                "governorate":{
-                    "id":1,
-                    "name":"القاهرة - Cairo"
-                }
-            },"zone_group":[9]
+    "count": 1,
+    "next": null,
+    "previous": null,
+    "results": [
+        {
+            "id": Number,
+            "name": String,
+            "store_url": String,
+            "logo": String,
+            "store_phone": String,
+            "address": Object,
+            "store_email": String,
+            "status": String,
+            "cash_processing_fees": Number,
+            "cash_processing_fees_max": Number,
+            "cash_processing_percentage": Number,
+            "cash_processing_threshold": Number,
+            "subscription": Object,
+            "pickup_days": List,
+            "billing_days": List,
+            "pricing_lookup_delivery": Object,
+            "pricing_lookup_return": Object,
+            "pricing_lookup_exchange": Object,
+            "pricing_lookup_cash_collection": Object
         }
-    },
-    "store_email":"info@souq.com",
-    "status":"active",
-    "api_key":"API_KEY",
-    "cash_processing_fees":5.0,
-    "cash_processing_fees_max":50.0,
-    "cash_processing_percentage":2.0,
-    "cash_processing_threshold":5.0,
-    "subscription":{
-        "id":2,"name":
-        "Super Saver"
-    },
-    "pickup_days":[1,3],
-    "billing_days":[6],
-    "pricing_lookup_delivery":{
-        "id":19,
-        "status":"ready",
-        "service_type":"delivery",
-        "package":{
-            "google_sheet_url":"https://docs.google.com/spreadsheets/d/1gCpdQAIYAm1o_mFU2bsPw-FvM8X5IgRYfydo1e1laSg"
-        }
-    },
-    "pricing_lookup_return":{
-        "id":20,
-        "status":"ready",
-        "service_type":"return",
-        "package":{
-            "google_sheet_url":"https://docs.google.com/spreadsheets/d/1gCpdQAIYAm1o_mFU2bsPw-FvM8X5IgRYfydo1e1laSg"
-        }
-    },"pricing_lookup_exchange":{
-        "id":21,
-        "status":"ready",
-        "service_type":"exchange",
-        "package":{
-            "google_sheet_url":"https://docs.google.com/spreadsheets/d/1gCpdQAIYAm1o_mFU2bsPw-FvM8X5IgRYfydo1e1laSg"
-        }
-    },
-    "pricing_lookup_cash_collection":{
-        "id":22,
-        "status":"ready",
-        "service_type":"cash_collection",
-        "package":{
-            "google_sheet_url":"https://docs.google.com/spreadsheets/d/1gCpdQAIYAm1o_mFU2bsPw-FvM8X5IgRYfydo1e1laSg"
-        }
-    }
+    ]
 }
-</pre>
+```
 
-</div>
+**Congratulations!** Your are all set for integrating your app with our API!
+
 
 ## API Reference
 

@@ -16,168 +16,234 @@ permalink: /tutorial
 </style>
 
 # ShipBlu API Tutorial
-{: .fs-9 }
 
 In this tutorial we will tell a story of a merchant who wants to integrate their online e-commerce store to our delivery service.
 
-Before start we need to introduce only two major concept:
+## Geographic Availability
 
-1. <span class="point">Customer Agent (CA):</span> Is a person that deliver shipment to customer.
-2. <span class="point">Merchant Agent (MA):</span> Is a person that deal with merchant.
+The first question is "Where does ShipBlu operate?" To answer this question, you can explore what governorates we cover:
 
-After we introduce above two concepts let's don't waste a lot of time and let's start.
+```
+$ curl -H 'Authorization: Api-Key <YOUR-API-KEY> -X GET https://api.shipblu.com/api/v1/governorates/'
+```
 
-We will start tutorial by passing on following points:
+The response gives you back a list of governorates that are covered by ShipBlu Service.
 
-[geo availability](api-reference#geographic-availability), to [service availability](api-reference#service-availability) to placing an [orders](api-reference#orders) and viewing orders.
+```
+[
+    {
+        "id": 1,
+        "name": "القاهرة - Cairo"
+    },
+    {
+        "id": 2,
+        "name": "الاسكندرية - Alexandria"
+    },
+    ,
+    {
+        "id": 3,
+        "name": "الساحل الشمالي - North Coast"
+    },
+    :
+    :
+    <response trimmed for clarity>
+]
+```
 
-## Geo Availability
-<br />
-ShipBlu offers four major concepts that illustrate  geo availability that introduce it.
+In each governorate, you can list the cities under it using:
 
-<div style="text-align:left"><img src="/assets/img/geo.png" width="340px" /></div>
+```
+$ curl -H 'Authorization: Api-Key <YOUR-API-KEY> -X GET https://api.shipblu.com/api/v1/governorates/<governorate-id>/cities/'
+```
 
-1. <span class="point">Governorates</span>
+The response gives you back a list of cities that are served in that governorate. For example, querying for Cairo will give you:
 
-   ShipBlu introduce his service in all egypt governorates from Alexandria to Aswan.
-   <br />
-   You can deliver your shipment to any place in egypt without any  headache about how deliver it.
-   <hr />
-2. <span class="point">Cities & Zones</span>
+```
+[
+    {
+        "id": 1,
+        "name": "القاهرة الجديدة - New Cairo",
+        "governorate": {
+            "id": 1,
+            "name": "القاهرة - Cairo"
+        }
+    },
+    {
+        "id": 2,
+        "name": "وسط البلد - Downtown Cairo",
+        "governorate": {
+            "id": 1,
+            "name": "القاهرة - Cairo"
+        }
+    },
+    {
+        "id": 3,
+        "name": "اكتوبر - October",
+        "governorate": {
+            "id": 1,
+            "name": "القاهرة - Cairo"
+        }
+    }
+    :
+    :
+    <response trimmed for clarity>
+]
+```
 
-   AS we know each governorate has many cities, and each city consist of some zones.
-   <br /> 
-   For good ShipBlu can deliver your shipment to any place within city.
-   <hr />
-3. <span class="point">PUDOs</span>
+We divide each city to zones to ensure delivering packages within the customer's preferred delivery window.
+In order to get the zones of a city, call:
 
-   We can define PUDOs as drop off points that CA can drop shipments on it and the Customer receive it from this PUDO.
+```
+$ curl -H 'Authorization: Api-Key <YOUR-API-KEY> -X GET https://api.shipblu.com/api/v1/cities/<city-id>/zones/'
+```
 
-   ShipBlu provide this service to save merchant and customer order shipment cost.
-   <hr />
+The response gives you back the list of zones covered in that city.
 
+```
+[
+    {
+        "id": 1,
+        "name": "التجمع الثالث - 3rd Settlement",
+    },
+    {
+        "id": 2,
+        "name": "التجمع الخامس - 5th Settlement",
+    }
+    :
+    :
+    <response trimmed for clarity>
+]
+```
 
-You can discover geo availability ShipBlu APIs from [here](api-reference#geographic-availability). 
+## Service Levels
 
-Now after we talked about [geo availability](#geo-availability) and how ShipBlu categories it and deal with it.<br />
-let's talk about other concept called service availability.
+At ShipBlu, we strive to meet our service level agreements.
+We take it seriously to plan a package delivery on the exact day we promise to delivery the package on.
 
-## Service Availability
-<br />
-Service availability is the services that ShipBlu can introduce it to merchants. This services is represented in the following points:
+In order to get the service levels for a governorate, you can use:
 
-- <span class="point">Service Level</span>
+```
+$ curl -H 'Authorization: Api-Key <YOUR-API-KEY> -X GET https://api.shipblu.com/api/v1/service-availability/?governorate_id=<Governorate-ID>&subscription_id=<Subscription-ID>'
+```
 
-  ShipBlu introduce service level concept that determine periods that shipment delivered to customer within. Service level determined by merchant based on his governorate and subscription, it consist of four categories.
+where `subscription_id` is retrieved from the merchant info. The response object looks like:
 
-  Availabel service level:
+```
+[
+    {
+        "governorate": {
+            "id": 1,
+            "name": "القاهرة - Cairo"
+        },
+        "service_level": {
+            "id": 3,
+            "name": "2 Days",
+            "short_code": "2D",
+            "description": "2 Business Days"
+        },
+        "package_size": {
+            "id": 1,
+            "name": "Small Flyer (25x35cm)",
+            "short_code": "S-FLY",
+            "description": "Small Flyer (25x35cm)"
+        }
+    },
+    :
+    :
+    <response trimmed for clarity>
+]
+```
 
-  - <span class="list">overnight</span>
-  - <span class="list">2 days</span>
-  - <span class="list">3 to 5 days</span>
-  - <span class="list">5 to 7 days</span>
+This represents a list of service availability where each object contains a `governorate`, a `service_level` and a `package_size`.
+For example, a governorate that has 2 service levels (e.g. Overnight and 2 Days) and 2 package sizes (e.g. Small Flyer and Large Flyer) will return a list of 4 objects.
 
-  <hr />
-- <span class="point">Package Size</span>
+> **Why are they separate?**
+  In some governorates, we are able to deliver mailers in a given service level, but large boxes take more time.
+  That's why we cannot return this as a flat list of available service levels and package sizes.
+  If you want to flatten the result, use a functional programming transformation, such as `unique`, to get unique service levels and/or package sizes.
 
-  ShipBlu introduce two package size option:
-
-  - <span class="list">Small Flyer (25x35cm)</span>
-  - <span class="list">Large Flyer (50x45cm)</span>
-
-  <hr />
-- <span class="point">Handshake Type</span>
-
-   ShipBlu introduce handshake type concept that determine how CA will deliver shipment to customer. it consist of two categories:
-
-   - <span class="list">D2D (Door To Door)</span>
-
-        From its name, CA will deliver shipment to customer door.
-
-   - <span class="list">PUDO</span>
-
-        As we mention [PUDO](#geo-availability) is drop off points that CA can drop shipments on it and the Customer receive it from this point.
-
-You can discover service availability ShipBlu APIs from [here](api-reference#service-availability).   
-
-Now after we talked about [geo availability](#geo-availability) and [service availability](#service-availability). let's talk about how placing an orders and viewing it.  
 
 ## Orders
-<br />
-ShipBlu introduce awesome features to merchant to control his orders.<br />
 
-Before discover these features let's talk shortly and quickly about orders types.
+At this point, you are all set up to start creating orders on our system.
+ShipBlu offers delivery, return, exchange and cash collection services.
 
-Orders are divided into three categoricals:
+### Delivery Orders
 
-- <span class="point">Delivery</span>
+#### List
 
-    Delivery order: is order that merchant want to deliver it to customer.
+```
+$ curl -H 'Authorization: Api-Key <YOUR-API-KEY> -X GET https://api.shipblu.com/api/v1/delivery-orders/?limit=10'
+```
 
-  <hr />
-- <span class="point">Return</span>
+Response
 
-    Return order: is order that merchant want to get it from customer.
+```
+{
+    "count": Number,
+    "next": "https://api.shipblu.com/api/v1/delivery-orders/?limit=10&offset=10",
+    "previous": null,
+    "results": [
+        {
+            "id": Number,
+            :
+            :
+        },
+        :
+        <response trimmed for clarity>
+    ]
+}
+```
 
-  <hr />
-- <span class="point">Exchanges</span>
+#### Create
 
-    exchange order: is order to deliver shipment to customer and get another shipment from him.
+```
+$ curl -H 'Authorization: Api-Key <YOUR-API-KEY> -H "Content-Type: application/json" -X POST -d '<request-body>' https://api.shipblu.com/api/v1/delivery-orders/'
+```
 
-<hr />
-Now after we talked about orders types, Let's discover these features together:
+where `<request-body>` is:
 
-- <span class="point">List all orders</span>
+```
+{
+    "customer": {
+        "first_name": String,
+        "last_name": String,
+        "phone": String,
+        "address":{
+            "line_1": String,
+            "line_2": String,
+            "zone": Integer
+        }
+    },
+    "service_level": Integer,
+    "packages": [
+        {
+            "package_size": Integer
+        }
+    ]
+}
+```
 
-    Merchant can show all (delivery, return, and exchange) orders info that he has created its.
-    <hr />
-- <span class="point">Create new one</span>
+These are the minimum number of parameters that you need to send.
+Refer to the [API Reference](api-reference) for a full documentation on the other parameters you can set.
 
-    Merchant can create new (delivery, return, and exchange) orders.
-    <hr />
-- <span class="point">Retrieve specific one</span>
+#### Update
 
-    Merchant can show specific (delivery, return, and exchange) order info.
-    <hr />
-- <span class="point">Update specific one</span>
+```
+$ curl -H 'Authorization: Api-Key <YOUR-API-KEY> -H "Content-Type: application/json" -d '<request-body>' -X PATCH https://api.shipblu.com/api/v1/delivery-orders/'
+```
 
-    Merchant can update all info of specific (delivery, return, and exchange) order.
-    <hr />
-- <span class="point">Partial update specific one</span>
+where `<request-body>` is the same as the used in the `POST` request.
 
-    Merchant can update some info of specific (delivery, return, and exchange) order.
-    <hr />
-- <span class="point">Delete update specific one</span>
 
-    Merchant can delete specific (delivery, return, and exchange) order.
-    <hr />
+### Other Orders
 
-You can discover ShipBlu APIs of all above features from following links: 
+Returns, exchanges and cash collection orders follow the same scheme.
+Please, refer to the complete API reference for detailed signatures.
 
-- [Delivery](api-reference#delivery)
-- [Return](api-reference#return)
-- [Exchanges](api-reference#exchanges)
 
-There is other feature ShipBlu introduce it to merchant to save his time to create multiple delivery order. 
+## What's Next?
 
-- <span class="point">Create multiple delivery orders</span>
+Bravoo! You made it to this point.
 
-    This feature divides into two steps:
-
-    - <span class="list">Download template file</span>
-
-        In this step you can download delivery order template file to add multiple delivery orders.
-
-    - <span class="list">Upload template file</span>
-
-        In this step you can create your multiple delivery orders by upload this file.
-
-You can discover this feature from [here](api-reference#delivery-order-upload)
-
-And you can discover more full features that ShipBlu introduce it to merchant from [API Reference](api-reference) page.
-    
-
-## API Reference
-
-Refer to our [Tutorial](tutorial) or the [API Reference](api-reference)
-for detailed API functionality.
+You can explore the full API functionality in the [API Reference](api-reference).
