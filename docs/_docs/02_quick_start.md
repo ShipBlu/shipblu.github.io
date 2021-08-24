@@ -50,7 +50,7 @@ Let's start by testing your setup using `curl`.
 Open the terminal and execute the following command to get your merchant account info:
 
 ```
-$ curl -H 'Authorization: Api-Key <YOUR-API-KEY> -X GET https://api.shipblu.com/api/v1/merchants/'
+$ curl -H 'Authorization: Api-Key <YOUR-API-KEY>' -X GET https://api.shipblu.com/api/v1/merchants/
 ```
 
 Response

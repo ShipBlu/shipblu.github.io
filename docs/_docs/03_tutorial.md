@@ -24,7 +24,7 @@ In this tutorial we will tell a story of a merchant who wants to integrate their
 The first question is "Where does ShipBlu operate?" To answer this question, you can explore what governorates we cover:
 
 ```
-$ curl -H 'Authorization: Api-Key <YOUR-API-KEY> -X GET https://api.shipblu.com/api/v1/governorates/'
+$ curl -H 'Authorization: Api-Key <YOUR-API-KEY>' -X GET https://api.shipblu.com/api/v1/governorates/
 ```
 
 The response gives you back a list of governorates that are covered by ShipBlu Service.
@@ -53,7 +53,7 @@ The response gives you back a list of governorates that are covered by ShipBlu S
 In each governorate, you can list the cities under it using:
 
 ```
-$ curl -H 'Authorization: Api-Key <YOUR-API-KEY> -X GET https://api.shipblu.com/api/v1/governorates/<governorate-id>/cities/'
+$ curl -H 'Authorization: Api-Key <YOUR-API-KEY>' -X GET https://api.shipblu.com/api/v1/governorates/<governorate-id>/cities/
 ```
 
 The response gives you back a list of cities that are served in that governorate. For example, querying for Cairo will give you:
@@ -94,7 +94,7 @@ We divide each city to zones to ensure delivering packages within the customer's
 In order to get the zones of a city, call:
 
 ```
-$ curl -H 'Authorization: Api-Key <YOUR-API-KEY> -X GET https://api.shipblu.com/api/v1/cities/<city-id>/zones/'
+$ curl -H 'Authorization: Api-Key <YOUR-API-KEY>' -X GET https://api.shipblu.com/api/v1/cities/<city-id>/zones/
 ```
 
 The response gives you back the list of zones covered in that city.
@@ -123,7 +123,7 @@ We take it seriously to plan a package delivery on the exact day we promise to d
 In order to get the service levels for a governorate, you can use:
 
 ```
-$ curl -H 'Authorization: Api-Key <YOUR-API-KEY> -X GET https://api.shipblu.com/api/v1/service-availability/?governorate_id=<Governorate-ID>&subscription_id=<Subscription-ID>'
+$ curl -H 'Authorization: Api-Key <YOUR-API-KEY>' -X GET https://api.shipblu.com/api/v1/service-availability/?governorate_id=<Governorate-ID>&subscription_id=<Subscription-ID>
 ```
 
 where `subscription_id` is retrieved from the merchant info. The response object looks like:
@@ -173,7 +173,7 @@ ShipBlu offers delivery, return, exchange and cash collection services.
 #### List
 
 ```
-$ curl -H 'Authorization: Api-Key <YOUR-API-KEY> -X GET https://api.shipblu.com/api/v1/delivery-orders/?limit=10'
+$ curl -H 'Authorization: Api-Key <YOUR-API-KEY>' -X GET https://api.shipblu.com/api/v1/delivery-orders/?limit=10
 ```
 
 Response
@@ -198,7 +198,7 @@ Response
 #### Create
 
 ```
-$ curl -H 'Authorization: Api-Key <YOUR-API-KEY> -H "Content-Type: application/json" -X POST -d '<request-body>' https://api.shipblu.com/api/v1/delivery-orders/'
+$ curl -H 'Authorization: Api-Key <YOUR-API-KEY>' -H "Content-Type: application/json" -X POST -d '<request-body>' https://api.shipblu.com/api/v1/delivery-orders/
 ```
 
 where `<request-body>` is:
@@ -230,7 +230,7 @@ Refer to the [API Reference](api-reference) for a full documentation on the othe
 #### Update
 
 ```
-$ curl -H 'Authorization: Api-Key <YOUR-API-KEY> -H "Content-Type: application/json" -d '<request-body>' -X PATCH https://api.shipblu.com/api/v1/delivery-orders/'
+$ curl -H 'Authorization: Api-Key <YOUR-API-KEY>' -H 'Content-Type: application/json' -d '<request-body>' -X PATCH https://api.shipblu.com/api/v1/delivery-orders/
 ```
 
 where `<request-body>` is the same as the used in the `POST` request.
