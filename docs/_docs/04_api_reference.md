@@ -9,33 +9,11 @@ permalink: /api-reference
 # API Reference
 {: .fs-9 }
 
-TO BE DOCUMENTED 
+At the moment, a Postman collection has been published at
+[https://documenter.getpostman.com/view/15149082/TzzGFYg8](https://documenter.getpostman.com/view/15149082/TzzGFYg8)
+
+To request access to the sandbox environment, please email `tech@shipblu.com`
+with your business account name (or email).
 
 
-## Geographic Availability
-
-TO BE DOCUMENTED
-
-## Service Availability
-
-TO BE DOCUMENTED 
-
-## Orders
-
-TO BE DOCUMENTED
-
-### Delivery
-
-TO BE DOCUMENTED 
-
-### Return
-
-TO BE DOCUMENTED
-
-### Exchanges
-
-TO BE DOCUMENTED
-
-### Cash Collection
-
-TO BE DOCUMENTED
+A Swagger interface is coming soon!
