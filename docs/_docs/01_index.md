@@ -24,5 +24,15 @@ If you need help streamlining your online sales process, this is the right place
 
 <div style="text-align:center"><img src="/assets/img/shipblu-tech.png" /></div>
 
+## Working on a new integration?
 
-**Don't have in-house developers?** We can always help. Get in touch at [tech@shipblu.com](tech@shipblu.com)
+We would love to hear from you! Please, join our Slack community below:
+
+[Join Slack](https://join.slack.com/t/shipbluengineering/shared_invite/zt-v059qoyd-khGLTue06nb8BVsBAYSGwg){: .btn .btn-blue }
+
+
+<div style="text-align:center"><a href="https://join.slack.com/t/shipbluengineering/shared_invite/zt-v059qoyd-khGLTue06nb8BVsBAYSGwg"><img src="/assets/img/slack.png" /></a></div>
+
+
+## Don't have in-house developers? 
+We can always help. Get in touch at [tech@shipblu.com](tech@shipblu.com)

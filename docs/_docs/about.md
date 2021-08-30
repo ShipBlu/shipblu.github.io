@@ -19,7 +19,7 @@ If you want to sign up for a merchant account, visit our website at [https://shi
 
 ### Issues
 
-If you find issues with this documentation, please [create and issue on GitHub](https://github.com/ShipBlu/shipblu.github.io/issues/new/choose).
+If you find issues with this documentation, please [create an issue on GitHub](https://github.com/ShipBlu/shipblu.github.io/issues/new/choose).
 
 ### Feature Requests
 
