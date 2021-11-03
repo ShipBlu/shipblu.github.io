@@ -26,12 +26,9 @@ If you need help streamlining your online sales process, this is the right place
 
 ## Working on a new integration?
 
-We would love to hear from you! Please, join our Slack community below:
+We would love to hear from you! Please, ask to join our Slack community.
 
-[Join Slack](https://join.slack.com/t/shipbluengineering/shared_invite/zt-v059qoyd-khGLTue06nb8BVsBAYSGwg){: .btn .btn-blue }
-
-
-<div style="text-align:center"><a href="https://join.slack.com/t/shipbluengineering/shared_invite/zt-v059qoyd-khGLTue06nb8BVsBAYSGwg"><img src="/assets/img/slack.png" /></a></div>
+[Ask to Join Slack](mailto:tech@shipblu?subject=Add me to your Slack!){: .btn .btn-blue }
 
 
 ## Don't have in-house developers? 
