@@ -42,8 +42,6 @@ exclude: ["node_modules/", "*.gemspec", "*.gem", "Gemfile", "Gemfile.lock",
   "bin/", "README.md", "Rakefile", "docs/tests/"
 ]
 
-escape_markup: false
-
 search_enabled: true
 search:
   # Split pages into sections that can be searched individually
