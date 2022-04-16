@@ -26,9 +26,11 @@ If you need help streamlining your online sales process, this is the right place
 
 ## Working on a new integration?
 
-We would love to hear from you! Please, ask to join our Slack community.
+We would love to hear from you. Please, join our Discord community below!
 
-[Ask to Join Slack](mailto:tech@shipblu?subject=Add me to your Slack!){: .btn .btn-blue }
+[Join Discord Community](https://discord.gg/QNfCuJdxQ5){: .btn .btn-blue }
+
+<iframe src="https://discord.com/widget?id=964999015588569119&theme=dark" width="500" height="400" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
 
 
 ## Don't have in-house developers? 

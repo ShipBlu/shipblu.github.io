@@ -22,9 +22,8 @@ You will then be able to execute all requests from the swagger interface.
 
 ## Working on a new integration?
 
-We would love to hear from you! Please, join our Slack community below:
+We would love to hear from you. Please, join our Discord community!
 
-[Join Slack](https://join.slack.com/t/shipbluengineering/shared_invite/zt-v059qoyd-khGLTue06nb8BVsBAYSGwg){: .btn .btn-blue }
+[Join Discord Community](https://discord.gg/QNfCuJdxQ5){: .btn .btn-blue }
 
-
-<div style="text-align:center"><a href="https://join.slack.com/t/shipbluengineering/shared_invite/zt-v059qoyd-khGLTue06nb8BVsBAYSGwg"><img src="/assets/img/slack.png" /></a></div>
+<iframe src="https://discord.com/widget?id=964999015588569119&theme=dark" width="500" height="400" allowtransparency="true" frameborder="0" sandbox="allow-popups allow-popups-to-escape-sandbox allow-same-origin allow-scripts"></iframe>
