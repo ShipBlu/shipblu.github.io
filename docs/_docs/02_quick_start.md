@@ -79,7 +79,16 @@ Response
             "pricing_lookup_delivery": Object,
             "pricing_lookup_return": Object,
             "pricing_lookup_exchange": Object,
-            "pricing_lookup_cash_collection": Object
+            "pricing_lookup_cash_collection": Object,
+            "pricing_lookup_rto": Object,
+            "refunds_enabled": Boolean,
+            "refunds_credit_limit": Number,
+            "cash_balance": Number,
+            "committed_volume": Number,
+            "account_manager": Object,
+            "sales": Object,
+            "age": String,
+            "force_scan_package_size_barcode": Boolean
         }
     ]
 }

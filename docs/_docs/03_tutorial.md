@@ -33,16 +33,19 @@ The response gives you back a list of governorates that are covered by ShipBlu S
 [
     {
         "id": 1,
-        "name": "القاهرة - Cairo"
+        "name": "القاهرة - Cairo",
+        "code": "EGC"
     },
     {
         "id": 2,
-        "name": "الاسكندرية - Alexandria"
+        "name": "الاسكندرية - Alexandria",
+        "code": "EGALX"
     },
     ,
     {
         "id": 3,
-        "name": "الساحل الشمالي - North Coast"
+        "name": "الساحل الشمالي - North Coast",
+        "code": "EGSHL"
     },
     :
     :
@@ -65,7 +68,8 @@ The response gives you back a list of cities that are served in that governorate
         "name": "القاهرة الجديدة - New Cairo",
         "governorate": {
             "id": 1,
-            "name": "القاهرة - Cairo"
+            "name": "القاهرة - Cairo",
+            "code": "EGC"
         }
     },
     {
@@ -73,15 +77,16 @@ The response gives you back a list of cities that are served in that governorate
         "name": "وسط البلد - Downtown Cairo",
         "governorate": {
             "id": 1,
-            "name": "القاهرة - Cairo"
+            "name": "القاهرة - Cairo",
+            "code": "EGC"
         }
     },
     {
         "id": 3,
         "name": "اكتوبر - October",
         "governorate": {
-            "id": 1,
-            "name": "القاهرة - Cairo"
+            "name": "الجيزة - Giza",
+            "code": "EGGZ"
         }
     }
     :
@@ -143,9 +148,9 @@ where `subscription_id` is retrieved from the merchant info. The response object
         },
         "package_size": {
             "id": 1,
-            "name": "Small Flyer (25x35cm)",
+            "name": "Small Flyer (20x25cm)",
             "short_code": "S-FLY",
-            "description": "Small Flyer (25x35cm)"
+            "description": "Small Flyer (20x25cm)"
         }
     },
     :
