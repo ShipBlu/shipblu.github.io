@@ -206,8 +206,7 @@ where `<request-body>` is:
 ```
 {
     "customer": {
-        "first_name": String,
-        "last_name": String,
+        "full_name": String,
         "phone": String,
         "address":{
             "line_1": String,
@@ -215,7 +214,6 @@ where `<request-body>` is:
             "zone": Integer
         }
     },
-    "service_level": Integer,
     "packages": [
         {
             "package_size": Integer

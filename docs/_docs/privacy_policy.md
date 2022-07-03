@@ -65,7 +65,7 @@ personally identifiable information that can be used to contact or
 identify You. Personally identifiable information may include, but is
 not limited to:
 - Email address
-- First name and last name
+- Full name
 - Phone number
 - Usage Data
 
