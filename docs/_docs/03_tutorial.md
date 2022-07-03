@@ -212,7 +212,9 @@ where `<request-body>` is:
 {
     "customer": {
         "full_name": String,
+        "email": String,
         "phone": String,
+        "secondary_phone": String,
         "address":{
             "line_1": String,
             "line_2": String,
