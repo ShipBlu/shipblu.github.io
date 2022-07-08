@@ -214,7 +214,6 @@ where `<request-body>` is:
         "full_name": String,
         "email": String,
         "phone": String,
-        "secondary_phone": String,
         "address":{
             "line_1": String,
             "line_2": String,
@@ -240,6 +239,14 @@ $ curl -H 'Authorization: Api-Key <YOUR-API-KEY>' -H 'Content-Type: application/
 
 where `<request-body>` is the same as the used in the `POST` request.
 
+
+### Print Shipping Labels
+
+```
+curl -H 'Authorization: Api-Key <YOUR-API-KEY>' -H 'Content-Type: application/json' -X GET 'https://api.staging.shipblu.com/api/v1/orders/shipping-label-pdf/' -o labels.pdf -d '{
+    "tracking_numbers" : ["123456789", "987654321"]
+}'
+```
 
 ### Other Orders
 
