@@ -9,7 +9,6 @@ permalink: /js-client
 
 The client library used in our frontend to communiate with ShipBlu API.
 
-
 ### Installation
 
 #### With npm
